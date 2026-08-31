@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Daily AI, ML and Cloud quiz — 3 questions every day." />
+  <title>Daily AI · ML · Cloud Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">3 questions · every day</p>
+      <h1>AI · ML · Cloud Daily Quiz</h1>
+      <p class="subtitle">Pick one answer for each question, submit your quiz, and then review the explanations.</p>
+
+      <div class="quiz-toolbar">
+        <label for="quiz-date">Quiz day</label>
+        <select id="quiz-date" aria-label="Choose quiz date"></select>
+      </div>
+    </header>
+
+    <section class="quiz-meta" aria-live="polite">
+      <div>
+        <span class="meta-label">Date</span>
+        <strong id="display-date">—</strong>
+      </div>
+      <div>
+        <span class="meta-label">Questions</span>
+        <strong id="question-count">3</strong>
+      </div>
+      <div>
+        <span class="meta-label">Status</span>
+        <strong id="quiz-status">Not submitted</strong>
+      </div>
+    </section>
+
+    <form id="quiz-form" novalidate>
+      <div id="questions"></div>
+
+      <div class="submit-area">
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+        <button id="submit-btn" class="primary-btn" type="submit">Submit Quiz</button>
+      </div>
+    </form>
+
+    <section id="result-card" class="result-card hidden" aria-live="polite">
+      <p class="result-kicker">Your result</p>
+      <div class="score-line">
+        <strong id="score">0 / 3</strong>
+        <span id="score-message"></span>
+      </div>
+      <button id="retry-btn" class="secondary-btn" type="button">Try Again</button>
+    </section>
+  </main>
+
+  <script src="data/quizzes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
