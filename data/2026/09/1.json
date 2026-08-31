@@ -1,0 +1,91 @@
+{
+    "title": "Daily AI · ML · Cloud Quiz",
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which statements about hybrid search in RAG are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It combines lexical (keyword) and semantic (vector) retrieval"
+                },
+                {
+                    "id": "B",
+                    "text": "Disabling vector search and using keywords only"
+                },
+                {
+                    "id": "C",
+                    "text": "It can improve recall for rare terms or exact matches"
+                },
+                {
+                    "id": "D",
+                    "text": "It works only when the query contains no keywords"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C"
+            ],
+            "explanation": "Hybrid search combines keyword matching with vector similarity. Keyword retrieval helps with exact terms, while vector retrieval finds semantic matches."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "Which statements about normalizing embedding vectors are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Normalization can make similarity comparisons more consistent"
+                },
+                {
+                    "id": "B",
+                    "text": "Normalizing changes the number of dimensions"
+                },
+                {
+                    "id": "C",
+                    "text": "Normalizing scales a vector to unit length"
+                },
+                {
+                    "id": "D",
+                    "text": "With unit vectors, cosine similarity aligns with the dot product"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "Normalization removes magnitude as a factor and preserves direction. Unit vectors have magnitude 1, so cosine similarity equals their dot product."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which of the following are commonly cited examples of small/efficient language models? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Gemma small variants"
+                },
+                {
+                    "id": "B",
+                    "text": "Phi family models"
+                },
+                {
+                    "id": "C",
+                    "text": "Llama smaller-parameter variants"
+                },
+                {
+                    "id": "D",
+                    "text": "Any model exceeding 100B parameters by definition"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Gemma small variants, Phi family models, and smaller Llama variants are widely cited efficient language models. Models above 100B parameters are not small by definition."
+        }
+    ]
+}

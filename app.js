@@ -53,7 +53,7 @@
         <h2>${q.question}</h2>
         <div class="options">${q.options.map(o => `
           <div class="option" data-opt="${o.id}">
-            <input type="radio" id="${q.id}-${o.id}" name="${q.id}" value="${o.id}">
+            <input type="${q.correctAnswers ? "checkbox" : "radio"}" id="${q.id}-${o.id}" name="${q.id}" value="${o.id}">
             <label for="${q.id}-${o.id}"><strong>${o.id}.</strong> ${o.text}</label>
           </div>
         `).join("")}</div>
@@ -88,15 +88,17 @@
     if (submitted || !currentQuiz) return;
     let score = 0;
     currentQuiz.questions.forEach(q => {
-      const ans = els.quizForm.querySelector(`input[name="${q.id}"]:checked`)?.value;
+      const answers = [...els.quizForm.querySelectorAll(`input[name="${q.id}"]:checked`)].map(input => input.value);
+      const correctAnswers = q.correctAnswers || [q.correctAnswer];
+      const isCorrect = answers.length === correctAnswers.length && answers.every(answer => correctAnswers.includes(answer));
       const card = els.questions.querySelector(`[data-qid="${q.id}"]`);
       card.querySelectorAll(".option").forEach(opt => {
-        if (opt.dataset.opt === q.correctAnswer) opt.classList.add("correct");
-        if (opt.dataset.opt === ans && ans !== q.correctAnswer) opt.classList.add("incorrect");
+        if (correctAnswers.includes(opt.dataset.opt)) opt.classList.add("correct");
+        if (answers.includes(opt.dataset.opt) && !correctAnswers.includes(opt.dataset.opt)) opt.classList.add("incorrect");
       });
-      if (ans === q.correctAnswer) score++;
+      if (isCorrect) score++;
       const exp = card.querySelector(".explanation");
-      exp.innerHTML = `<strong>Answer: ${q.correctAnswer}</strong> ${q.explanation}`;
+      exp.innerHTML = `<strong>Answer: ${correctAnswers.join(", ")}</strong> ${q.explanation}`;
       exp.classList.remove("hidden");
       card.querySelectorAll("input").forEach(i => i.disabled = true);
     });
