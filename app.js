@@ -28,7 +28,7 @@
 
   async function loadQuiz(date) {
     const [y, m, d] = date.split("-");
-    const r = await fetch(`./data/${y}/${m}/${d}.json`);
+    const r = await fetch(`./data/${y}/${m}/${d}.json?t=${Date.now()}`);
     return r.ok ? await r.json() : null;
   }
 
