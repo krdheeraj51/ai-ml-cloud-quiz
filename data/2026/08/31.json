@@ -1,0 +1,80 @@
+{
+    "title": "Daily AI · ML · Cloud Quiz",
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which statement best describes Retrieval-Augmented Generation (RAG)?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It trains a language model from scratch for every user query."
+                },
+                {
+                    "id": "B",
+                    "text": "It retrieves relevant external information and uses it as context for generation."
+                },
+                {
+                    "id": "C",
+                    "text": "It replaces a language model with a traditional relational database."
+                },
+                {
+                    "id": "D",
+                    "text": "It only reduces the number of tokens in a prompt."
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "RAG combines retrieval with generation: relevant information is first retrieved from an external knowledge source, then supplied to the model as context for producing the response."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "Which type of machine learning uses labeled examples during training?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Supervised learning"
+                },
+                {
+                    "id": "B",
+                    "text": "Unsupervised learning"
+                },
+                {
+                    "id": "C",
+                    "text": "Clustering"
+                },
+                {
+                    "id": "D",
+                    "text": "Dimensionality reduction"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Supervised learning trains a model using examples that contain both input data and the expected target or label."
+        },
+        {
+            "id": "q3",
+            "category": "Cloud",
+            "question": "In cloud computing, which service model gives users virtual machines while the provider manages the underlying physical infrastructure?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "SaaS"
+                },
+                {
+                    "id": "B",
+                    "text": "PaaS"
+                },
+                {
+                    "id": "C",
+                    "text": "IaaS"
+                },
+                {
+                    "id": "D",
+                    "text": "FaaS"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Infrastructure as a Service (IaaS) provides resources such as virtual machines, networking, and storage while the cloud provider manages the physical hardware."
+        }
+    ]
+}

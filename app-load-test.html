@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App Load Test</title>
+</head>
+
+<body>
+    <h1>App Load Test</h1>
+    <p id="result">Loading...</p>
+    <script src="app.js"></script>
+    <script>
+        setTimeout(() => {
+            if (window.__appLoaded) {
+                document.getElementById("result").innerHTML = "<strong style='color:green;'>✓ App loaded successfully!</strong><br/>Now check if quiz is displayed in index.html";
+            } else {
+                document.getElementById("result").innerHTML = "<strong style='color:red;'>✗ App did NOT load</strong>";
+            }
+        }, 100);
+    </script>
+</body>
+
+</html>

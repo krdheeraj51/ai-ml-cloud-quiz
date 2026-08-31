@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App Debug</title>
+    <style>
+        body {
+            font-family: monospace;
+            white-space: pre-wrap;
+            padding: 20px;
+        }
+
+        .log {
+            color: blue;
+            margin: 5px 0;
+        }
+
+        .error {
+            color: red;
+            margin: 5px 0;
+        }
+
+        .success {
+            color: green;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>App Debug Test</h1>
+    <div id="logs"></div>
+    <div id="quiz-display"></div>
+
+    <script>
+        const log = (msg, type = "log") => {
+            const div = document.getElementById("logs");
+            const el = document.createElement("div");
+            el.className = type;
+            el.textContent = msg;
+            div.appendChild(el);
+            console.log(msg);
+        };
+
+        (async () => {
+            try {
+                log("Starting init process...");
+
+                log("Step 1: Load manifest");
+                const r = await fetch("/data/manifest.json?t=" + Date.now());
+                const manifest = r.ok ? (await r.json()).dates.sort().reverse() : [];
+                log(`Manifest dates: ${JSON.stringify(manifest)}`, manifest.length ? "success" : "error");
+
+                if (!manifest.length) {
+                    log("No dates in manifest", "error");
+                    return;
+                }
+
+                log("Step 2: Populate dropdown");
+                const dates = manifest;
+                log(`Available dates: ${dates.join(", ")}`, "success");
+
+                log("Step 3: Select date to load");
+                const today = new Date().toISOString().split("T")[0];
+                log(`Today's date: ${today}`);
+                const dateToLoad = dates.includes(today) ? today : dates[0];
+                log(`Date to load: ${dateToLoad}`, "success");
+
+                log("Step 4: Load quiz");
+                const [y, m, d] = dateToLoad.split("-");
+                const url = `/data/${y}/${m}/${d}.json`;
+                log(`Fetching from: ${url}`);
+                const quiz_r = await fetch(url);
+                log(`Fetch status: ${quiz_r.status}`);
+
+                if (!quiz_r.ok) {
+                    log("Quiz fetch failed", "error");
+                    return;
+                }
+
+                const quiz = await quiz_r.json();
+                log(`Quiz loaded: ${quiz.title}`, "success");
+                log(`Questions: ${quiz.questions.length}`, "success");
+
+                log("Step 5: Render quiz");
+                const quizDiv = document.getElementById("quiz-display");
+                quizDiv.innerHTML = `<h2>${quiz.title}</h2>` + quiz.questions.map((q, i) => `
+          <h3>Question ${i + 1}: ${q.question}</h3>
+          <p>Category: ${q.category}</p>
+          <ul>
+            ${q.options.map(o => `<li>${o.id}. ${o.text}</li>`).join("")}
+          </ul>
+        `).join("");
+
+                log("Quiz rendered successfully!", "success");
+
+            } catch (err) {
+                log(`ERROR: ${err.message}`, "error");
+                log(`Stack: ${err.stack}`, "error");
+            }
+        })();
+    </script>
+</body>
+
+</html>

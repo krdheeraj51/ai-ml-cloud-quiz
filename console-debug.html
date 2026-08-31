@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Console Debug</title>
+    <style>
+        body {
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .log {
+            color: blue;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>App Execution Log</h1>
+    <div id="logs"></div>
+    <h2>Quiz Content</h2>
+    <div id="quiz-container">Loading...</div>
+
+    <script>
+        // Capture console logs
+        const logs = [];
+        const logsDiv = document.getElementById("logs");
+
+        const originalLog = console.log;
+        const originalError = console.error;
+
+        console.log = function (...args) {
+            originalLog(...args);
+            logs.push("LOG: " + args.join(" "));
+            updateLogs();
+        };
+
+        console.error = function (...args) {
+            originalError(...args);
+            logs.push("ERROR: " + args.join(" "));
+            updateLogs();
+        };
+
+        function updateLogs() {
+            logsDiv.innerHTML = logs.map(log =>
+                `<div class="${log.startsWith("ERROR") ? "error" : "log"}">${log}</div>`
+            ).join("");
+        }
+    </script>
+    <script src="app.js"></script>
+    <script>
+        // After app loads, show the quiz container
+        setTimeout(() => {
+            const quizContainer = document.getElementById("quiz-container");
+            const questions = document.getElementById("questions");
+            if (questions) {
+                quizContainer.innerHTML = questions.innerHTML;
+            } else {
+                quizContainer.innerHTML = "<p style='color:red;'>No #questions element found!</p>";
+            }
+        }, 500);
+    </script>
+</body>
+
+</html>
