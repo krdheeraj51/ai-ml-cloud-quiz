@@ -20,7 +20,10 @@
 
   async function loadManifest() {
     const r = await fetch("./data/manifest.json?t=" + Date.now());
-    return r.ok ? (await r.json()).dates.sort().reverse() : [];
+    if (!r.ok) throw new Error(`Manifest request failed with status ${r.status}`);
+    const manifest = await r.json();
+    if (!Array.isArray(manifest.dates)) throw new Error("Manifest does not contain a dates array");
+    return manifest.dates.sort().reverse();
   }
 
   async function loadQuiz(date) {
@@ -60,16 +63,23 @@
   }
 
   async function init() {
-    const dates = await loadManifest();
-    if (!dates.length) {
-      els.questions.innerHTML = "<p>No quizzes available</p>";
-      return;
+    try {
+      const dates = await loadManifest();
+      if (!dates.length) {
+        els.questions.innerHTML = "<p>No quizzes available</p>";
+        return;
+      }
+      els.dateSelect.innerHTML = dates.map(d => `<option value="${d}">${fmt(d)}</option>`).join("");
+      const today = new Date().toISOString().split("T")[0];
+      const date = dates.includes(today) ? today : dates[0];
+      els.dateSelect.value = date;
+      await renderQuiz(date);
+    } catch (error) {
+      console.error("Unable to load quiz manifest:", error);
+      els.quizStatus.textContent = "Unavailable";
+      els.submitBtn.disabled = true;
+      els.questions.innerHTML = "<p>Unable to load the quiz. Check that the data files are published, then refresh the page.</p>";
     }
-    els.dateSelect.innerHTML = dates.map(d => `<option value="${d}">${fmt(d)}</option>`).join("");
-    const today = new Date().toISOString().split("T")[0];
-    const date = dates.includes(today) ? today : dates[0];
-    els.dateSelect.value = date;
-    await renderQuiz(date);
   }
 
   els.dateSelect.addEventListener("change", e => renderQuiz(e.target.value));
