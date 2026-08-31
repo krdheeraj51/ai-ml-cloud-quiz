@@ -19,13 +19,13 @@
   const fmt = (d) => new Date(d.split("-")).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
 
   async function loadManifest() {
-    const r = await fetch("/data/manifest.json?t=" + Date.now());
+    const r = await fetch("./data/manifest.json?t=" + Date.now());
     return r.ok ? (await r.json()).dates.sort().reverse() : [];
   }
 
   async function loadQuiz(date) {
     const [y, m, d] = date.split("-");
-    const r = await fetch(`/data/${y}/${m}/${d}.json`);
+    const r = await fetch(`./data/${y}/${m}/${d}.json`);
     return r.ok ? await r.json() : null;
   }
 
