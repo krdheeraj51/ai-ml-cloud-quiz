@@ -1,0 +1,85 @@
+{
+    "questions": [
+        {
+            "id": "q4",
+            "category": "AI",
+            "question": "In a RAG system, what is the primary purpose of the retrieval step?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To generate the final answer without using any external information"
+                },
+                {
+                    "id": "B",
+                    "text": "To find relevant information that can be provided to the language model"
+                },
+                {
+                    "id": "C",
+                    "text": "To increase the number of parameters in the language model"
+                },
+                {
+                    "id": "D",
+                    "text": "To convert text directly into executable code"
+                }
+            ],
+            "correctAnswers": [
+                "B"
+            ],
+            "explanation": "The retrieval step searches a knowledge source for relevant information and provides that context to the language model so it can generate a more grounded response."
+        },
+        {
+            "id": "q5",
+            "category": "ML",
+            "question": "What is the main purpose of splitting documents into chunks before creating embeddings for a RAG system?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To make every document exactly the same size"
+                },
+                {
+                    "id": "B",
+                    "text": "To make the language model larger"
+                },
+                {
+                    "id": "C",
+                    "text": "To create smaller units that can be retrieved based on their relevance"
+                },
+                {
+                    "id": "D",
+                    "text": "To remove all semantic information from the document"
+                }
+            ],
+            "correctAnswers": [
+                "C"
+            ],
+            "explanation": "Chunking divides large documents into smaller meaningful pieces. This allows the retrieval system to identify and return only the sections most relevant to a user's query."
+        },
+        {
+            "id": "q6",
+            "category": "Cloud",
+            "question": "What is the main benefit of using autoscaling in a cloud application?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It automatically adjusts computing resources based on demand"
+                },
+                {
+                    "id": "B",
+                    "text": "It permanently removes the need for servers"
+                },
+                {
+                    "id": "C",
+                    "text": "It guarantees that an application will never fail"
+                },
+                {
+                    "id": "D",
+                    "text": "It converts a cloud application into a local application"
+                }
+            ],
+            "correctAnswers": [
+                "A"
+            ],
+            "explanation": "Autoscaling dynamically increases or decreases computing resources according to workload demand, helping applications handle traffic changes efficiently while controlling resource usage."
+        }
+    ]
+}
