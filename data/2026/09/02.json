@@ -1,0 +1,92 @@
+{
+    "title": "Daily AI · ML · Cloud Quiz",
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which statements about LangChain tools are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A tool gives an LLM a defined capability it can invoke"
+                },
+                {
+                    "id": "B",
+                    "text": "Tools can wrap APIs, functions, databases, or other external capabilities"
+                },
+                {
+                    "id": "C",
+                    "text": "Tools are only used for generating text"
+                },
+                {
+                    "id": "D",
+                    "text": "An agent can decide when to call a tool based on the task"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "LangChain tools provide callable capabilities to AI applications. They can interact with APIs, databases, functions, and other systems. Agents can reason about when a tool is needed and invoke it."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which statements correctly describe the difference between a chain and an agent? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A chain generally follows a predefined execution flow"
+                },
+                {
+                    "id": "B",
+                    "text": "An agent can dynamically decide which tools or actions to use"
+                },
+                {
+                    "id": "C",
+                    "text": "A chain always requires an LLM"
+                },
+                {
+                    "id": "D",
+                    "text": "Agents are useful when the required sequence of actions is not completely predetermined"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "Chains typically execute a known sequence of operations, while agents can dynamically choose actions and tools based on the task. A chain does not necessarily require an LLM."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which statements about cosine similarity between embedding vectors are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It measures the angle between two vectors"
+                },
+                {
+                    "id": "B",
+                    "text": "A value closer to 1 generally indicates greater directional similarity"
+                },
+                {
+                    "id": "C",
+                    "text": "It requires vectors to have exactly two dimensions"
+                },
+                {
+                    "id": "D",
+                    "text": "It is commonly used to compare semantic embeddings"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "Cosine similarity measures the angle between vectors and is commonly used with embeddings. Vectors pointing in similar directions have cosine similarity closer to 1, regardless of their dimensionality."
+        }
+    ]
+}
