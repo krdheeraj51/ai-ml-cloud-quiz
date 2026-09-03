@@ -22,7 +22,7 @@
           "text": "Vector index"
         }
       ],
-      "correctAnswers": "B",
+      "correctAnswer": "B",
       "explanation": "The orchestration layer coordinates interactions between models, APIs, tools, databases, and business workflows. It gathers information from multiple sources, manages execution flow, and prepares context before generation."
     },
     {
