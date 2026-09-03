@@ -72,7 +72,7 @@
                     "text": "It converts a cloud application into a local application"
                 }
             ],
-            "correctAnswers": "A",
+            "correctAnswer": "A",
             "explanation": "Autoscaling dynamically increases or decreases computing resources according to workload demand, helping applications handle traffic changes efficiently while controlling resource usage."
         }
     ]
