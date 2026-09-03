@@ -22,9 +22,7 @@
                     "text": "To convert text directly into executable code"
                 }
             ],
-            "correctAnswers": [
-                "B"
-            ],
+            "correctAnswer": "B",
             "explanation": "The retrieval step searches a knowledge source for relevant information and provides that context to the language model so it can generate a more grounded response."
         },
         {
@@ -49,9 +47,7 @@
                     "text": "To remove all semantic information from the document"
                 }
             ],
-            "correctAnswers": [
-                "C"
-            ],
+            "correctAnswer": "C",
             "explanation": "Chunking divides large documents into smaller meaningful pieces. This allows the retrieval system to identify and return only the sections most relevant to a user's query."
         },
         {
@@ -76,9 +72,7 @@
                     "text": "It converts a cloud application into a local application"
                 }
             ],
-            "correctAnswers": [
-                "A"
-            ],
+            "correctAnswers": "A",
             "explanation": "Autoscaling dynamically increases or decreases computing resources according to workload demand, helping applications handle traffic changes efficiently while controlling resource usage."
         }
     ]
