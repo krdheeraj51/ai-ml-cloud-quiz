@@ -1,7 +1,7 @@
 {
     "questions": [
         {
-            "id": "q4",
+            "id": "q1",
             "category": "AI",
             "question": "In a RAG system, what is the primary purpose of the retrieval step?",
             "options": [
@@ -26,7 +26,7 @@
             "explanation": "The retrieval step searches a knowledge source for relevant information and provides that context to the language model so it can generate a more grounded response."
         },
         {
-            "id": "q5",
+            "id": "q2",
             "category": "ML",
             "question": "What is the main purpose of splitting documents into chunks before creating embeddings for a RAG system?",
             "options": [
@@ -51,7 +51,7 @@
             "explanation": "Chunking divides large documents into smaller meaningful pieces. This allows the retrieval system to identify and return only the sections most relevant to a user's query."
         },
         {
-            "id": "q6",
+            "id": "q3",
             "category": "Cloud",
             "question": "What is the main benefit of using autoscaling in a cloud application?",
             "options": [
