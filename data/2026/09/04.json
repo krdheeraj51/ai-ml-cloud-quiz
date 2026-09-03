@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "A GenAI system must generate text after querying multiple APIs. What layer coordinates this process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "UI layer"
+        },
+        {
+          "id": "B",
+          "text": "Orchestration layer"
+        },
+        {
+          "id": "C",
+          "text": "Embedding model"
+        },
+        {
+          "id": "D",
+          "text": "Vector index"
+        }
+      ],
+      "correctAnswers": "B",
+      "explanation": "The orchestration layer coordinates interactions between models, APIs, tools, databases, and business workflows. It gathers information from multiple sources, manages execution flow, and prepares context before generation."
+    },
+    {
+      "id": "q2",
+      "category": "ML",
+      "question": "Which of the following is a generative model trained with an adversarial (generator vs. discriminator) objective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Generative Adversarial Networks (GANs)"
+        },
+        {
+          "id": "B",
+          "text": "Diffusion models"
+        },
+        {
+          "id": "C",
+          "text": "Support Vector Machines"
+        },
+        {
+          "id": "D",
+          "text": "Variational Autoencoders (VAEs)"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "GANs consist of two competing neural networks: a generator that creates samples and a discriminator that attempts to distinguish real data from generated data. This adversarial training process is the defining characteristic of GANs."
+    },
+    {
+      "id": "q3",
+      "category": "AI",
+      "question": "Which of the following are typical characteristics of Small Language Models (SLMs)? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fewer parameters than large frontier models"
+        },
+        {
+          "id": "B",
+          "text": "Suitability for resource-constrained or edge hardware"
+        },
+        {
+          "id": "C",
+          "text": "Faster inference and lower latency in many cases"
+        },
+        {
+          "id": "D",
+          "text": "Lower compute and memory needs for inference"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanation": "Small Language Models typically have fewer parameters, require less memory and compute, offer faster inference, and can often run on edge devices or resource-constrained hardware. These properties make them attractive for low-latency and cost-sensitive applications."
+    }
+  ]
+}
