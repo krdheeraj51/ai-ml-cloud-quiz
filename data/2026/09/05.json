@@ -1,0 +1,89 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "Which of the following are examples of prompt engineering techniques? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gradient-descent weight optimization"
+        },
+        {
+          "id": "B",
+          "text": "Supervised fine-tuning on labeled data"
+        },
+        {
+          "id": "C",
+          "text": "Zero-shot prompting"
+        },
+        {
+          "id": "D",
+          "text": "Chain-of-thought prompting"
+        }
+      ],
+      "correctAnswers": [
+        "C",
+        "D"
+      ],
+      "explanation": "Zero-shot prompting and chain-of-thought prompting are prompt engineering techniques used to guide model behavior without changing model weights. Gradient descent optimization and supervised fine-tuning are model training techniques rather than prompt engineering methods."
+    },
+    {
+      "id": "q2",
+      "category": "AI",
+      "question": "An e-commerce company wants to generate product descriptions automatically. Which approaches would improve output quality? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Removing all evaluation so generation runs faster"
+        },
+        {
+          "id": "B",
+          "text": "Maximizing temperature to force creativity"
+        },
+        {
+          "id": "C",
+          "text": "Providing product specifications in the prompt"
+        },
+        {
+          "id": "D",
+          "text": "Including brand voice guidelines"
+        }
+      ],
+      "correctAnswers": [
+        "C",
+        "D"
+      ],
+      "explanation": "Providing detailed product specifications helps the model generate accurate descriptions, while brand voice guidelines ensure consistency with company messaging. Removing evaluation reduces quality control, and excessively high temperature can lead to inconsistent or inaccurate content."
+    },
+    {
+      "id": "q3",
+      "category": "ML",
+      "question": "A team wants to search across both text and images with one system. Which statements about multimodal embeddings are correct? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Models like CLIP are designed for this kind of alignment"
+        },
+        {
+          "id": "B",
+          "text": "Text and images can never share a comparable space"
+        },
+        {
+          "id": "C",
+          "text": "Multimodal models can map text and images into a shared space"
+        },
+        {
+          "id": "D",
+          "text": "A text query can then retrieve semantically related images"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "Multimodal embedding models such as CLIP learn a shared embedding space where text and images can be represented as vectors. This enables cross-modal search, allowing text queries to retrieve semantically related images and vice versa."
+    }
+  ]
+}
