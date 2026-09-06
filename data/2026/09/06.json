@@ -1,0 +1,83 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "Which of the following are valid techniques to reduce hallucinations in LLMs? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increasing the temperature parameter"
+        },
+        {
+          "id": "B",
+          "text": "Grounding responses with citations"
+        },
+        {
+          "id": "C",
+          "text": "Fine-tuning on domain-specific data"
+        },
+        {
+          "id": "D",
+          "text": "Retrieval-Augmented Generation (RAG)"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "C",
+        "D"
+      ],
+      "explanation": "Hallucinations can be reduced by grounding responses in trusted sources, providing citations, using Retrieval-Augmented Generation (RAG) to retrieve factual information, and fine-tuning models on high-quality domain-specific datasets. Increasing temperature generally increases randomness and may increase hallucinations."
+    },
+    {
+      "id": "q2",
+      "category": "Cloud",
+      "question": "Which capability distinguishes Azure AI Search from basic search engines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Keyword matching only"
+        },
+        {
+          "id": "B",
+          "text": "AI enrichment of content"
+        },
+        {
+          "id": "C",
+          "text": "Manual indexing"
+        },
+        {
+          "id": "D",
+          "text": "Static queries"
+        }
+      ],
+      "correctAnswer":"B",
+      "explanation": "Azure AI Search provides AI enrichment capabilities such as OCR, entity recognition, language detection, key phrase extraction, semantic search, and vector search. These capabilities go beyond traditional keyword-based search systems."
+    },
+    {
+      "id": "q3",
+      "category": "AI",
+      "question": "Which of these is a common method for AI Alignment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rebooting the server daily"
+        },
+        {
+          "id": "B",
+          "text": "Using Constitutional AI or RLHF"
+        },
+        {
+          "id": "C",
+          "text": "Limiting the AI's access to the internet"
+        },
+        {
+          "id": "D",
+          "text": "Adding more RAM to the computer"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "AI alignment focuses on ensuring AI systems behave according to human values and intended objectives. Common alignment techniques include Reinforcement Learning from Human Feedback (RLHF) and Constitutional AI, which guide models toward safer and more helpful behavior."
+    }
+  ]
+}

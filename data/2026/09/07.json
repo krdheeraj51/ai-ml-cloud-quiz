@@ -1,0 +1,89 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "A team evaluates an LLM before production rollout. Which evaluation practices are sound? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reporting only the single best run as the final metric"
+        },
+        {
+          "id": "B",
+          "text": "Judging quality from a single cherry-picked example"
+        },
+        {
+          "id": "C",
+          "text": "Checking for bias across demographic groups"
+        },
+        {
+          "id": "D",
+          "text": "Measuring accuracy on a representative test set"
+        }
+      ],
+      "correctAnswers": [
+        "C",
+        "D"
+      ],
+      "explanation": "Reliable LLM evaluation should use representative datasets and assess fairness across different groups. Relying on a single best run or a cherry-picked example can produce misleading conclusions and does not reflect real-world performance."
+    },
+    {
+      "id": "q2",
+      "category": "AI",
+      "question": "A developer wants to build a question-answering app over private PDFs using LangChain. Which components are typically used? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A module that renders the PDFs as printed pages"
+        },
+        {
+          "id": "B",
+          "text": "Document loaders to ingest the PDFs"
+        },
+        {
+          "id": "C",
+          "text": "A vector store to hold embeddings for retrieval"
+        },
+        {
+          "id": "D",
+          "text": "Embedding each PDF page as a single fixed 3-dimensional vector"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "C"
+      ],
+      "explanation": "A typical LangChain RAG pipeline uses document loaders to ingest PDF content, embedding models to create vector representations, and a vector store for semantic retrieval. Modern embeddings usually contain hundreds or thousands of dimensions, not a fixed 3-dimensional vector."
+    },
+    {
+      "id": "q3",
+      "category": "AI",
+      "question": "An agent occasionally loops indefinitely without finishing a task. Which controls help? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Setting a maximum number of steps or iterations"
+        },
+        {
+          "id": "B",
+          "text": "Imposing a time or token budget per task"
+        },
+        {
+          "id": "C",
+          "text": "Adding a termination check when the goal is met"
+        },
+        {
+          "id": "D",
+          "text": "Removing all stopping conditions so it keeps trying"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "Agent systems commonly use guardrails such as maximum iteration limits, time or token budgets, and goal-completion checks to prevent infinite loops. Removing stopping conditions increases the risk of endless execution."
+    }
+  ]
+}
