@@ -1,0 +1,88 @@
+{
+  "title": "Retrieval, LangChain Data Components & AI Security Quiz",
+  "questions": [
+    {
+      "id": "q1",
+      "category": "ML",
+      "question": "Which automated metric can help evaluate ranking quality of retrieved items?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean Reciprocal Rank (MRR)"
+        },
+        {
+          "id": "B",
+          "text": "Number of tokens in prompt"
+        },
+        {
+          "id": "C",
+          "text": "HTTP status code 200 only"
+        },
+        {
+          "id": "D",
+          "text": "Embedding dimension size"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mean Reciprocal Rank (MRR) is a widely used information retrieval metric that evaluates how highly relevant results are ranked. Token count, HTTP status codes, and embedding dimensions do not directly measure retrieval ranking quality."
+    },
+    {
+      "id": "q2",
+      "category": "AI",
+      "question": "Which of the following are types of components LangChain provides for working with data? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Document loaders for various file formats"
+        },
+        {
+          "id": "B",
+          "text": "Retrievers that fetch relevant documents"
+        },
+        {
+          "id": "C",
+          "text": "A built-in spreadsheet pivot-table designer"
+        },
+        {
+          "id": "D",
+          "text": "Text splitters to chunk long documents"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "LangChain provides document loaders, retrievers, text splitters, embedding integrations, and vector store integrations to build RAG and document-processing applications. A spreadsheet pivot-table designer is not a standard LangChain data component."
+    },
+    {
+      "id": "q3",
+      "category": "Security",
+      "question": "A legal firm is implementing an AI assistant for contract review. Which security measures are appropriate? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Publishing all contracts to a shared public dataset"
+        },
+        {
+          "id": "B",
+          "text": "Encrypting data in transit and at rest"
+        },
+        {
+          "id": "C",
+          "text": "Implementing access controls and audit logs"
+        },
+        {
+          "id": "D",
+          "text": "Using on-premise or private cloud deployment"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "C",
+        "D"
+      ],
+      "explanation": "Legal documents contain sensitive and confidential information. Appropriate protections include encryption, strong access controls, audit logging, and private deployment options. Publishing contracts to a public dataset would create significant confidentiality and compliance risks."
+    }
+  ]
+}
