@@ -1,0 +1,80 @@
+
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "Why are prompt templates useful in production generative AI systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They permanently change the model weights"
+        },
+        {
+          "id": "B",
+          "text": "They eliminate the need for testing and evaluation"
+        },
+        {
+          "id": "C",
+          "text": "They guarantee perfect model responses"
+        },
+        {
+          "id": "D",
+          "text": "They standardize input structure and make prompts reusable"
+        }
+      ],
+      "correctAnswer":"D",
+      "explanation": "Prompt templates provide a consistent structure for inputs, making prompts easier to reuse, maintain, and update across applications. They help enforce best practices and improve reliability in production generative AI systems."
+    },
+    {
+      "id": "q2",
+      "category": "ML",
+      "question": "Which statement about model size and inference cost is generally true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Larger models always produce perfect outputs"
+        },
+        {
+          "id": "B",
+          "text": "Model size has no impact on inference resources"
+        },
+        {
+          "id": "C",
+          "text": "Larger models usually require more compute and cost more to run inference"
+        },
+        {
+          "id": "D",
+          "text": "Smaller models always outperform larger models on complex tasks"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "As model size grows, the computational resources, memory requirements, latency, and infrastructure costs for inference typically increase. Organizations often balance capability, latency, and cost when choosing a model."
+    },
+    {
+      "id": "q3",
+      "category": "Cloud",
+      "question": "Which AWS database supports vector embeddings using extensions like pgvector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon DynamoDB"
+        },
+        {
+          "id": "B",
+          "text": "Amazon RDS for PostgreSQL"
+        },
+        {
+          "id": "C",
+          "text": "Amazon ElastiCache"
+        },
+        {
+          "id": "D",
+          "text": "Amazon S3"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Amazon RDS for PostgreSQL supports extensions such as pgvector, enabling storage and similarity search of embedding vectors. This makes it a popular option for retrieval-augmented generation (RAG) and semantic search applications."
+    }
+  ]
+}

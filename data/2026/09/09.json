@@ -1,0 +1,90 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "Which statements about trade-offs of SLMs versus large LLMs are correct? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SLMs may have weaker performance on broad, complex reasoning"
+        },
+        {
+          "id": "B",
+          "text": "SLMs always outperform large models on every task"
+        },
+        {
+          "id": "C",
+          "text": "SLMs are cheaper and faster to run"
+        },
+        {
+          "id": "D",
+          "text": "SLMs can be fine-tuned effectively for narrow domains"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "Small Language Models (SLMs) typically require less compute, memory, and cost, making them faster and cheaper to deploy. They can perform very well when fine-tuned for specific domains, but they generally do not match large frontier models on broad knowledge and complex reasoning tasks."
+    },
+    {
+      "id": "q2",
+      "category": "NLP",
+      "question": "A team builds a pipeline to analyze customer reviews. Which NLP preprocessing steps are typically relevant? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Converting reviews into raw electrical voltage signals"
+        },
+        {
+          "id": "B",
+          "text": "Tokenizing the text into words or subwords"
+        },
+        {
+          "id": "C",
+          "text": "Removing stop words or normalizing case where appropriate"
+        },
+        {
+          "id": "D",
+          "text": "Encoding reviews as raw uncompressed audio waveforms"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "C"
+      ],
+      "explanation": "Common NLP preprocessing steps include tokenization, normalization, lowercasing, stemming, lemmatization, and sometimes stop-word removal. Converting text into electrical signals or audio waveforms is not part of a standard text analytics pipeline."
+    },
+    {
+      "id": "q3",
+      "category": "AI",
+      "question": "An autonomous agent can execute shell commands on production systems. Which safety measures are appropriate? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Logging every action for audit and rollback"
+        },
+        {
+          "id": "B",
+          "text": "Sandboxing the execution environment"
+        },
+        {
+          "id": "C",
+          "text": "Granting unrestricted production access for speed"
+        },
+        {
+          "id": "D",
+          "text": "Requiring human approval for high-risk actions"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "Production-grade AI agents should operate with strong guardrails, including audit logging, sandboxed execution, least-privilege access, and human approval for sensitive actions. Unrestricted production access significantly increases operational and security risks."
+    }
+  ]
+}
