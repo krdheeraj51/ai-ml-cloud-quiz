@@ -1,0 +1,85 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "Which option is an example of generative output?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Predicting a label"
+        },
+        {
+          "id": "B",
+          "text": "Generating an image from text"
+        },
+        {
+          "id": "C",
+          "text": "Sorting a list"
+        },
+        {
+          "id": "D",
+          "text": "Indexing a database"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Generative AI creates new content such as text, images, audio, video, or code. Generating an image from a text description is a classic example of a generative AI task."
+    },
+    {
+      "id": "q2",
+      "category": "AI",
+      "question": "Which scenario benefits most from hybrid retrieval (semantic + lexical)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When embedding dimension is zero"
+        },
+        {
+          "id": "B",
+          "text": "When there is a single short document corpus"
+        },
+        {
+          "id": "C",
+          "text": "Queries with rare technical terms where exact matches matter"
+        },
+        {
+          "id": "D",
+          "text": "Only conversational small talk"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Hybrid retrieval combines semantic search with keyword-based retrieval. It is especially valuable for technical queries, product names, error codes, and specialized terminology where exact keyword matches and semantic understanding are both important."
+    },
+    {
+      "id": "q3",
+      "category": "AI",
+      "question": "A support assistant must first search policies and then draft a response. What makes this behavior agentic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It generates fluent text"
+        },
+        {
+          "id": "B",
+          "text": "It can decide when to search and when to respond"
+        },
+        {
+          "id": "C",
+          "text": "It stores chats in memory"
+        },
+        {
+          "id": "D",
+          "text": "It produces longer answers"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Agentic AI is characterized by autonomous decision-making and tool usage. Instead of immediately generating an answer, the system first evaluates the task, determines that policy information is required, invokes a search tool to retrieve relevant documents, and then uses the retrieved information to compose a response. The ability to plan actions, choose tools, and execute multi-step workflows is what makes the behavior agentic."
+    }
+  ]
+}
