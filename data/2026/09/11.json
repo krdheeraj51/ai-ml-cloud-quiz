@@ -22,9 +22,7 @@
           "text": "Indexing a database"
         }
       ],
-      "correctAnswers": [
-        "B"
-      ],
+      "correctAnswer": "B",
       "explanation": "Generative AI creates new content such as text, images, audio, video, or code. Generating an image from a text description is a classic example of a generative AI task."
     },
     {
@@ -49,9 +47,7 @@
           "text": "Only conversational small talk"
         }
       ],
-      "correctAnswers": [
-        "C"
-      ],
+      "correctAnswer": "C",
       "explanation": "Hybrid retrieval combines semantic search with keyword-based retrieval. It is especially valuable for technical queries, product names, error codes, and specialized terminology where exact keyword matches and semantic understanding are both important."
     },
     {
@@ -76,9 +72,7 @@
           "text": "It produces longer answers"
         }
       ],
-      "correctAnswers": [
-        "B"
-      ],
+      "correctAnswer":"B",
       "explanation": "Agentic AI is characterized by autonomous decision-making and tool usage. Instead of immediately generating an answer, the system first evaluates the task, determines that policy information is required, invokes a search tool to retrieve relevant documents, and then uses the retrieved information to compose a response. The ability to plan actions, choose tools, and execute multi-step workflows is what makes the behavior agentic."
     }
   ]
