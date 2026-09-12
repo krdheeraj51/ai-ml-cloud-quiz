@@ -51,9 +51,7 @@
                     "text": "Reduce embedding dimension to 8"
                 }
             ],
-            "correctAnswers": [
-                "B"
-            ],
+            "correctAnswers": "B",
             "explanation": "Embedding-based retrieval excels at finding semantically similar content, but it can sometimes return results that are conceptually related yet miss important keywords or domain-specific terms. Hybrid search combines semantic vector search with traditional keyword-based retrieval, allowing the system to leverage both meaning and exact term matching. This approach often improves relevance for technical documentation, product catalogs, error messages, legal documents, and enterprise knowledge bases where both context and precise terminology matter."
         },
         {
