@@ -1,0 +1,90 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which of the following are potential benefits of using SLMs? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Reduced inference cost"
+                },
+                {
+                    "id": "B",
+                    "text": "Easier deployment on local or edge hardware"
+                },
+                {
+                    "id": "C",
+                    "text": "A guarantee of superhuman performance on all tasks"
+                },
+                {
+                    "id": "D",
+                    "text": "Better data privacy when run on-device"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "Small Language Models usually require less memory and computational power than larger models, which can reduce inference costs and make deployment on local devices or edge hardware easier. Running an SLM on-device can also improve data privacy because sensitive information may be processed locally instead of being sent to an external cloud service. However, SLMs do not guarantee superhuman performance and may perform worse than larger models on broad knowledge, complex reasoning, or highly specialized tasks."
+        },
+        {
+            "id": "q2",
+            "category": "NLP",
+            "question": "Which of the following are common Natural Language Processing (NLP) tasks? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Named entity recognition"
+                },
+                {
+                    "id": "B",
+                    "text": "Part-of-speech tagging of tokens"
+                },
+                {
+                    "id": "C",
+                    "text": "Sentiment analysis of text"
+                },
+                {
+                    "id": "D",
+                    "text": "Machine translation between languages"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "All four options are common NLP tasks. Named entity recognition identifies entities such as people, organizations, locations, and dates in text. Part-of-speech tagging assigns grammatical categories such as noun, verb, or adjective to tokens. Sentiment analysis determines the attitude or opinion expressed in text. Machine translation converts text from one natural language into another while preserving its meaning."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which retrieval augmentation design choice helps when documents contain redundant but slightly different facts?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Always return documents in random order"
+                },
+                {
+                    "id": "B",
+                    "text": "Limit retrieval to a single short document"
+                },
+                {
+                    "id": "C",
+                    "text": "Use reranking after retrieval to surface the most authoritative passages"
+                },
+                {
+                    "id": "D",
+                    "text": "Disable reranking and rely on the top raw vector match only"
+                }
+            ],
+            "correctAnswers": [
+                "C"
+            ],
+            "explanation": "When multiple documents contain overlapping or slightly conflicting facts, initial vector retrieval may return several passages that appear semantically relevant but differ in quality, recency, or authority. A reranking step evaluates the retrieved candidates more carefully and moves the passages that best match the query and reliability criteria to the top. This gives the language model stronger evidence and reduces the chance of generating an answer from a less relevant or less authoritative passage. Random ordering, retrieving only one short document, or relying only on the top raw vector match can omit better supporting evidence."
+        }
+    ]
+}

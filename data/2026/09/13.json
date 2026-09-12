@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "A product team wants more consistent LLM outputs for a structured task. Which steps help? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Providing a clear output format or schema"
+                },
+                {
+                    "id": "B",
+                    "text": "Removing all instructions from the prompt"
+                },
+                {
+                    "id": "C",
+                    "text": "Lowering the temperature setting"
+                },
+                {
+                    "id": "D",
+                    "text": "Increasing temperature to maximize output diversity"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C"
+            ],
+            "explanation": "Consistent LLM behavior is achieved by reducing ambiguity and constraining output generation. Providing a clear output schema, such as JSON, markdown tables, or predefined fields, helps the model produce predictable responses. Lowering the temperature reduces randomness in token selection, leading to more deterministic outputs. In contrast, removing instructions makes responses less reliable, while increasing temperature generally increases variability and creativity rather than consistency."
+        },
+        {
+            "id": "q2",
+            "category": "Security",
+            "question": "Which prompt-hardening technique defends against prompt injection attacks?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Remove system-level instructions entirely"
+                },
+                {
+                    "id": "B",
+                    "text": "Allow user-supplied content to directly control system prompts"
+                },
+                {
+                    "id": "C",
+                    "text": "Trust all retrieved text blindly"
+                },
+                {
+                    "id": "D",
+                    "text": "Use an outer instruction layer that explicitly instructs the model to ignore embedded user instructions in retrieved content"
+                }
+            ],
+            "correctAnswers": [
+                "D"
+            ],
+            "explanation": "Prompt injection occurs when malicious or unintended instructions are embedded within user input or retrieved documents and attempt to override the model's intended behavior. A common defense is prompt hardening, where trusted system instructions are placed in an outer control layer and explicitly tell the model to treat retrieved content as data rather than executable instructions. This helps maintain control of the model's behavior and reduces the risk of unauthorized actions or information disclosure."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which logged artifact is most useful to diagnose poor answers in a RAG system?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The retrieved passages and the final prompt sent to the LLM"
+                },
+                {
+                    "id": "B",
+                    "text": "Only system CPU metrics"
+                },
+                {
+                    "id": "C",
+                    "text": "IP addresses of requesters"
+                },
+                {
+                    "id": "D",
+                    "text": "Only the final generated text without context"
+                }
+            ],
+            "correctAnswers": [
+                "A"
+            ],
+            "explanation": "In a Retrieval-Augmented Generation (RAG) system, poor answers often originate from either retrieval problems or prompt construction issues. Logging the retrieved passages and the final prompt allows developers to determine whether the correct information was retrieved, whether important context was omitted, and whether prompt assembly introduced errors. CPU metrics, requester IP addresses, or the final answer alone do not provide enough visibility into the retrieval and reasoning pipeline to effectively diagnose root causes."
+        }
+    ]
+}

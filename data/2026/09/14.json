@@ -1,0 +1,88 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "A company wants reliable tool use from its agent. Which practices improve reliability? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Letting the agent guess undocumented API parameters"
+                },
+                {
+                    "id": "B",
+                    "text": "Validating tool inputs and outputs against a schema"
+                },
+                {
+                    "id": "C",
+                    "text": "Handling tool errors with retries or fallbacks"
+                },
+                {
+                    "id": "D",
+                    "text": "Giving the model clear descriptions of each tool"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "Reliable agent systems depend on well-defined tool contracts and robust error handling. Schema validation helps ensure that tool inputs and outputs follow the expected structure, reducing failures caused by malformed data. Clear tool descriptions help the model understand when and how to use a tool. Retry mechanisms and fallback strategies improve resilience when external APIs or services fail temporarily."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which technique helps improve retrieval relevance when embeddings alone return noisy results?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Always use exact nearest neighbor search"
+                },
+                {
+                    "id": "B",
+                    "text": "Use hybrid search combining semantic embeddings with keyword filtering"
+                },
+                {
+                    "id": "C",
+                    "text": "Disable normalization of vectors"
+                },
+                {
+                    "id": "D",
+                    "text": "Reduce embedding dimension to 8"
+                }
+            ],
+            "correctAnswers": [
+                "B"
+            ],
+            "explanation": "Embedding-based retrieval excels at finding semantically similar content, but it can sometimes return results that are conceptually related yet miss important keywords or domain-specific terms. Hybrid search combines semantic vector search with traditional keyword-based retrieval, allowing the system to leverage both meaning and exact term matching. This approach often improves relevance for technical documentation, product catalogs, error messages, legal documents, and enterprise knowledge bases where both context and precise terminology matter."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which of the following are common ways to measure similarity or distance between vectors? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Cosine similarity"
+                },
+                {
+                    "id": "B",
+                    "text": "Euclidean (L2) distance"
+                },
+                {
+                    "id": "C",
+                    "text": "Comparing the raw byte length of the two text strings"
+                },
+                {
+                    "id": "D",
+                    "text": "Counting shared punctuation marks in the text"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B"
+            ],
+            "explanation": "Embeddings represent data as high-dimensional vectors, and similarity is determined using mathematical distance metrics. Cosine similarity measures the angle between vectors and is widely used in semantic search because it focuses on directional similarity rather than magnitude. Euclidean (L2) distance measures the straight-line distance between vectors in multidimensional space and is commonly used in clustering and nearest-neighbor search. Techniques such as comparing text length or counting shared punctuation do not capture semantic relationships and therefore are not suitable for embedding similarity calculations."
+        }
+    ]
+}
