@@ -81,9 +81,7 @@
                     "text": "Disable reranking and rely on the top raw vector match only"
                 }
             ],
-            "correctAnswers": [
-                "C"
-            ],
+            "correctAnswer": "C",
             "explanation": "When multiple documents contain overlapping or slightly conflicting facts, initial vector retrieval may return several passages that appear semantically relevant but differ in quality, recency, or authority. A reranking step evaluates the retrieved candidates more carefully and moves the passages that best match the query and reliability criteria to the top. This gives the language model stronger evidence and reduces the chance of generating an answer from a less relevant or less authoritative passage. Random ordering, retrieving only one short document, or relying only on the top raw vector match can omit better supporting evidence."
         }
     ]
