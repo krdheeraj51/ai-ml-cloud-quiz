@@ -3,7 +3,7 @@ export const APP_CONFIG = Object.freeze({
   dataRoot: "./data",
 
   profile: {
-    website: "https://thetechticker.in/",
+    website: "https://krdheeraj51.github.io/",
     linkedin: "https://www.linkedin.com/in/krdheeraj51/",
     github: "https://github.com/krdheeraj51"
   },
