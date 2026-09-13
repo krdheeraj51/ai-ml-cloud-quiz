@@ -50,7 +50,7 @@
                     "text": "Use an outer instruction layer that explicitly instructs the model to ignore embedded user instructions in retrieved content"
                 }
             ],
-            "correctAnswers": "D",
+            "correctAnswer": "D",
             "explanation": "Prompt injection occurs when malicious or unintended instructions are embedded within user input or retrieved documents and attempt to override the model's intended behavior. A common defense is prompt hardening, where trusted system instructions are placed in an outer control layer and explicitly tell the model to treat retrieved content as data rather than executable instructions. This helps maintain control of the model's behavior and reduces the risk of unauthorized actions or information disclosure."
         },
         {
@@ -75,9 +75,7 @@
                     "text": "Only the final generated text without context"
                 }
             ],
-            "correctAnswers": [
-                "A"
-            ],
+            "correctAnswer": "A",
             "explanation": "In a Retrieval-Augmented Generation (RAG) system, poor answers often originate from either retrieval problems or prompt construction issues. Logging the retrieved passages and the final prompt allows developers to determine whether the correct information was retrieved, whether important context was omitted, and whether prompt assembly introduced errors. CPU metrics, requester IP addresses, or the final answer alone do not provide enough visibility into the retrieval and reasoning pipeline to effectively diagnose root causes."
         }
     ]
