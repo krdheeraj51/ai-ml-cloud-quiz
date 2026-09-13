@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Daily AI, ML and Cloud quiz — 3 questions every day." />
+  <meta name="description" content="Daily AI, ML and Cloud quiz — three questions every day." />
+  <meta name="theme-color" content="#4f46e5" />
   <title>Daily AI · ML · Cloud Quiz</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
-
 <body>
   <main class="page-shell">
-    <header class="hero">
-      <p class="eyebrow">3 questions · every day</p>
-      <h1>AI · ML · Cloud Daily Quiz</h1>
-      <p class="subtitle">Pick one answer for each question, submit your quiz, and then review the explanations.</p>
-
-      <div class="quiz-toolbar">
-        <label for="quiz-date">Quiz day</label>
-        <select id="quiz-date" aria-label="Choose quiz date"></select>
+    <header class="site-header">
+      <div class="brand-block">
+        <p class="eyebrow">DAILY LEARNING</p>
+        <h1>AI · ML · Cloud Quiz</h1>
+        <p class="subtitle">Test your knowledge, learn from every explanation, and keep building your AI engineering skills.</p>
       </div>
+
+      <nav class="header-links" aria-label="Profile links">
+        <a id="website-link" class="header-link" href="#" target="_blank" rel="noopener noreferrer">Website</a>
+        <a id="linkedin-link" class="header-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a id="github-link" class="header-link" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
     </header>
 
-    <section class="quiz-meta" aria-live="polite">
-      <div>
-        <span class="meta-label">Date</span>
-        <strong id="display-date">—</strong>
+    <section class="week-panel" aria-labelledby="week-heading">
+      <div class="section-label" id="week-heading">Quiz Week</div>
+      <div class="week-navigation">
+        <button id="previous-week-btn" class="week-nav-btn" type="button" aria-label="Previous week">
+          <span aria-hidden="true">←</span>
+          <span>Previous Week</span>
+        </button>
+
+        <div class="week-range" aria-live="polite">
+          <strong id="week-range">—</strong>
+          <span id="week-availability" class="week-availability">Loading available quizzes…</span>
+        </div>
+
+        <button id="next-week-btn" class="week-nav-btn" type="button" aria-label="Next week">
+          <span>Next Week</span>
+          <span aria-hidden="true">→</span>
+        </button>
       </div>
-      <div>
-        <span class="meta-label">Questions</span>
-        <strong id="question-count">3</strong>
-      </div>
-      <div>
-        <span class="meta-label">Status</span>
-        <strong id="quiz-status">Not submitted</strong>
+
+      <div class="date-selector-wrap">
+        <label for="quiz-date">Select Quiz Date</label>
+        <select id="quiz-date" aria-label="Select quiz date"></select>
       </div>
     </section>
 
+    <section class="quiz-meta" aria-live="polite">
+      <div class="meta-card">
+        <span class="meta-label">Date</span>
+        <strong id="display-date">—</strong>
+      </div>
+      <div class="meta-card">
+        <span class="meta-label">Questions</span>
+        <strong id="question-count">—</strong>
+      </div>
+      <div class="meta-card">
+        <span class="meta-label">Status</span>
+        <strong id="quiz-status">Loading</strong>
+      </div>
+    </section>
+
+    <section id="error-banner" class="message-banner error-banner hidden" role="alert"></section>
+    <section id="info-banner" class="message-banner info-banner hidden" role="status"></section>
+
     <form id="quiz-form" novalidate>
-      <div id="questions"></div>
+      <div id="questions" aria-live="polite"></div>
 
       <div class="submit-area">
         <p id="form-message" class="form-message" aria-live="polite"></p>
@@ -47,16 +77,30 @@
     </form>
 
     <section id="result-card" class="result-card hidden" aria-live="polite">
-      <p class="result-kicker">Your result</p>
+      <p class="result-kicker">Your Result</p>
       <div class="score-line">
-        <strong id="score">0 / 3</strong>
+        <strong id="score">0 / 0</strong>
         <span id="score-message"></span>
       </div>
       <button id="retry-btn" class="secondary-btn" type="button">Try Again</button>
     </section>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Dheeraj Kumar</strong>
+        <span>Senior Full-Stack &amp; Cloud Engineer · AI &amp; Automation</span>
+      </div>
+      <div class="footer-links">
+        <a id="footer-website-link" href="#" target="_blank" rel="noopener noreferrer">Website</a>
+        <a id="footer-linkedin-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a id="footer-github-link" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </footer>
   </main>
 
-  <script src="app.js"></script>
+  <!-- Local-preview fallback generated from data/manifest.json. HTTP hosting still uses data/manifest.json. -->
+  <script id="manifest-fallback" type="application/json">{"dates":["2026-09-13","2026-09-12","2026-09-11","2026-09-10","2026-09-09","2026-09-08","2026-09-07","2026-09-06","2026-09-05","2026-09-04","2026-09-03","2026-09-02","2026-09-01","2026-08-31"]}</script>
+  <noscript><div class="message-banner error-banner" style="display:block;margin:16px;">JavaScript is required to run the quiz.</div></noscript>
+  <script type="module" src="./js/app.js"></script>
 </body>
-
 </html>
