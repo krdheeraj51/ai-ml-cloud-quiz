@@ -98,14 +98,43 @@
   transform: translateY(-1px);
 }
 
-.option.correct label {
+/* Post-submit feedback: highlight only the options selected by the user. */
+.option.selected-correct label {
   border-color: var(--success);
   background: var(--success-bg);
+  box-shadow: 0 0 0 1px rgba(6, 118, 71, 0.08);
 }
 
-.option.incorrect label {
+.option.selected-correct label::before {
+  border-color: var(--success);
+}
+
+.option.selected-correct input[type="radio"]:checked + label::before {
+  border: 5px solid var(--success);
+}
+
+.option.selected-correct input[type="checkbox"]:checked + label::before {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.option.selected-incorrect label {
   border-color: var(--danger);
   background: var(--danger-bg);
+  box-shadow: 0 0 0 1px rgba(180, 35, 24, 0.08);
+}
+
+.option.selected-incorrect label::before {
+  border-color: var(--danger);
+}
+
+.option.selected-incorrect input[type="radio"]:checked + label::before {
+  border: 5px solid var(--danger);
+}
+
+.option.selected-incorrect input[type="checkbox"]:checked + label::before {
+  background: var(--danger);
+  border-color: var(--danger);
 }
 
 .explanation {
