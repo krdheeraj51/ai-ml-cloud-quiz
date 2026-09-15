@@ -1,0 +1,80 @@
+{
+    "title": "RAG Pipeline Fundamentals Quiz",
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "What is the primary purpose of CharacterTextSplitter with chunk_size=1000 and chunk_overlap=0 in the RAG pipeline?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To remove special characters from documents"
+                },
+                {
+                    "id": "B",
+                    "text": "To break large documents into smaller, manageable pieces for embedding"
+                },
+                {
+                    "id": "C",
+                    "text": "To compress document content for storage efficiency"
+                },
+                {
+                    "id": "D",
+                    "text": "To translate documents into different languages"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "In a Retrieval-Augmented Generation (RAG) pipeline, large documents are typically split into smaller chunks before generating embeddings. CharacterTextSplitter divides the content into manageable sections based on the specified chunk size, making it easier to create embeddings, store them in a vector database, and retrieve relevant information during search. The splitter does not remove special characters, compress content, or perform translation. Its primary purpose is document chunking to support efficient retrieval and context generation."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "In the context of RAG ingestion, what role do OpenAIEmbeddings serve?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "They convert text chunks into high-dimensional vector representations"
+                },
+                {
+                    "id": "B",
+                    "text": "They store the original document text"
+                },
+                {
+                    "id": "C",
+                    "text": "They provide search functionality for the vector database"
+                },
+                {
+                    "id": "D",
+                    "text": "They handle user authentication for OpenAI services"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "In a Retrieval-Augmented Generation (RAG) pipeline, embedding models such as OpenAIEmbeddings transform text chunks into high-dimensional numerical vectors that capture semantic meaning. These vector representations allow similar content to be located through vector similarity search. The embeddings model does not store documents, provide search capabilities, or handle authentication. Instead, its primary responsibility is converting textual information into a machine-understandable vector space that supports semantic retrieval."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "What happens when you call PineconeVectorStore.from_documents(docs, embeddings, index_name=\"rag-index\")?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It only stores the original documents without embeddings"
+                },
+                {
+                    "id": "B",
+                    "text": "It downloads existing vectors from the Pinecone index"
+                },
+                {
+                    "id": "C",
+                    "text": "It deletes the specified index and creates a new empty one"
+                },
+                {
+                    "id": "D",
+                    "text": "It creates embeddings for documents and stores both vectors and metadata in Pinecone"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "The from_documents() method is commonly used during the ingestion phase of a Retrieval-Augmented Generation (RAG) pipeline. It processes the supplied documents, generates embeddings for each document or chunk using the specified embedding model, and then uploads the resulting vectors along with associated metadata to the Pinecone index. This enables semantic search and similarity-based retrieval later during the query phase. The method does not simply store raw documents, download existing vectors, or recreate the index. Its primary purpose is to transform document content into searchable vector representations and persist them in the vector database."
+        }
+    ]
+}
