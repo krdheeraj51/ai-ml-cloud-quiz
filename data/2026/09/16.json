@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "What is the purpose of vectorstore.as_retriever() in the retrieval chain?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It converts the vector store into a retriever interface for document search"
+                },
+                {
+                    "id": "B",
+                    "text": "It downloads all vectors from Pinecone to local memory"
+                },
+                {
+                    "id": "C",
+                    "text": "It creates new embeddings for the query"
+                },
+                {
+                    "id": "D",
+                    "text": "It deletes outdated vectors from the database"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "In a Retrieval-Augmented Generation (RAG) pipeline, vectorstore.as_retriever() converts a vector database into a retriever interface that can be used by retrieval chains and question-answering workflows. The retriever is responsible for searching the vector store and returning the most relevant documents based on semantic similarity to the user's query. This abstraction allows retrieval logic to be integrated seamlessly with LLM applications. The method does not download vectors to local memory, generate embeddings, or delete database records. Its primary purpose is to enable efficient document retrieval from the vector store so that relevant context can be supplied to the language model."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "What does create_stuff_documents_chain(llm, retrieval_qa_chat_prompt) accomplish?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It stores documents in the vector database"
+                },
+                {
+                    "id": "B",
+                    "text": "It splits large documents into smaller chunks"
+                },
+                {
+                    "id": "C",
+                    "text": "It creates a chain that combines retrieved documents with the LLM and prompt"
+                },
+                {
+                    "id": "D",
+                    "text": "It generates embeddings for new documents"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "The create_stuff_documents_chain() function creates a document-processing chain that takes retrieved documents, combines them with a specified prompt template, and passes the resulting context to the language model. In a RAG workflow, this chain is responsible for 'stuffing' the retrieved document contents into the prompt so the LLM can use that context to answer user questions. It does not store documents, split text into chunks, or create embeddings. Instead, its primary role is to connect the retrieved knowledge with the prompt and LLM to generate context-aware responses."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "In the retrieval chain, what happens when you invoke with {\"input\": query}?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Only the query is sent to the LLM without any context"
+                },
+                {
+                    "id": "B",
+                    "text": "The query is embedded, similar documents are retrieved, and both are sent to the LLM"
+                },
+                {
+                    "id": "C",
+                    "text": "The query replaces all existing documents in the vector store"
+                },
+                {
+                    "id": "D",
+                    "text": "The system generates new training data for the embedding model"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "When a user submits a query to a Retrieval-Augmented Generation (RAG) chain, the query is first converted into a vector embedding using the configured embedding model. The retriever then performs a similarity search against the vector store to identify the most relevant document chunks. These retrieved documents are combined with the user's question and inserted into the prompt sent to the Large Language Model (LLM). By grounding the response in retrieved context, the system can generate more accurate and up-to-date answers. The process does not modify the vector database, create training data, or bypass retrieval by sending only the raw query to the LLM."
+        }
+    ]
+}
