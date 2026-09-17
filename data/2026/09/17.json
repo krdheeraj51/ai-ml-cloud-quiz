@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "An AI agent needs to decide whether to call a weather API or answer directly from its own knowledge. Which capability primarily enables this behavior?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Tool calling, where the LLM selects and invokes an available tool when needed"
+                },
+                {
+                    "id": "B",
+                    "text": "Fine-tuning the model every time a tool is required"
+                },
+                {
+                    "id": "C",
+                    "text": "Increasing the temperature of the language model"
+                },
+                {
+                    "id": "D",
+                    "text": "Converting the API response into training data"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Tool calling allows an LLM-based agent to interact with external systems such as APIs, databases, search engines, or custom functions. The model can determine that external information is required, generate the appropriate tool call with structured arguments, and then use the tool's response to continue processing the request. This is a fundamental capability of agentic AI systems because it allows the model to go beyond generating text and interact with real-world systems. Fine-tuning is not required for every tool invocation, temperature controls response randomness, and an API response does not automatically become training data."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "A binary classification model achieves 98% accuracy, but the dataset contains 99% negative samples. Which metric would be especially useful for evaluating how well the model identifies the positive class?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Accuracy only"
+                },
+                {
+                    "id": "B",
+                    "text": "Precision and recall"
+                },
+                {
+                    "id": "C",
+                    "text": "Mean Squared Error"
+                },
+                {
+                    "id": "D",
+                    "text": "R-squared"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "When a classification dataset is highly imbalanced, accuracy can be misleading because a model can achieve very high accuracy simply by predicting the majority class. Precision measures how many predicted positive cases are actually positive, while recall measures how many actual positive cases the model successfully identifies. These metrics provide a much clearer view of positive-class performance. Mean Squared Error and R-squared are commonly associated with regression problems rather than binary classification evaluation."
+        },
+        {
+            "id": "q3",
+            "category": "Cloud",
+            "question": "An application running on Azure experiences sudden traffic spikes. Which approach is most appropriate for automatically increasing compute capacity when demand increases?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Vertical scaling only by permanently increasing the VM size"
+                },
+                {
+                    "id": "B",
+                    "text": "Horizontal autoscaling based on application or infrastructure metrics"
+                },
+                {
+                    "id": "C",
+                    "text": "Disabling monitoring to reduce resource consumption"
+                },
+                {
+                    "id": "D",
+                    "text": "Storing application logs in the compute instance's local memory"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Horizontal scaling increases capacity by adding or removing compute instances based on demand. In Azure, autoscaling mechanisms can use metrics such as CPU utilization, request count, or other signals to dynamically adjust the number of running instances. This helps applications handle traffic spikes while avoiding the cost of permanently running maximum capacity. Vertical scaling changes the size of an existing instance and is not the same as automatically adding multiple instances."
+        }
+    ]
+}
