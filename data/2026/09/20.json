@@ -1,0 +1,92 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which factors generally influence the inference cost of an LLM? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Use of techniques like quantization"
+                },
+                {
+                    "id": "B",
+                    "text": "Number of input and output tokens"
+                },
+                {
+                    "id": "C",
+                    "text": "The number of stop sequences defined in the prompt"
+                },
+                {
+                    "id": "D",
+                    "text": "Model parameter size"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "LLM inference cost is influenced by several factors. Larger models with more parameters generally require more memory and computational resources, increasing execution costs. The number of input and output tokens directly affects processing time and API pricing in many hosted LLM services. Quantization techniques can reduce memory usage and computational requirements, often lowering inference costs. In contrast, the number of stop sequences typically has minimal impact on overall inference cost because stop sequences primarily control output termination behavior rather than the underlying computational workload."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which of the following are core building blocks provided by LangChain? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Output parsers for structuring model responses"
+                },
+                {
+                    "id": "B",
+                    "text": "Prompt templates for structuring model inputs"
+                },
+                {
+                    "id": "C",
+                    "text": "Integrations with many LLM providers"
+                },
+                {
+                    "id": "D",
+                    "text": "Chains for composing multiple steps"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "LangChain provides a comprehensive framework for building LLM-powered applications. Prompt templates help standardize and structure inputs sent to language models. Output parsers transform model responses into structured formats such as JSON or typed objects. LangChain supports integrations with numerous model providers, vector databases, and external services. Chains allow developers to connect multiple operations into reusable workflows, making it easier to build sophisticated applications such as RAG systems, agents, chatbots, and document-processing pipelines."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "A team stores high-dimensional embeddings but faces high memory and cost. Which techniques can help? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Reducing dimensionality (e.g., via PCA) where appropriate"
+                },
+                {
+                    "id": "B",
+                    "text": "Using product quantization to compress the index"
+                },
+                {
+                    "id": "C",
+                    "text": "Storing each vector as an uncompressed plain-text essay"
+                },
+                {
+                    "id": "D",
+                    "text": "Quantizing vectors to lower-precision representations"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "High-dimensional embeddings can consume significant storage and memory resources, especially in large-scale vector databases. Dimensionality reduction techniques such as PCA can decrease vector size while preserving much of the important information. Product quantization is a widely used vector compression technique that significantly reduces storage requirements and improves retrieval efficiency. Quantizing vectors to lower-precision numerical formats, such as float16 or int8, can further reduce memory usage and computation costs. Storing embeddings as plain-text content is inefficient and eliminates the performance advantages of vector-based retrieval systems."
+        }
+    ]
+}
