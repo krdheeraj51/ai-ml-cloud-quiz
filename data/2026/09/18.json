@@ -1,0 +1,82 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which capabilities does LangGraph provide for building agent applications? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Persistence of state via checkpointers"
+                },
+                {
+                    "id": "B",
+                    "text": "A guarantee that the graph runs without any state"
+                },
+                {
+                    "id": "C",
+                    "text": "Support for cyclic, multi-step agent loops"
+                },
+                {
+                    "id": "D",
+                    "text": "A guarantee that no node can ever call an LLM"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C"
+            ],
+            "explanation": "LangGraph is designed for building stateful and agentic AI workflows. It supports checkpointing mechanisms that allow application state to be persisted and recovered, which is useful for long-running workflows, human-in-the-loop interactions, and fault tolerance. LangGraph also supports cyclic execution patterns, enabling agents to reason, take actions, evaluate results, and repeat steps until a goal is achieved. It does not require applications to operate without state, and nodes can freely interact with LLMs, tools, APIs, and other systems as part of the workflow."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Why would you add a re-ranker after initial vector retrieval?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To increase embedding dimensions"
+                },
+                {
+                    "id": "B",
+                    "text": "To compress vectors further"
+                },
+                {
+                    "id": "C",
+                    "text": "To replace the LLM entirely"
+                },
+                {
+                    "id": "D",
+                    "text": "To refine ranking using cross-encoder scoring for better final answer relevance"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Vector retrieval is typically optimized for speed and scalability, returning a set of candidate documents that appear semantically relevant to a query. However, the highest-scoring vector matches are not always the most useful context for answering the user's question. A re-ranker evaluates the retrieved candidates in greater detail, often using a cross-encoder model that jointly examines both the query and each document. This additional scoring step improves ranking quality by promoting the most relevant passages to the top, which can significantly improve the accuracy and reliability of Retrieval-Augmented Generation (RAG) systems."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Your GenAI app must answer policy questions using the latest internal documents. What component ensures up-to-date answers?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Model fine-tuning"
+                },
+                {
+                    "id": "B",
+                    "text": "Document retrieval before generation"
+                },
+                {
+                    "id": "C",
+                    "text": "Longer user prompts"
+                },
+                {
+                    "id": "D",
+                    "text": "Changing the chat UI"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "When an application must provide answers based on the most recent internal policies, procedures, or knowledge-base content, Retrieval-Augmented Generation (RAG) is the preferred approach. Before generating a response, the system retrieves the latest relevant documents from a trusted knowledge source and supplies them as context to the language model. This allows answers to reflect current information without requiring model retraining. Fine-tuning can improve domain knowledge but does not automatically incorporate newly created documents. Longer prompts and UI changes do not ensure that the model has access to the latest organizational information."
+        }
+    ]
+}

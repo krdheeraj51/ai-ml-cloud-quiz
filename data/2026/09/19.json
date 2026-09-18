@@ -1,0 +1,87 @@
+{
+    "title": "Transformers, LangGraph & Prompt Engineering Quiz",
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which model family is most commonly used for large language models?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "CNN"
+                },
+                {
+                    "id": "B",
+                    "text": "RNN"
+                },
+                {
+                    "id": "C",
+                    "text": "Transformer"
+                },
+                {
+                    "id": "D",
+                    "text": "Decision tree"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Modern Large Language Models (LLMs) such as GPT, Claude, Gemini, Llama, and many others are built primarily on the Transformer architecture. Transformers use self-attention mechanisms to efficiently process relationships between tokens across long sequences of text. Compared to earlier architectures such as RNNs and CNNs, Transformers scale more effectively with large datasets and computational resources, making them the dominant architecture for state-of-the-art language understanding and generation tasks."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "A team is designing a multi-agent system in LangGraph. Which patterns are commonly used? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Shared state so agents can pass information along"
+                },
+                {
+                    "id": "B",
+                    "text": "A supervisor node that routes work to specialist nodes"
+                },
+                {
+                    "id": "C",
+                    "text": "A single hard-coded node that can never delegate"
+                },
+                {
+                    "id": "D",
+                    "text": "Conditional edges to choose which agent acts next"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "LangGraph applications commonly use shared state to allow agents to exchange information throughout a workflow. A supervisor or coordinator node is often responsible for delegating work to specialized agents based on the task requirements. Conditional edges enable dynamic routing, allowing the graph to decide which node or agent should execute next based on the current state or intermediate results. A single hard-coded node that cannot delegate work contradicts the flexible and agentic design patterns that LangGraph is intended to support."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which of the following are valid ways to construct prompts in LangChain? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Composing few-shot examples requires compiling the template to bytecode"
+                },
+                {
+                    "id": "B",
+                    "text": "Using a ChatPromptTemplate for message-based models"
+                },
+                {
+                    "id": "C",
+                    "text": "Prompts must be written directly in the model's native binary format"
+                },
+                {
+                    "id": "D",
+                    "text": "Using a PromptTemplate with input variables"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "D"
+            ],
+            "explanation": "LangChain provides flexible prompt-management abstractions that make prompts reusable, maintainable, and easier to integrate into AI applications. PromptTemplate is commonly used to create text-based prompts containing input variables that are dynamically filled at runtime, allowing the same prompt structure to be reused across different requests. ChatPromptTemplate extends this concept for chat-based models by allowing developers to define structured conversations with system, user, and assistant messages. These abstractions help standardize prompt construction, improve code organization, and simplify prompt updates. Few-shot prompting in LangChain does not require template compilation or bytecode generation, and language models expect human-readable text rather than prompts written in a binary format. Therefore, PromptTemplate and ChatPromptTemplate are the primary and valid approaches for constructing prompts in LangChain applications."
+        }
+    ]
+}
