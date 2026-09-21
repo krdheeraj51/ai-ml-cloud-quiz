@@ -1,0 +1,91 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "Which techniques can help improve the reliability of an LLM-based application? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Retrieval-Augmented Generation (RAG) using trusted sources"
+        },
+        {
+          "id": "B",
+          "text": "Structured output validation"
+        },
+        {
+          "id": "C",
+          "text": "Increasing temperature for every production request"
+        },
+        {
+          "id": "D",
+          "text": "Adding evaluation and monitoring to detect incorrect responses"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "LLM reliability can be improved by grounding responses in trusted information through RAG, validating model outputs against an expected schema, and continuously evaluating and monitoring application behavior. Increasing temperature generally introduces more randomness and is not a general reliability improvement for production workloads. The appropriate temperature depends on the application's requirements."
+    },
+    {
+      "id": "q2",
+      "category": "ML",
+      "question": "Which statements about regularization in machine learning are correct? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "L1 regularization can encourage some model coefficients to become exactly zero"
+        },
+        {
+          "id": "B",
+          "text": "L2 regularization penalizes large model coefficients"
+        },
+        {
+          "id": "C",
+          "text": "Regularization can help reduce overfitting"
+        },
+        {
+          "id": "D",
+          "text": "Regularization always guarantees higher accuracy on unseen data"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "Regularization adds a penalty to the model's objective function to discourage overly complex solutions. L1 regularization can drive some coefficients to exactly zero, which can also provide a form of feature selection. L2 regularization penalizes large coefficient values and encourages smaller weights. Both can help reduce overfitting by controlling model complexity. However, regularization does not guarantee improved unseen-data accuracy because its effectiveness depends on the model, dataset, and chosen regularization strength."
+    },
+    {
+      "id": "q3",
+      "category": "Cloud",
+      "question": "Which practices can help improve the security of cloud-hosted applications? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Applying the principle of least privilege"
+        },
+        {
+          "id": "B",
+          "text": "Storing secrets directly in source code"
+        },
+        {
+          "id": "C",
+          "text": "Enabling encryption for sensitive data"
+        },
+        {
+          "id": "D",
+          "text": "Monitoring logs and security events"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "Cloud security commonly relies on multiple layers of protection. Least-privilege access limits users and services to only the permissions they need. Encryption helps protect sensitive data both at rest and, where applicable, in transit. Logging and security monitoring can help detect suspicious activity and support incident investigation. Storing secrets directly in source code is insecure because credentials can accidentally be exposed through repositories, logs, or build artifacts. Dedicated secret-management services should be preferred."
+    }
+  ]
+}
