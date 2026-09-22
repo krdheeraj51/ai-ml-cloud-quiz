@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "How can you detect semantic drift in your vector database over time?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Never evaluate after deployment"
+                },
+                {
+                    "id": "B",
+                    "text": "Remove old data without analysis"
+                },
+                {
+                    "id": "C",
+                    "text": "Only check disk usage"
+                },
+                {
+                    "id": "D",
+                    "text": "Monitor retrieval performance on a labeled validation set periodically"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Semantic drift occurs when changes in documents, user queries, terminology, embedding models, or data distributions cause retrieval quality to decline over time. Periodically evaluating the vector database against a labeled validation set helps detect this decline by tracking retrieval metrics such as Recall@K, Precision@K, Mean Reciprocal Rank, and nDCG. Comparing these metrics across evaluation periods can reveal whether relevant documents are being ranked lower or missed entirely. Disk usage alone does not measure semantic retrieval quality, while removing old data without analysis can discard useful information and does not provide evidence of drift."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Your GenAI app needs to search semantically similar documents. Which technology is essential?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Keyword indexing"
+                },
+                {
+                    "id": "B",
+                    "text": "Vector database"
+                },
+                {
+                    "id": "C",
+                    "text": "Relational database"
+                },
+                {
+                    "id": "D",
+                    "text": "Workflow scheduler"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A vector database stores document embeddings and supports similarity searches across high-dimensional vectors. In a semantic search workflow, documents and user queries are converted into embeddings that represent their meaning. The vector database compares the query embedding with stored document embeddings and returns the closest matches, even when the query and document use different words. Keyword indexing focuses primarily on exact or lexical matches, a standard relational database does not provide semantic retrieval by default, and a workflow scheduler manages task execution rather than document similarity."
+        },
+        {
+            "id": "q3",
+            "category": "Security",
+            "question": "Which scenario most needs prompt injection defenses?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Offline batch training"
+                },
+                {
+                    "id": "B",
+                    "text": "A RAG application that ingests user-provided documents"
+                },
+                {
+                    "id": "C",
+                    "text": "GPU benchmarking"
+                },
+                {
+                    "id": "D",
+                    "text": "Static website hosting"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A RAG application that ingests user-provided documents is particularly vulnerable to indirect prompt injection. A malicious document can contain hidden or visible instructions that attempt to override the application's trusted instructions, manipulate the generated answer, expose sensitive information, or trigger unauthorized tool actions. The application should treat retrieved documents as untrusted data rather than trusted commands. Appropriate defenses include separating system instructions from retrieved content, validating and filtering uploaded documents, restricting tool permissions, applying least-privilege access, requiring approval for sensitive actions, and monitoring retrieval and tool-execution logs. GPU benchmarking and static website hosting do not normally pass untrusted natural-language content into an LLM's decision-making context."
+        }
+    ]
+}
