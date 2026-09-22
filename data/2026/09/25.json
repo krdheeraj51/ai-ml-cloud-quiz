@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "What is an effective A/B testing metric for evaluating two RAG configurations?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Count of prompt templates"
+                },
+                {
+                    "id": "B",
+                    "text": "User satisfaction or task success rate on a controlled set of queries"
+                },
+                {
+                    "id": "C",
+                    "text": "Number of index shards"
+                },
+                {
+                    "id": "D",
+                    "text": "Embedding vector size only"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "An effective A/B test should compare the two RAG configurations using outcome-focused metrics under controlled conditions. User satisfaction and task success rate reveal whether one configuration helps users obtain more accurate, relevant, and useful answers. The same or equivalently distributed queries should be assigned across both configurations so that differences can be attributed to the RAG setup rather than query difficulty. Operational properties such as the number of prompt templates, index shards, or embedding dimensions may affect implementation, but they do not directly measure whether users receive better answers."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which foundation model type supports both text and image inputs for recommendations?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Text embedding model"
+                },
+                {
+                    "id": "B",
+                    "text": "Image embedding model"
+                },
+                {
+                    "id": "C",
+                    "text": "Multimodal embedding model"
+                },
+                {
+                    "id": "D",
+                    "text": "NLP-only model"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "A multimodal embedding model can represent information from multiple modalities, such as text and images, in a shared or comparable vector space. This enables a recommendation system to compare a textual description with product images, retrieve images using a text query, or combine visual and textual characteristics when ranking items. A text-only embedding model cannot directly process images, while an image-only embedding model cannot fully interpret natural-language inputs. An NLP-only model is designed primarily for language and does not inherently provide cross-modal alignment."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which metric should be monitored to detect degradation in retrieval effectiveness over time?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Periodic evaluation of Recall@K and user feedback rates"
+                },
+                {
+                    "id": "B",
+                    "text": "CPU temperature only"
+                },
+                {
+                    "id": "C",
+                    "text": "Disk fragmentation"
+                },
+                {
+                    "id": "D",
+                    "text": "Number of prompt templates"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Retrieval effectiveness should be monitored using metrics that measure whether relevant documents are consistently found and ranked for user queries. Recall@K measures how often the relevant documents appear within the top K retrieved results, while user feedback rates provide evidence about the practical usefulness of those results. Tracking both metrics periodically can reveal degradation caused by semantic drift, outdated content, indexing problems, changes to the embedding model, or shifts in user query patterns. CPU temperature and disk fragmentation are infrastructure measurements, while the number of prompt templates does not indicate whether retrieval quality has improved or declined."
+        }
+    ]
+}

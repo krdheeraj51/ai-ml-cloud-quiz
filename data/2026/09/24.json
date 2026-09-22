@@ -1,0 +1,87 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which statements about the attention mechanism in modern NLP are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It lets a model weigh the relevance of different tokens"
+                },
+                {
+                    "id": "B",
+                    "text": "Self-attention relates tokens within the same sequence"
+                },
+                {
+                    "id": "C",
+                    "text": "It underpins transformer architectures"
+                },
+                {
+                    "id": "D",
+                    "text": "Forcing strictly left-to-right sequential token reads"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Attention mechanisms allow a model to determine which tokens are most relevant when processing a piece of text. Self-attention enables tokens within the same sequence to interact with one another, helping the model capture both short-range and long-range relationships. This capability is the foundation of Transformer architectures, which power most modern Large Language Models. Attention does not require strictly sequential processing of tokens in the way traditional RNNs do. Instead, Transformers can analyze relationships between multiple tokens in parallel, making training and inference more efficient and scalable."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which end-to-end practice improves reliability of answers in a production RAG system?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Remove source citations to save tokens"
+                },
+                {
+                    "id": "B",
+                    "text": "Disable monitoring after deployment"
+                },
+                {
+                    "id": "C",
+                    "text": "Rely solely on the base LLM without retrieval or checks"
+                },
+                {
+                    "id": "D",
+                    "text": "Combine retrieval, prompt templates that cite sources, automated verification checks, and human review for edge cases"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Reliable RAG systems depend on multiple layers of quality control rather than a single technique. Retrieval provides grounded information from trusted knowledge sources, prompt templates help standardize reasoning and citation behavior, and automated verification checks can detect missing context, unsupported claims, or formatting issues. Human review remains valuable for high-risk or edge-case scenarios where automated systems may still make mistakes. Removing citations, disabling monitoring, or relying entirely on the base LLM reduces transparency and increases the likelihood of hallucinations or outdated answers."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which statements about the LangChain Expression Language (LCEL) are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It lets you compose components using a pipe-style syntax"
+                },
+                {
+                    "id": "B",
+                    "text": "It supports chaining runnables together declaratively"
+                },
+                {
+                    "id": "C",
+                    "text": "It enables features like batching and async execution"
+                },
+                {
+                    "id": "D",
+                    "text": "It removes the ability to stream outputs"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "LangChain Expression Language (LCEL) provides a declarative way to compose AI application components using a simple pipe-style syntax. Developers can connect prompts, models, retrievers, parsers, and other runnables into reusable workflows without writing complex orchestration code. LCEL supports advanced capabilities such as streaming, batching, parallel execution, and asynchronous processing, making it suitable for production-grade AI systems. Rather than removing streaming support, LCEL is specifically designed to make streaming outputs easier to integrate and manage across entire chains and workflows."
+        }
+    ]
+}

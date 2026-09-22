@@ -1,0 +1,82 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "What is the purpose of 'Quantization' in AI model deployment?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To make the model more complex for better accuracy"
+                },
+                {
+                    "id": "B",
+                    "text": "To reduce the model size and memory usage with minimal loss in quality"
+                },
+                {
+                    "id": "C",
+                    "text": "To increase the number of parameters in the model"
+                },
+                {
+                    "id": "D",
+                    "text": "To change the AI's personality to be more professional"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Quantization is a model optimization technique that reduces the numerical precision used to represent model weights and activations, such as converting 32-bit floating-point values to 8-bit integers. This significantly reduces memory consumption, storage requirements, and inference costs while typically preserving most of the model's quality and accuracy. Quantization is widely used when deploying AI models to edge devices, mobile applications, and cost-sensitive production environments. It does not increase model complexity, add parameters, or alter the model's personality or behavior."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which of the following is not an official partner package and ecosystem integration SDK within the LangChain GitHub ecosystem?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "langchain-cohere"
+                },
+                {
+                    "id": "B",
+                    "text": "langchain-gemini"
+                },
+                {
+                    "id": "C",
+                    "text": "langchain-aws"
+                },
+                {
+                    "id": "D",
+                    "text": "langchain-anthropic"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "LangChain maintains several official integration packages for major providers and platforms, including packages such as langchain-aws, langchain-anthropic, and langchain-cohere. These packages provide structured integrations with their respective ecosystems. Google's Gemini models are supported within the LangChain ecosystem through dedicated Google integration packages rather than an official package named 'langchain-gemini'. Therefore, among the listed options, 'langchain-gemini' is the one that does not represent an official LangChain partner package name."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which of the following are forms of memory an agent might use? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Long-term storage such as a vector database"
+                },
+                {
+                    "id": "B",
+                    "text": "Short-term context within the current task"
+                },
+                {
+                    "id": "C",
+                    "text": "Storing memory only as raw GPU register contents"
+                },
+                {
+                    "id": "D",
+                    "text": "A purely stateless model that retains nothing"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B"
+            ],
+            "explanation": "AI agents commonly use multiple forms of memory. Short-term memory stores context relevant to the current conversation, workflow, or task, allowing the agent to maintain continuity and reason across multiple steps. Long-term memory is often implemented using databases, vector stores, knowledge bases, or document repositories that allow the agent to retrieve historical information when needed. Raw GPU register contents are not a practical memory mechanism for agent reasoning, and a completely stateless model retains no information between interactions, making it the absence of memory rather than a memory type. Effective agent systems frequently combine both short-term and long-term memory to improve personalization, retrieval, planning, and task execution."
+        }
+    ]
+}
