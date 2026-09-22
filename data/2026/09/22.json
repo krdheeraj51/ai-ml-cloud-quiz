@@ -1,0 +1,91 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "Which techniques can help reduce hallucinations in an LLM-powered application? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Grounding responses with relevant retrieved documents"
+        },
+        {
+          "id": "B",
+          "text": "Using structured output schemas and validation"
+        },
+        {
+          "id": "C",
+          "text": "Increasing the temperature to the maximum value"
+        },
+        {
+          "id": "D",
+          "text": "Instructing the model to indicate when information is unavailable"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "Hallucinations can be reduced by grounding the model with trusted information through techniques such as Retrieval-Augmented Generation (RAG). Structured output schemas and validation can prevent malformed or unexpected responses. Explicitly instructing a model to acknowledge when it does not have sufficient information can also reduce unsupported claims. Increasing temperature generally introduces more randomness and does not inherently reduce hallucinations."
+    },
+    {
+      "id": "q2",
+      "category": "ML",
+      "question": "Which statements about precision and recall are correct for a binary classification problem? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precision measures how many predicted positives are actually positive"
+        },
+        {
+          "id": "B",
+          "text": "Recall measures how many actual positives were correctly identified"
+        },
+        {
+          "id": "C",
+          "text": "Increasing the classification threshold can sometimes increase precision while reducing recall"
+        },
+        {
+          "id": "D",
+          "text": "Precision and recall are calculated only from true-negative predictions"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "Precision is the proportion of predicted positives that are actually positive, calculated as TP/(TP+FP). Recall is the proportion of actual positives that are correctly identified, calculated as TP/(TP+FN). Changing the classification threshold can create a trade-off between precision and recall. True negatives are not directly included in either the precision or recall formula."
+    },
+    {
+      "id": "q3",
+      "category": "Cloud",
+      "question": "Which practices can help control costs in cloud-based applications? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Right-sizing compute resources based on actual workload"
+        },
+        {
+          "id": "B",
+          "text": "Automatically scaling resources according to demand"
+        },
+        {
+          "id": "C",
+          "text": "Leaving unused development resources running indefinitely"
+        },
+        {
+          "id": "D",
+          "text": "Monitoring usage and setting budgets or cost alerts"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "Cloud cost optimization involves matching resources to actual workload requirements. Right-sizing avoids paying for unnecessarily large resources, while autoscaling can reduce resource consumption during periods of low demand. Usage monitoring, budgets, and cost alerts help teams identify unexpected spending and enforce cost controls. Leaving unused development resources running indefinitely can create unnecessary costs."
+    }
+  ]
+}
