@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which of the following are components commonly found in a RAG architecture? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A module dedicated to rendering 3D game graphics"
+                },
+                {
+                    "id": "B",
+                    "text": "A generator (LLM) that produces the final answer"
+                },
+                {
+                    "id": "C",
+                    "text": "A vector store holding document embeddings"
+                },
+                {
+                    "id": "D",
+                    "text": "A retriever that finds relevant documents"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "A Retrieval-Augmented Generation (RAG) architecture combines information retrieval with Large Language Model generation. The retriever searches for relevant information based on the user's query, while a vector store contains document embeddings used for semantic search and similarity matching. The retrieved information is then provided to a generator, typically an LLM, which produces the final answer. A 3D graphics rendering module is unrelated to document retrieval or language generation and is therefore not part of a standard RAG system."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which prompt construction helps LLMs use retrieved context effectively?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Only provide the question without retrieved passages"
+                },
+                {
+                    "id": "B",
+                    "text": "Provide retrieved passages clearly labeled with source and then ask a specific question"
+                },
+                {
+                    "id": "C",
+                    "text": "Randomize passage order and avoid punctuation"
+                },
+                {
+                    "id": "D",
+                    "text": "Append passages without labels and give no question"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "LLMs perform best when retrieved context is presented in a structured and unambiguous format. Clearly labeling retrieved passages, including source references when available, and following them with a specific user question helps the model understand which information should be used to formulate the answer. This approach improves grounding, reduces hallucinations, and makes responses more traceable. Omitting context, removing structure, or failing to provide a clear question makes it harder for the model to identify relevant information and generate accurate responses."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "You want an LLM to classify customer feedback into Positive, Neutral, or Negative. It works sometimes but fails on borderline cases. What change is most likely to improve consistency without retraining the model?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Remove all instructions and just provide the feedback text"
+                },
+                {
+                    "id": "B",
+                    "text": "Add 2–3 labeled examples of borderline feedback and expected labels in the prompt"
+                },
+                {
+                    "id": "C",
+                    "text": "Replace the LLM with a vector database"
+                },
+                {
+                    "id": "D",
+                    "text": "Ask the model to 'be more accurate' with no additional guidance"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Few-shot prompting is one of the most effective ways to improve classification consistency without modifying or retraining the underlying model. By providing several labeled examples, especially borderline or ambiguous cases, the model gains a clearer understanding of the expected decision boundaries and classification criteria. These examples act as guidance that helps the LLM apply the desired labeling logic more consistently across similar inputs. Simply asking the model to be more accurate, removing instructions, or replacing the LLM with a vector database does not provide the explicit behavioral guidance needed to improve classification performance on difficult edge cases."
+        }
+    ]
+}
