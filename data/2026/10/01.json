@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "What is the primary purpose of the LangChain MCP Adapter library?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To replace the need for LangChain tools entirely with MCP tools"
+                },
+                {
+                    "id": "B",
+                    "text": "To allow developers to run MCP Servers directly within LangChain"
+                },
+                {
+                    "id": "C",
+                    "text": "To provide tool compatibility, enabling LangChain/LangGraph agents to use tools exposed via the MCP protocol"
+                },
+                {
+                    "id": "D",
+                    "text": "To automatically generate MCP server code from LangChain tool definitions"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "The LangChain MCP Adapter acts as a bridge between the LangChain/LangGraph ecosystem and the Model Context Protocol (MCP). Its primary purpose is to make tools exposed by MCP Servers available as tools that LangChain and LangGraph agents can discover, invoke, and use during execution. This allows developers to reuse existing MCP-based integrations without rewriting them as native LangChain tools. The adapter improves interoperability by translating MCP tool definitions into a format that LangChain agents understand, enabling seamless access to external data sources, APIs, databases, and business systems. It does not replace LangChain tools, generate MCP server implementations, or directly host MCP Servers. Instead, it focuses on compatibility and integration, allowing agent frameworks and MCP-based tool ecosystems to work together effectively."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "What is a key benefit of decoupling tool execution onto an MCP Server as done in the MCP architecture?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It makes the LLM prompts much simpler to write"
+                },
+                {
+                    "id": "B",
+                    "text": "It allows tool execution to happen on a separate service, aiding scalability, monitoring, and deployment"
+                },
+                {
+                    "id": "C",
+                    "text": "It forces all tools to be written in a single, standardized programming language"
+                },
+                {
+                    "id": "D",
+                    "text": "It eliminates the need for an LLM altogether for tool-based tasks"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "One of the primary architectural benefits of MCP is the separation of concerns between AI reasoning and tool execution. The LLM focuses on understanding user intent and determining when a tool should be used, while the MCP Server is responsible for executing the actual business logic, interacting with external systems, and returning results. By moving tool execution into a dedicated service, organizations gain important operational advantages such as independent deployment, easier maintenance, centralized monitoring, improved security controls, scalability, fault isolation, and the ability to reuse the same tools across multiple AI applications. This architectural decoupling allows tool infrastructure to evolve independently from both the LLM and the client application, making MCP-based systems more flexible and production-ready."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "What is a crucial element required when defining a tool in both LangChain and MCP for the LLM to use it effectively?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A unique numerical ID for each tool"
+                },
+                {
+                    "id": "B",
+                    "text": "The tool's source code must be provided directly"
+                },
+                {
+                    "id": "C",
+                    "text": "A clear description explaining what the tool does and when to use it"
+                },
+                {
+                    "id": "D",
+                    "text": "The tool must be written in Python"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "For an LLM to use a tool correctly, it must understand the tool's purpose, capabilities, inputs, outputs, and appropriate usage scenarios. Both LangChain and MCP rely on tool metadata, particularly clear descriptions, to help the model decide when a tool should be invoked and what information should be passed to it. The model does not typically inspect or understand the underlying source code. Likewise, tools do not require numerical IDs, nor must they be implemented in a specific programming language such as Python. A well-written description acts as guidance for the LLM, enabling more accurate tool selection, reducing incorrect tool calls, and improving the overall reliability of agent workflows."
+        }
+    ]
+}
