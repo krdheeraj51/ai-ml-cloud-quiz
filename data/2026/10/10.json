@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "category": "AI",
+      "question": "Which metric would help you understand if retrieved documents are relevant to queries in a RAG setup?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recall@k and Mean Reciprocal Rank (MRR)"
+        },
+        {
+          "id": "B",
+          "text": "Image resolution"
+        },
+        {
+          "id": "C",
+          "text": "Number of tokens generated"
+        },
+        {
+          "id": "D",
+          "text": "API cost only"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Retrieval quality is a critical component of a Retrieval-Augmented Generation (RAG) system. Metrics such as Recall@k measure whether relevant documents are present within the top retrieved results, while Mean Reciprocal Rank (MRR) evaluates how highly relevant documents are ranked. Together, these metrics provide direct insight into retrieval effectiveness and help teams determine whether users are receiving the right supporting context. Metrics such as image resolution, token count, or API cost may be useful for other purposes but do not directly measure retrieval relevance."
+    },
+    {
+      "id": "q2",
+      "category": "Cloud",
+      "question": "A media company wants to automatically detect explicit content in user-uploaded videos with minimal operational effort. Which AWS service best fits this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Transcribe"
+        },
+        {
+          "id": "B",
+          "text": "Amazon Rekognition Content Moderation"
+        },
+        {
+          "id": "C",
+          "text": "Amazon SageMaker Canvas"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Comprehend"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Amazon Rekognition Content Moderation is specifically designed to identify potentially inappropriate, explicit, unsafe, or undesirable content in images and videos. It provides pre-trained moderation capabilities that require minimal machine learning expertise and operational overhead. Amazon Transcribe focuses on speech-to-text conversion, Amazon Comprehend provides natural language processing capabilities, and Amazon SageMaker Canvas is a no-code machine learning platform. Therefore, Rekognition Content Moderation is the most suitable service for automated video content moderation."
+    },
+    {
+      "id": "q3",
+      "category": "ML",
+      "question": "A company's sentiment model performs poorly on sarcastic and domain-specific reviews. Which steps may help? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ignoring context and classifying strictly word-by-word"
+        },
+        {
+          "id": "B",
+          "text": "Augmenting training data with sarcastic examples"
+        },
+        {
+          "id": "C",
+          "text": "Classifying each character independently of the sentence"
+        },
+        {
+          "id": "D",
+          "text": "Fine-tuning on labeled in-domain examples"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "D"
+      ],
+      "explanation": "Sarcasm and domain-specific language often require contextual understanding that is not present in generic sentiment datasets. Adding sarcastic examples to the training data helps the model learn linguistic patterns associated with sarcasm, irony, and nuanced sentiment. Fine-tuning on labeled examples from the target domain allows the model to learn industry-specific terminology and expressions. In contrast, ignoring context or classifying individual characters removes important semantic information and generally leads to poorer sentiment classification performance."
+    }
+  ]
+}

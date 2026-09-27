@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "In the MCP (Model Context Protocol) flow, which component is ultimately responsible for executing the actual code of a tool (e.g., running the forecast function)?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The User"
+                },
+                {
+                    "id": "B",
+                    "text": "The Application (acting as the Host/Client)"
+                },
+                {
+                    "id": "C",
+                    "text": "The LLM"
+                },
+                {
+                    "id": "D",
+                    "text": "The MCP Server"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Within the MCP architecture, the MCP Server is responsible for executing the actual implementation of a tool. When an LLM determines that a tool is needed, it generates a structured tool-call request. The Host application receives this request and forwards it to the appropriate MCP Server. The MCP Server then runs the underlying code, performs API calls, queries databases, accesses files, or executes business logic associated with the requested tool. After execution, the MCP Server returns the results to the Host, which passes the information back to the LLM for further reasoning or response generation. The LLM itself does not execute code, and the Host primarily coordinates communication rather than performing the tool's business logic. Therefore, the MCP Server is the component ultimately responsible for executing the tool's functionality."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "How does an LLM, within an application designed for tool use, typically initiate an action like calling a weather API?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "By directly running internal code designed for weather lookup"
+                },
+                {
+                    "id": "B",
+                    "text": "By generating specifically formatted text that represents a tool call (e.g., get_weather(city=\"New York\"))"
+                },
+                {
+                    "id": "C",
+                    "text": "By automatically accessing the API through built-in LLM features"
+                },
+                {
+                    "id": "D",
+                    "text": "By asking the user for permission to call the API in natural language"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A base Large Language Model does not directly execute code, call APIs, or interact with external systems on its own. Instead, when operating within an application that supports tools, the LLM generates a structured output representing its intent to use a tool. This output may take the form of a function call, JSON object, or other predefined schema such as get_weather(city=\"New York\"). The surrounding application, agent framework, or orchestration layer then interprets this structured request, executes the actual API call, and returns the results back to the model. This separation of responsibilities allows LLMs to safely interact with external services while keeping execution logic under the control of the application. Therefore, the model initiates actions by generating a tool-call request rather than directly running code or accessing APIs itself."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "What is the fundamental capability of a base Large Language Model (LLM) before adding application layers or tools?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Executing external Python code directly"
+                },
+                {
+                    "id": "B",
+                    "text": "Searching the web for real-time information"
+                },
+                {
+                    "id": "C",
+                    "text": "Performing complex mathematical calculations inherently"
+                },
+                {
+                    "id": "D",
+                    "text": "Predicting the next token in a sequence (text generation)"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "At its core, a Large Language Model (LLM) is a next-token prediction system. During training, the model learns statistical patterns, relationships, grammar, facts, and reasoning behaviors from massive amounts of text data. When given an input prompt, the model generates output by repeatedly predicting the most likely next token based on the preceding context. Capabilities such as web search, code execution, database access, API calls, retrieval from external knowledge sources, and tool usage are not inherent features of a base LLM. These capabilities are typically added through application layers, agent frameworks, Retrieval-Augmented Generation (RAG) systems, tools, plugins, or protocols such as MCP. While LLMs can often appear to reason, calculate, or perform complex tasks, these behaviors ultimately emerge from the underlying process of next-token prediction."
+        }
+    ]
+}
