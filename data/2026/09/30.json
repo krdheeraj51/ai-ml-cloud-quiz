@@ -1,0 +1,92 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which statements about advanced RAG techniques are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Query rewriting can improve retrieval for vague questions"
+                },
+                {
+                    "id": "B",
+                    "text": "Re-ranking reorders candidates by relevance before generation"
+                },
+                {
+                    "id": "C",
+                    "text": "Hybrid search combines keyword and vector retrieval"
+                },
+                {
+                    "id": "D",
+                    "text": "These techniques make retrieval entirely unnecessary"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Advanced Retrieval-Augmented Generation (RAG) systems often use multiple optimization techniques to improve retrieval quality and answer accuracy. Query rewriting transforms unclear or ambiguous user queries into forms that are easier for retrieval systems to understand. Re-ranking evaluates retrieved candidates and reorders them so the most relevant documents are placed at the top before generation occurs. Hybrid search combines lexical keyword matching with semantic vector search to leverage both exact-term matching and semantic understanding. These techniques enhance retrieval effectiveness, but they do not eliminate the need for retrieval itself. Instead, they make retrieval more accurate and reliable."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "A user asks a RAG chatbot a question with no relevant documents in the knowledge base. What is good behavior? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Responding that it does not have enough information"
+                },
+                {
+                    "id": "B",
+                    "text": "Optionally suggesting how the user could refine the query"
+                },
+                {
+                    "id": "C",
+                    "text": "Avoiding answering as if the missing context were known"
+                },
+                {
+                    "id": "D",
+                    "text": "Confidently fabricating a detailed but unsupported answer"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "When a RAG system cannot retrieve relevant supporting information, the safest and most trustworthy behavior is to acknowledge that sufficient information is unavailable. The system may also guide the user toward refining the query or suggest additional sources that could help. Equally important is avoiding unsupported claims or pretending that missing information exists. Hallucinating detailed answers without evidence reduces trust, can spread misinformation, and defeats the purpose of using a retrieval-based architecture. Transparent communication about uncertainty is a key principle of responsible AI system design."
+        },
+        {
+            "id": "q3",
+            "category": "Knowledge Graphs",
+            "question": "Which of the following are core elements of a knowledge graph? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Relationships represented as edges between nodes"
+                },
+                {
+                    "id": "B",
+                    "text": "Properties (attributes) attached to nodes and edges"
+                },
+                {
+                    "id": "C",
+                    "text": "Entities represented as nodes"
+                },
+                {
+                    "id": "D",
+                    "text": "Facts often expressed as subject-predicate-object triples"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "Knowledge graphs model information as interconnected entities and relationships. Entities such as people, organizations, products, or locations are represented as nodes, while relationships between them are represented as edges. Both nodes and edges can contain properties or attributes that provide additional context. Many knowledge graph systems also represent facts in the form of subject-predicate-object triples, such as 'Company X employs Person Y'. Together, these elements create a structured representation of knowledge that supports semantic search, reasoning, recommendation systems, question-answering applications, and graph-based analytics."
+        }
+    ]
+}

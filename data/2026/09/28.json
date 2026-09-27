@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "A team builds a RAG system over a company wiki. Which preparation steps are typically required? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Splitting documents into manageable chunks"
+                },
+                {
+                    "id": "B",
+                    "text": "Translating every page into binary by hand"
+                },
+                {
+                    "id": "C",
+                    "text": "Embedding the chunks into vector representations"
+                },
+                {
+                    "id": "D",
+                    "text": "Storing the embeddings in a vector database"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "Building a Retrieval-Augmented Generation (RAG) system typically involves several document preparation steps. Large documents are first split into smaller chunks so that they can fit within embedding and retrieval workflows. Each chunk is then converted into a vector representation using an embedding model. These embeddings are stored in a vector database, enabling efficient similarity search during retrieval. Translating documents into binary by hand is not part of a standard RAG pipeline and provides no benefit for semantic retrieval."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which practical step helps ensure retrieved documents in RAG are relevant before passing them to the LLM?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Apply a relevance threshold on similarity scores and optionally re-rank results"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase temperature to 1.0 for retrieval"
+                },
+                {
+                    "id": "C",
+                    "text": "Skip similarity scoring and send all documents"
+                },
+                {
+                    "id": "D",
+                    "text": "Always use the highest max_tokens for generation"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Retrieval quality directly impacts answer quality in RAG systems. Applying a similarity threshold helps filter out documents that are only weakly related to the user's query. Many production systems also perform re-ranking, where a second model evaluates retrieved candidates and promotes the most relevant passages before they are sent to the LLM. This process reduces noise, improves context quality, and helps minimize hallucinations. Retrieval relevance is independent of generation parameters such as temperature or maximum token count."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which of the following are valid types of edges/transitions in LangGraph? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A conditional edge that branches based on state"
+                },
+                {
+                    "id": "B",
+                    "text": "An edge that physically rewires the host CPU"
+                },
+                {
+                    "id": "C",
+                    "text": "An edge that automatically retrains the underlying model"
+                },
+                {
+                    "id": "D",
+                    "text": "A normal edge from one node to a fixed next node"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "D"
+            ],
+            "explanation": "LangGraph workflows are composed of nodes connected by edges that determine execution flow. A normal edge creates a fixed transition from one node to another, while a conditional edge allows routing decisions based on the current graph state, agent output, or workflow conditions. These mechanisms enable dynamic and agentic execution patterns. LangGraph edges do not perform hardware operations such as rewiring CPUs, nor do they automatically retrain machine learning models. Their purpose is to control how execution moves through the graph."
+        }
+    ]
+}
