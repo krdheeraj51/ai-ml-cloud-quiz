@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "A healthcare startup wants to use GenAI for medical document summarization. Which practices are recommended? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Adding disclaimers about AI-generated content"
+                },
+                {
+                    "id": "B",
+                    "text": "Implementing human-in-the-loop review"
+                },
+                {
+                    "id": "C",
+                    "text": "Deploying a general-purpose model with no domain adaptation or review"
+                },
+                {
+                    "id": "D",
+                    "text": "Fine-tuning on medical terminology"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "Healthcare is a high-stakes domain where inaccurate AI outputs can have significant consequences. Recommended practices include clearly indicating when content is AI-generated, implementing human-in-the-loop review processes to validate outputs, and adapting models for medical terminology and domain-specific knowledge. These measures help improve accuracy, transparency, and safety. In contrast, deploying a general-purpose model without domain adaptation, validation, or oversight increases the risk of incorrect summaries, hallucinations, and compliance issues."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "Which metric is appropriate for evaluating a classification model?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Mean Squared Error"
+                },
+                {
+                    "id": "B",
+                    "text": "Precision"
+                },
+                {
+                    "id": "C",
+                    "text": "Silhouette score"
+                },
+                {
+                    "id": "D",
+                    "text": "R²"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Precision is a standard classification metric that measures the proportion of predicted positive instances that are actually positive. It is especially useful when the cost of false positives is significant. Mean Squared Error and R² are primarily used for regression problems, while Silhouette Score is used to evaluate clustering quality. Therefore, Precision is the most appropriate metric among the listed options for evaluating a classification model."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "An LLM answers based on outdated training data. What is the cleanest architectural fix?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Retrain the model weekly"
+                },
+                {
+                    "id": "B",
+                    "text": "Add retrieval from trusted sources"
+                },
+                {
+                    "id": "C",
+                    "text": "Increase prompt size"
+                },
+                {
+                    "id": "D",
+                    "text": "Switch to another UI"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "When a model's knowledge becomes outdated, the most scalable and maintainable solution is to use Retrieval-Augmented Generation (RAG). Rather than retraining the model whenever information changes, the system retrieves current information from trusted knowledge sources such as databases, document repositories, enterprise systems, or search indexes and provides that context to the LLM at inference time. This approach enables access to up-to-date information while avoiding the high cost, operational complexity, and delays associated with frequent retraining. Increasing prompt size or changing the user interface does not solve the underlying knowledge freshness problem."
+        }
+    ]
+}
