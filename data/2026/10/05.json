@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "NLP",
+            "question": "Which statements about Named Entity Recognition (NER) are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Mapping every token to a single global sentiment score"
+                },
+                {
+                    "id": "B",
+                    "text": "It can be framed as a sequence labeling problem"
+                },
+                {
+                    "id": "C",
+                    "text": "It is used only to translate text between languages"
+                },
+                {
+                    "id": "D",
+                    "text": "It identifies spans like person, organization, and location names"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "D"
+            ],
+            "explanation": "Named Entity Recognition (NER) is an NLP task that identifies and classifies entities such as people, organizations, locations, dates, products, and other named concepts within text. NER is commonly formulated as a sequence labeling problem, where each token is assigned a label indicating whether it is part of an entity and what type of entity it represents. NER is widely used in information extraction, search, document analysis, compliance systems, and question-answering applications. It is not a sentiment analysis technique, nor is it limited to machine translation."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Why is chunk overlap often used when splitting documents for a RAG (Retrieval-Augmented Generation) system?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To reduce embedding dimensions"
+                },
+                {
+                    "id": "B",
+                    "text": "To prevent loss of context across chunk boundaries"
+                },
+                {
+                    "id": "C",
+                    "text": "To increase inference speed"
+                },
+                {
+                    "id": "D",
+                    "text": "To eliminate hallucinations completely"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "When documents are divided into chunks, important information may span the boundary between two adjacent chunks. Chunk overlap duplicates a small portion of text between neighboring chunks so that contextual information is preserved. This improves the likelihood that retrieval systems will capture complete ideas, sentences, definitions, or relationships during semantic search. While overlap can improve retrieval quality and answer accuracy, it does not reduce embedding dimensions, guarantee faster inference, or completely eliminate hallucinations."
+        },
+        {
+            "id": "q3",
+            "category": "NLP",
+            "question": "Which of the following are classic NLP text representation techniques? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A method representing text purely as musical notes"
+                },
+                {
+                    "id": "B",
+                    "text": "N-gram features"
+                },
+                {
+                    "id": "C",
+                    "text": "Bag-of-Words"
+                },
+                {
+                    "id": "D",
+                    "text": "TF-IDF weighting"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "Before the widespread adoption of neural embeddings and transformer models, NLP systems commonly represented text using techniques such as Bag-of-Words, N-grams, and TF-IDF. Bag-of-Words represents text using word occurrence counts, N-grams capture sequences of adjacent words or tokens, and TF-IDF assigns higher weights to terms that are important within a document but less common across the overall collection. Option A is not a classic NLP text representation technique."
+        }
+    ]
+}

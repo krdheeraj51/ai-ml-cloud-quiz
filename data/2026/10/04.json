@@ -1,0 +1,82 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "In what scenario might Euclidean distance be preferred over cosine similarity for vectors?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "When embeddings are strings"
+                },
+                {
+                    "id": "B",
+                    "text": "When using normalized vectors exclusively"
+                },
+                {
+                    "id": "C",
+                    "text": "When vector magnitude (not just direction) carries semantic meaning"
+                },
+                {
+                    "id": "D",
+                    "text": "When you need scale invariance only"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Cosine similarity measures the angle between vectors and focuses on directional similarity while largely ignoring magnitude. This makes it useful when vector length is not important. Euclidean distance, however, takes both direction and magnitude into account. Therefore, when the magnitude of an embedding conveys meaningful information, such as confidence, frequency, intensity, or other domain-specific signals, Euclidean distance may be a better choice. If vectors are normalized, magnitude information is largely removed, making cosine similarity a more common option."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "A team needs an agent in LangChain that can use a calculator and a search API. Which elements are involved? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Defining tools the agent is allowed to call"
+                },
+                {
+                    "id": "B",
+                    "text": "Hard-coding tool outputs so the model never reasons"
+                },
+                {
+                    "id": "C",
+                    "text": "An agent executor that runs the reasoning-action loop"
+                },
+                {
+                    "id": "D",
+                    "text": "Disabling the LLM so it cannot reason about tools"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C"
+            ],
+            "explanation": "LangChain agents typically consist of a language model, a set of tools, and an agent executor. Developers explicitly define which tools are available, such as calculators, search APIs, databases, or custom business functions. The agent executor manages the reasoning-action-observation cycle, allowing the model to decide when a tool should be used, execute the tool, observe the result, and continue reasoning until a final answer is produced. Hard-coding outputs removes the benefits of agent reasoning, while disabling the LLM would prevent the agent from selecting and coordinating tool usage."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Why is a lower temperature setting preferred in enterprise, factual GenAI applications?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It increases creative output"
+                },
+                {
+                    "id": "B",
+                    "text": "It speeds up model training"
+                },
+                {
+                    "id": "C",
+                    "text": "It reduces randomness and improves consistency"
+                },
+                {
+                    "id": "D",
+                    "text": "It expands the context window"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Temperature controls the randomness of token selection during text generation. Lower temperature values make the model more deterministic by favoring higher-probability token choices. In enterprise applications such as customer support, compliance, policy assistance, reporting, and factual question answering, organizations generally prioritize consistency, predictability, and accuracy over creativity. A lower temperature helps produce more stable responses across repeated queries, reducing variability and the likelihood of unexpected outputs. Temperature does not affect model training speed or context window size."
+        }
+    ]
+}
