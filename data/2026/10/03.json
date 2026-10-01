@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which logging detail is least useful when diagnosing prompt underperformance?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The GPU model type used for inference"
+                },
+                {
+                    "id": "B",
+                    "text": "Exact prompt and retrieval context"
+                },
+                {
+                    "id": "C",
+                    "text": "User query and timestamp"
+                },
+                {
+                    "id": "D",
+                    "text": "Model parameters and token usage"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Diagnosing prompt underperformance typically requires understanding the inputs, context, retrieval results, model configuration, and generated outputs. Exact prompts, retrieval context, user queries, timestamps, model settings, and token usage help identify issues such as poor prompt design, retrieval failures, context-window limitations, or hallucinations. The specific GPU model used for inference is generally unrelated to prompt quality and reasoning behavior, making it the least useful option when investigating why a prompt is producing poor results."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "A multilingual support team wants one model to handle many languages. Which approaches are reasonable? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Fine-tuning on data from the target languages"
+                },
+                {
+                    "id": "B",
+                    "text": "Hand-building a fully separate pipeline for every language"
+                },
+                {
+                    "id": "C",
+                    "text": "Using a multilingual pretrained model"
+                },
+                {
+                    "id": "D",
+                    "text": "Leveraging cross-lingual transfer from high-resource languages"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "Multilingual AI systems are commonly built using pretrained multilingual models that already understand and generate multiple languages. Performance can often be improved further by fine-tuning on data from the target languages. Cross-lingual transfer techniques allow knowledge learned from high-resource languages to benefit lower-resource languages, reducing the amount of training data required. While creating separate pipelines for every language is possible, it is usually more expensive to maintain, less scalable, and defeats the goal of having a unified multilingual solution."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which property of embeddings is typically stored in a vector database along with metadata?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "CSS classes"
+                },
+                {
+                    "id": "B",
+                    "text": "Server uptime"
+                },
+                {
+                    "id": "C",
+                    "text": "Video codec"
+                },
+                {
+                    "id": "D",
+                    "text": "Numeric vector representation"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Vector databases are designed to store embeddings, which are numerical vector representations of text, images, audio, or other data types. These vectors capture semantic meaning in a high-dimensional space and enable similarity search, nearest-neighbor retrieval, recommendation systems, and Retrieval-Augmented Generation (RAG) workflows. Alongside the vector itself, databases typically store metadata such as document IDs, source references, timestamps, categories, or tags that help filter and retrieve relevant records. CSS classes, server uptime information, and video codecs are not properties of embeddings and are not generally part of vector-search storage structures."
+        }
+    ]
+}
