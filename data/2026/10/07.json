@@ -1,0 +1,87 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "A long-running LangGraph workflow crashes midway. How can LangGraph help recover? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Discarding all progress and forcing a full restart"
+                },
+                {
+                    "id": "B",
+                    "text": "Execution can resume from the last saved checkpoint"
+                },
+                {
+                    "id": "C",
+                    "text": "Checkpointers can save state at each step"
+                },
+                {
+                    "id": "D",
+                    "text": "A thread/session id can track and restore a conversation's state"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "LangGraph is designed for stateful and resilient agent workflows. Checkpointers can persist workflow state after individual steps, allowing progress to be saved throughout execution. If a workflow is interrupted due to a crash, timeout, or infrastructure failure, execution can resume from the most recent checkpoint rather than starting over. LangGraph also supports thread or session identifiers that can be used to track, restore, and continue conversational or workflow state across requests. These capabilities improve reliability, fault tolerance, and user experience in long-running agent applications."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt Engineering",
+            "question": "You want the assistant to respond as a legal reviewer with formal language. Which prompt modification helps most?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Add role-based instructions"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase token count"
+                },
+                {
+                    "id": "C",
+                    "text": "Reduce input size"
+                },
+                {
+                    "id": "D",
+                    "text": "Switch vector database"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Role-based prompting is a powerful prompt engineering technique that guides the model's behavior, tone, and response style. By instructing the model to act as a legal reviewer, compliance officer, financial analyst, or another professional role, developers can encourage responses that align with the expectations of that domain. This approach influences vocabulary, formality, structure, and reasoning style. Increasing token limits, reducing input size, or changing a vector database does not directly control how the assistant presents itself or the language style it uses."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "A team builds semantic search using vector embeddings. Which statements about this approach are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A nearest-neighbor search finds the most relevant items"
+                },
+                {
+                    "id": "B",
+                    "text": "Search relies only on exact keyword string matching"
+                },
+                {
+                    "id": "C",
+                    "text": "Query and documents are encoded into the same vector space"
+                },
+                {
+                    "id": "D",
+                    "text": "Nearby vectors indicate semantically similar content"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "Semantic search uses embedding models to convert both queries and documents into numerical vectors within a shared vector space. Because semantically similar concepts are positioned close together in that space, nearest-neighbor search techniques can identify documents that are most relevant to a query even when different words are used. This allows semantic search to capture meaning rather than relying solely on exact keyword matches. As a result, nearby vectors typically represent content with similar semantic meaning, making vector databases and similarity search core components of modern RAG and recommendation systems."
+        }
+    ]
+}

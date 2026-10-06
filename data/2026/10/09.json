@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "What is 'Overfitting' in a machine learning model?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "When the model is too small to learn anything"
+                },
+                {
+                    "id": "B",
+                    "text": "When the model learns training data too well, failing to generalize to new data"
+                },
+                {
+                    "id": "C",
+                    "text": "When the model takes too long to respond to a prompt"
+                },
+                {
+                    "id": "D",
+                    "text": "When too many users try to access the AI at once"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Overfitting occurs when a machine learning model learns patterns, noise, and specific details from the training dataset so closely that it performs well on training examples but poorly on unseen data. Instead of learning generalizable relationships, the model effectively memorizes the training set. This leads to a gap between training performance and real-world performance. Techniques such as regularization, cross-validation, dropout, early stopping, and collecting more diverse training data are commonly used to reduce overfitting."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "If retrieved results are too repetitive, which adjustment can increase diversity of results?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Set k to 1 permanently"
+                },
+                {
+                    "id": "B",
+                    "text": "Remove ANN and use exact scan only"
+                },
+                {
+                    "id": "C",
+                    "text": "Introduce semantic query expansion or use diverse sampling strategies"
+                },
+                {
+                    "id": "D",
+                    "text": "Increase embedding dimension to an arbitrary large value"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "When retrieval results are highly repetitive, the system may be retrieving documents that are semantically very similar to one another. Techniques such as semantic query expansion can broaden the search space by introducing related concepts, synonyms, or alternate phrasings. Diversity-aware retrieval and sampling strategies can also intentionally return relevant results from different clusters or perspectives. These approaches improve coverage and reduce redundancy. Simply reducing k, changing the search algorithm, or arbitrarily increasing embedding dimensions does not directly address the diversity problem."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Predicting heating costs based on office size and employee count is an example of which ML problem?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Classification"
+                },
+                {
+                    "id": "B",
+                    "text": "Clustering"
+                },
+                {
+                    "id": "C",
+                    "text": "Regression"
+                },
+                {
+                    "id": "D",
+                    "text": "Anomaly detection"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Regression is a supervised machine learning task used to predict continuous numerical values. In this scenario, the model uses input features such as office size and employee count to estimate a numerical output: heating cost. Because the target value can take many possible numerical values rather than belonging to a fixed category, this is a regression problem. Common regression algorithms include Linear Regression, Decision Tree Regression, Random Forest Regression, and Gradient Boosting Regression. Classification would instead be used when predicting discrete categories, such as whether heating costs are 'Low', 'Medium', or 'High'."
+        }
+    ]
+}

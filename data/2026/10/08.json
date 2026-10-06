@@ -1,0 +1,88 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which statements about embeddings in RAG are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Embeddings can only encode a single word at a time"
+                },
+                {
+                    "id": "B",
+                    "text": "Semantically similar texts have nearby vectors"
+                },
+                {
+                    "id": "C",
+                    "text": "Comparing query and document vectors by string equality"
+                },
+                {
+                    "id": "D",
+                    "text": "They represent text as dense numeric vectors"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "D"
+            ],
+            "explanation": "Embeddings are dense numerical representations that capture the semantic meaning of text, images, or other data. In Retrieval-Augmented Generation (RAG) systems, both queries and documents are converted into embeddings within the same vector space. Texts with similar meanings tend to be located near each other in that space, enabling semantic search through similarity metrics such as cosine similarity or Euclidean distance. Embeddings are not limited to single words and are generally compared mathematically rather than through direct string matching."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which statements about fine-tuning vs. prompt engineering are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Fine-tuning modifies model weights"
+                },
+                {
+                    "id": "B",
+                    "text": "Prompt engineering requires retraining the model"
+                },
+                {
+                    "id": "C",
+                    "text": "Fine-tuning leaves the base weights unchanged"
+                },
+                {
+                    "id": "D",
+                    "text": "Prompt engineering is generally faster to implement"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "D"
+            ],
+            "explanation": "Fine-tuning adapts a model by updating its weights using additional training data, allowing the model to learn new behaviors, domain knowledge, or response styles. In contrast, prompt engineering influences model behavior through carefully crafted instructions, examples, and context without modifying the underlying model. Because it does not require training infrastructure, datasets, or retraining cycles, prompt engineering is typically much faster and less expensive to implement. Fine-tuning changes model parameters, whereas prompt engineering works with the model as-is."
+        },
+        {
+            "id": "q3",
+            "category": "AI Agents",
+            "question": "Which statements about planning strategies in agents are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Decomposing a complex goal into smaller subtasks aids execution"
+                },
+                {
+                    "id": "B",
+                    "text": "Re-planning can occur when new observations contradict the plan"
+                },
+                {
+                    "id": "C",
+                    "text": "A good plan removes any need for the agent to act"
+                },
+                {
+                    "id": "D",
+                    "text": "Tree-of-thought search guarantees the globally optimal plan"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B"
+            ],
+            "explanation": "Agent planning involves breaking complex objectives into smaller, manageable tasks and determining an appropriate sequence of actions to achieve the desired outcome. Decomposing a goal helps an agent reason about dependencies between tasks and execute them in a structured way. However, plans are not always fixed. Agents can observe the results of their actions and re-plan when new information, unexpected tool results, failures, or environmental changes make the original plan unsuitable. A plan does not eliminate the need for action because the agent still needs to execute tasks and interact with tools or its environment. Similarly, Tree-of-Thought search explores multiple reasoning paths, but it does not guarantee a globally optimal plan because the quality of the result depends on the search strategy, evaluation criteria, available information, and model capabilities."
+        }
+    ]
+}
