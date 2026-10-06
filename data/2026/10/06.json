@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI Governance",
+            "question": "A manager wants to paste a file containing employee personal data (PII) into a public GenAI tool for summarization. What is the safest guidance?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Do not paste sensitive/PII into external tools; use approved secure solutions or redact PII first"
+                },
+                {
+                    "id": "B",
+                    "text": "Paste it only if the output looks correct"
+                },
+                {
+                    "id": "C",
+                    "text": "Paste it, but ask the model to 'not store the data'"
+                },
+                {
+                    "id": "D",
+                    "text": "Paste it only after converting it to a PDF"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Personally Identifiable Information (PII) and sensitive organizational data should be handled according to company security, privacy, and compliance policies. Before using external AI services, organizations should ensure approved security controls are in place. A common best practice is to avoid sharing sensitive information with unapproved tools and, where possible, redact or anonymize the data before processing. Asking a model not to store data, checking output quality, or converting a document format does not provide adequate privacy protection."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt Engineering",
+            "question": "Which technique most cost-effectively controls tone and style in LLM responses?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "RLHF"
+                },
+                {
+                    "id": "B",
+                    "text": "Model retraining"
+                },
+                {
+                    "id": "C",
+                    "text": "Prompt engineering"
+                },
+                {
+                    "id": "D",
+                    "text": "Increasing parameters"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Prompt engineering is typically the fastest and most cost-effective way to guide an LLM's behavior, tone, format, and communication style. By providing role instructions, examples, formatting requirements, and desired writing conventions, developers can significantly influence outputs without modifying the underlying model. Retraining and RLHF require substantial data, infrastructure, and operational effort, while increasing model size does not directly control response style."
+        },
+        {
+            "id": "q3",
+            "category": "Cloud AI",
+            "question": "Why should enterprises prefer Azure OpenAI over public APIs?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Lower model quality"
+                },
+                {
+                    "id": "B",
+                    "text": "Enterprise security and compliance"
+                },
+                {
+                    "id": "C",
+                    "text": "Unlimited access"
+                },
+                {
+                    "id": "D",
+                    "text": "No filters"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Enterprise AI deployments often require strong security, governance, compliance, auditing, identity management, data protection, and organizational controls. Azure OpenAI is designed to integrate with enterprise-grade security and compliance frameworks, making it suitable for business-critical workloads. The key benefit is not unlimited access or the removal of safeguards. Instead, organizations choose enterprise AI platforms because they provide a controlled environment for deploying generative AI solutions while meeting regulatory, privacy, and operational requirements."
+        }
+    ]
+}
