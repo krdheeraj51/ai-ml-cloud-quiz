@@ -1,0 +1,87 @@
+{
+    "title": "Knowledge Graphs, Human-in-the-Loop Agents & Workflow Design Quiz",
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Knowledge Graphs",
+            "question": "A team is building a knowledge graph from messy enterprise data. Which steps are important? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Mapping source fields to a defined schema or ontology"
+                },
+                {
+                    "id": "B",
+                    "text": "Deleting all relationships to keep nodes isolated"
+                },
+                {
+                    "id": "C",
+                    "text": "Entity resolution to merge duplicate records"
+                },
+                {
+                    "id": "D",
+                    "text": "Dropping all schema mapping to ingest data as-is"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C"
+            ],
+            "explanation": "Knowledge graphs depend on well-structured entities and relationships. Mapping source data to a defined schema or ontology ensures that information from different systems follows a consistent structure and meaning. Entity resolution is equally important because enterprise data often contains duplicate or slightly different references to the same real-world entity. Merging these duplicates improves graph quality and enables more accurate querying and reasoning. Deleting relationships defeats the purpose of a graph, while ingesting data without schema mapping typically leads to inconsistent and difficult-to-use knowledge structures."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "A developer wants a human to approve an agent's action mid-workflow in LangGraph. Which features help? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Checkpointing to persist graph state between steps"
+                },
+                {
+                    "id": "B",
+                    "text": "Removing all interrupt points so it runs end-to-end"
+                },
+                {
+                    "id": "C",
+                    "text": "Resuming the graph after the human provides input"
+                },
+                {
+                    "id": "D",
+                    "text": "Interrupting execution before a sensitive node"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "LangGraph supports human-in-the-loop workflows by allowing execution to pause at specific points and resume later. Checkpointing preserves workflow state so progress is not lost while awaiting user approval. Interrupts can be placed before sensitive actions such as financial transactions, production deployments, or data modifications, enabling human review before execution continues. Once the human provides input or approval, the graph can resume from the saved state. Removing all interrupt points would eliminate the opportunity for human oversight and approval."
+        },
+        {
+            "id": "q3",
+            "category": "AI Architecture",
+            "question": "A team says: \"We don't need an agent; we just need the model to summarize text.\" Which statement best matches the distinction between LLMs, workflows, and agents?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "LLMs cannot be used inside workflows"
+                },
+                {
+                    "id": "B",
+                    "text": "Agents are always more accurate than workflows"
+                },
+                {
+                    "id": "C",
+                    "text": "Workflows require retraining the model each time"
+                },
+                {
+                    "id": "D",
+                    "text": "A workflow can run a fixed sequence of steps; an agent may choose tools/steps dynamically based on the goal"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "LLMs, workflows, and agents serve different purposes. An LLM generates or processes content based on prompts. A workflow orchestrates a predefined series of steps and is ideal when the process is predictable, such as document summarization, report generation, or data transformation. An agent adds decision-making capabilities, allowing the system to select tools, determine next actions, adapt plans, and respond dynamically to new information. If a task simply requires summarizing text in a consistent manner, a workflow may be sufficient. Agents become valuable when the system must reason about goals and choose actions dynamically."
+        }
+    ]
+}
