@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI Security",
+            "question": "What risk arises when sensitive data is embedded and stored improperly?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Higher latency"
+                },
+                {
+                    "id": "B",
+                    "text": "Data leakage through vector similarity"
+                },
+                {
+                    "id": "C",
+                    "text": "Model underfitting"
+                },
+                {
+                    "id": "D",
+                    "text": "Lower accuracy"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Embeddings can capture semantic information from the original data. If sensitive information is embedded and stored without proper protections, attackers or unauthorized users may be able to infer, retrieve, or expose confidential information through similarity searches or vector reconstruction attacks. This creates a data leakage risk. While latency, underfitting, and accuracy are important system concerns, they are not the primary security risk associated with improperly stored sensitive embeddings."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "A fixed set of steps runs every time without decision-making. Which approach fits best?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Agent"
+                },
+                {
+                    "id": "B",
+                    "text": "Workflow"
+                },
+                {
+                    "id": "C",
+                    "text": "LLM-only chat"
+                },
+                {
+                    "id": "D",
+                    "text": "Vector search"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A workflow follows a predefined sequence of steps and executes them in a predictable order every time. There is little or no dynamic decision-making involved. In contrast, an agent can reason about a task, choose tools, adapt its plan, and make decisions based on observations and results. Therefore, when the execution path is fixed and deterministic, a workflow is the most appropriate architecture."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which of the following are valid operations you can perform on numeric vectors? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Normalizing a vector to unit length"
+                },
+                {
+                    "id": "B",
+                    "text": "Reordering a vector's components changes nothing about it"
+                },
+                {
+                    "id": "C",
+                    "text": "Adding two vectors element-wise"
+                },
+                {
+                    "id": "D",
+                    "text": "Computing the magnitude (length) of a vector"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "Vectors support many mathematical operations that are fundamental to machine learning and embedding-based systems. Normalization converts a vector to unit length while preserving its direction, which is commonly used with cosine similarity. Vectors can be added element-wise when they have compatible dimensions. The magnitude (or norm) of a vector can also be calculated to measure its length. Reordering vector components generally changes the meaning of the vector because each dimension represents a specific position within the embedding space, so the vector is not preserved when components are rearranged."
+        }
+    ]
+}

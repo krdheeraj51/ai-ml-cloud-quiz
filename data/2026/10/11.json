@@ -1,0 +1,88 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which of the following are core stages in a typical RAG pipeline? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Augmenting the prompt with the retrieved context"
+                },
+                {
+                    "id": "B",
+                    "text": "Retrieving relevant documents for a query"
+                },
+                {
+                    "id": "C",
+                    "text": "Generating an answer with the language model"
+                },
+                {
+                    "id": "D",
+                    "text": "Indexing and embedding the source documents beforehand"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "A typical Retrieval-Augmented Generation (RAG) pipeline consists of both an ingestion phase and a retrieval-generation phase. During ingestion, source documents are processed, chunked if necessary, converted into embeddings, and stored in a vector database or search index. When a user submits a query, the system retrieves the most relevant documents, augments the prompt with the retrieved context, and then passes both the query and context to the language model to generate an answer. All four options represent key stages commonly found in production RAG architectures."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "A team must classify support tickets into categories with limited labeled data. Which strategies can help? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Applying few-shot or transfer learning"
+                },
+                {
+                    "id": "B",
+                    "text": "Discarding all pretrained knowledge and training from scratch"
+                },
+                {
+                    "id": "C",
+                    "text": "Fine-tuning a pretrained language model"
+                },
+                {
+                    "id": "D",
+                    "text": "Using data augmentation to expand the training set"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "When labeled data is scarce, techniques that leverage existing knowledge are often most effective. Few-shot learning and transfer learning allow models to perform well using a small number of examples by utilizing knowledge learned from previous tasks. Fine-tuning a pretrained language model can significantly improve classification performance while requiring far less data than training from scratch. Data augmentation can further increase the diversity and size of the training dataset. In contrast, discarding pretrained knowledge and building a model entirely from scratch usually requires much larger datasets and computational resources."
+        },
+        {
+            "id": "q3",
+            "category": "AI Security",
+            "question": "Which practice helps protect sensitive information when sending context to third-party LLM APIs?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Store unencrypted logs of prompts"
+                },
+                {
+                    "id": "B",
+                    "text": "Anonymize or redact sensitive fields before including in prompts"
+                },
+                {
+                    "id": "C",
+                    "text": "Include raw PII to get better answers"
+                },
+                {
+                    "id": "D",
+                    "text": "Disable TLS"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "When using external AI services, sensitive information such as personally identifiable information (PII), financial records, healthcare data, and confidential business information should be protected. A common best practice is to anonymize, mask, tokenize, or redact sensitive fields before sending data to an LLM. This minimizes privacy and compliance risks while still allowing the model to perform useful tasks. Storing unencrypted logs, exposing raw PII, or disabling TLS increases security risks and violates standard data protection practices."
+        }
+    ]
+}
