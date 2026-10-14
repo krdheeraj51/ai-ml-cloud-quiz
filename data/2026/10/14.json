@@ -1,0 +1,87 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "A RAG system returns relevant chunks but the final answer is still poor. Which improvements may help? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Discarding the retrieved context before generation"
+                },
+                {
+                    "id": "B",
+                    "text": "Removing the prompt so the model sees only raw chunks"
+                },
+                {
+                    "id": "C",
+                    "text": "Refining the prompt that combines context and question"
+                },
+                {
+                    "id": "D",
+                    "text": "Re-ranking retrieved chunks before sending to the LLM"
+                }
+            ],
+            "correctAnswers": [
+                "C",
+                "D"
+            ],
+            "explanation": "When retrieval is already finding relevant information but the generated answer remains poor, the problem may be in how that information is selected, ordered, or presented to the language model. Refining the prompt can provide clearer instructions about how the model should use the retrieved context and answer the user's question. Re-ranking can further improve the context by placing the most useful retrieved chunks ahead of weaker candidates before generation. Discarding retrieved context would remove the grounding RAG is intended to provide, while sending raw chunks without clear instructions can make it more difficult for the model to produce a focused and well-grounded answer."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "Which of the following are core concepts in LangGraph? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A shared state passed between nodes"
+                },
+                {
+                    "id": "B",
+                    "text": "Edges that determine which node runs next"
+                },
+                {
+                    "id": "C",
+                    "text": "Modeling workflows as a graph of nodes and edges"
+                },
+                {
+                    "id": "D",
+                    "text": "Compilation of the graph into an executable application"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "LangGraph represents workflows as graphs composed of nodes and edges. Nodes perform individual operations, while edges control how execution moves from one node to another. Shared state enables information and intermediate results to move through the graph as nodes execute. After the workflow structure has been defined, the graph is compiled into an executable application that can process inputs and manage execution. Together, state, nodes, edges, routing, and graph compilation form important building blocks for creating stateful and agentic workflows."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "You're building a support assistant. Users paste long policy documents, and the assistant starts ignoring earlier parts of the message and answers incorrectly. What is the most likely reason?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The model automatically retrains itself on every new document, which causes confusion"
+                },
+                {
+                    "id": "B",
+                    "text": "The model converts the document to images internally, losing information"
+                },
+                {
+                    "id": "C",
+                    "text": "The model can only consider a limited amount of text in one request, so older content may be dropped"
+                },
+                {
+                    "id": "D",
+                    "text": "A vector database is corrupting the text even though you aren't using retrieval"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Language models have a finite context window that limits how much information can be processed within a single request. The context window must accommodate the user's input, instructions, conversation history, retrieved information when applicable, and generated output. If a policy document and surrounding conversation exceed the available context, some content may need to be truncated or otherwise may not be available to the model when generating the answer. For applications involving very large documents, techniques such as document chunking, retrieval, summarization, and careful context management can help ensure that the most relevant information is supplied to the model."
+        }
+    ]
+}
