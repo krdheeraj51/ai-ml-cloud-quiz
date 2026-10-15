@@ -1,0 +1,82 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Generative AI",
+            "question": "What is the main output type of a text-to-image GenAI model?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Keywords"
+                },
+                {
+                    "id": "B",
+                    "text": "Images"
+                },
+                {
+                    "id": "C",
+                    "text": "Audio"
+                },
+                {
+                    "id": "D",
+                    "text": "Tables"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A text-to-image generative AI model takes a natural-language description, commonly called a prompt, and generates an image that corresponds to that description. The generated output may contain objects, scenes, styles, or compositions specified by the user. Keywords and text can be part of the input prompt, but they are not the primary output. Audio generation belongs to text-to-audio models, while tables are generally produced by text-generation or structured-output systems."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "Which of the following are valid types of edges/transitions in LangGraph? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A conditional edge that branches based on state"
+                },
+                {
+                    "id": "B",
+                    "text": "An edge that physically rewires the host CPU"
+                },
+                {
+                    "id": "C",
+                    "text": "An edge that automatically retrains the underlying model"
+                },
+                {
+                    "id": "D",
+                    "text": "A normal edge from one node to a fixed next node"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "D"
+            ],
+            "explanation": "LangGraph uses edges to control how execution moves between nodes in a graph. A normal edge defines a fixed transition from one node to another, while a conditional edge dynamically selects the next node based on the graph's current state or routing logic. These transitions make it possible to build both deterministic workflows and dynamic agentic flows. Edges are orchestration constructs, so they do not physically modify computer hardware or automatically retrain the underlying language model."
+        },
+        {
+            "id": "q3",
+            "category": "AI Architecture",
+            "question": "You are comparing an LLM and a workflow. The task requires fixed steps with no variation. Which is more suitable?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "An autonomous agent"
+                },
+                {
+                    "id": "B",
+                    "text": "A predefined workflow"
+                },
+                {
+                    "id": "C",
+                    "text": "A multimodal model"
+                },
+                {
+                    "id": "D",
+                    "text": "A vector database"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A predefined workflow is the best choice when a task always follows the same known sequence of steps and does not require dynamic decision-making. Workflows provide predictable and controlled execution, making them suitable for deterministic business processes. An autonomous agent is more appropriate when the system must reason about a goal, decide what action to take next, select tools, or adapt its execution path dynamically. A multimodal model processes multiple types of data, while a vector database supports similarity-based storage and retrieval; neither defines a fixed execution sequence."
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which simple retrieval index type is appropriate for small-scale RAG prototypes in Python?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A blockchain ledger"
+                },
+                {
+                    "id": "B",
+                    "text": "A relational database without vector support only"
+                },
+                {
+                    "id": "C",
+                    "text": "A distributed petabyte-scale index only"
+                },
+                {
+                    "id": "D",
+                    "text": "Flat (brute-force) vector index using FAISS or numpy for small datasets"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "For a small-scale RAG prototype, a flat or brute-force vector index is a simple and practical retrieval approach. Document embeddings can be stored and compared directly against the query embedding using similarity or distance calculations. Libraries such as FAISS can support flat vector indexes, while small prototypes can also perform vector comparisons with numerical libraries. Brute-force retrieval can be practical for relatively small collections because implementation is straightforward and every stored vector can be considered during search. Large distributed indexes become more relevant as datasets and scalability requirements grow, while a blockchain ledger or a database without vector-search capability does not directly provide embedding-based semantic retrieval."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "A team combines a knowledge graph with an LLM (GraphRAG). Which benefits can this provide? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Letting the graph answer without the LLM generating text"
+                },
+                {
+                    "id": "B",
+                    "text": "Removing the need for the LLM to generate any text"
+                },
+                {
+                    "id": "C",
+                    "text": "Grounding answers in structured, verifiable relationships"
+                },
+                {
+                    "id": "D",
+                    "text": "Retrieving connected facts via graph traversal"
+                }
+            ],
+            "correctAnswers": [
+                "C",
+                "D"
+            ],
+            "explanation": "GraphRAG combines graph-structured knowledge with language-model generation. A knowledge graph explicitly represents entities and the relationships between them, allowing a retrieval system to follow connections and retrieve related facts through graph traversal. This structured context can then ground the LLM's response in relationships represented in the graph. The knowledge graph complements the LLM rather than eliminating text generation entirely. This approach is especially useful when answering a question requires understanding relationships or combining information across multiple connected entities."
+        },
+        {
+            "id": "q3",
+            "category": "NLP",
+            "question": "Which statements contrast contextual embeddings (e.g., BERT) with static embeddings (e.g., Word2Vec)? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Contextual embeddings can disambiguate polysemous words"
+                },
+                {
+                    "id": "B",
+                    "text": "Static embeddings always outperform contextual ones"
+                },
+                {
+                    "id": "C",
+                    "text": "Static embeddings assign one fixed vector per word"
+                },
+                {
+                    "id": "D",
+                    "text": "Contextual embeddings change based on surrounding words"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "Static embedding approaches such as Word2Vec generally assign a word the same learned vector regardless of the sentence in which the word appears. This makes it difficult to distinguish different meanings of polysemous words. Contextual embedding models such as BERT generate representations based on surrounding words, allowing the representation of a word to change according to its context. For example, the representation of 'bank' can differ between a financial-bank sentence and a river-bank sentence. Therefore, contextual representations can better capture word meaning in context, while the claim that static embeddings always outperform contextual embeddings is incorrect."
+        }
+    ]
+}
