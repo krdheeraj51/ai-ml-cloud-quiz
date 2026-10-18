@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "What is the difference between a traditional Machine Learning model and a Large Language Model (LLM)? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Traditional is trained for a specific task, where LLM trained on massive text data for many tasks"
+                },
+                {
+                    "id": "B",
+                    "text": "No such difference"
+                },
+                {
+                    "id": "C",
+                    "text": "Traditional usually predicts labels or numbers, where LLM generates and understands human language"
+                },
+                {
+                    "id": "D",
+                    "text": "Traditional Machine Learning model are powerful than LLM"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C"
+            ],
+            "explanation": "Traditional machine learning models are commonly developed for specific predictive tasks such as classification, regression, forecasting, or anomaly detection. Large Language Models are pretrained on very large text corpora and can perform a broad range of language tasks, including generation, summarization, question answering, extraction, and classification. Traditional ML models commonly produce labels, probabilities, or numerical predictions, while LLMs primarily process and generate natural language. Neither approach is universally more powerful; the appropriate choice depends on the problem, data, cost, latency, and deployment requirements."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "Which metric is generally most appropriate for evaluating a fraud detection model when fraudulent transactions are very rare?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Accuracy"
+                },
+                {
+                    "id": "B",
+                    "text": "Precision-Recall AUC"
+                },
+                {
+                    "id": "C",
+                    "text": "Mean Squared Error"
+                },
+                {
+                    "id": "D",
+                    "text": "R² Score"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Fraud detection is typically a highly imbalanced classification problem because fraudulent transactions represent a small fraction of all transactions. Accuracy can therefore be misleading because a model could classify nearly every transaction as legitimate and still achieve high accuracy. Precision-Recall AUC evaluates the trade-off between precision and recall across classification thresholds and is particularly informative when the positive class is rare. Mean Squared Error and R² are primarily regression metrics and are not appropriate choices for this classification scenario."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which statements about Large Language Models (LLMs) are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "LLMs are typically trained on large amounts of text data"
+                },
+                {
+                    "id": "B",
+                    "text": "Fine-tuning can adapt an LLM for specific tasks or domains"
+                },
+                {
+                    "id": "C",
+                    "text": "Prompt engineering can influence model outputs without changing model weights"
+                },
+                {
+                    "id": "D",
+                    "text": "Hallucinations refer to the model generating plausible and correct information"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Large Language Models are generally pretrained on large collections of textual data so they can learn language patterns and broad knowledge. Fine-tuning can further adapt a pretrained model for particular tasks, behaviors, or domains by updating model parameters. Prompt engineering takes a different approach by changing the instructions or context supplied to the model without modifying its underlying weights. The hallucination statement is incorrect: hallucination refers to generated information that may appear plausible or confident but is unsupported, fabricated, or factually incorrect."
+        }
+    ]
+}

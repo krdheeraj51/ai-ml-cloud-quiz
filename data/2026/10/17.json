@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Generative AI",
+            "question": "Which statement best separates model choice from reasoning mode?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "They are the same setting"
+                },
+                {
+                    "id": "B",
+                    "text": "Extended thinking is a different model"
+                },
+                {
+                    "id": "C",
+                    "text": "Model choice picks which member of the family runs; extended thinking is a per-call setting that any supporting model can run with on or off"
+                },
+                {
+                    "id": "D",
+                    "text": "Reasoning mode is fixed per account"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Model choice and reasoning configuration are separate concepts. Model choice determines which supported model handles the request, while thinking or reasoning settings control how the selected model approaches a response. For models that support configurable thinking, the setting can be adjusted independently of selecting the model. Therefore, enabling extended thinking does not inherently mean switching to a completely different model. Current implementations vary by model, so the exact thinking controls available depend on the selected model."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt Engineering",
+            "question": "A short, well-specified classification task returns the right answer zero-shot. What does adding three examples most likely do?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Improves accuracy substantially"
+                },
+                {
+                    "id": "B",
+                    "text": "Adds token cost on every call for little or no gain"
+                },
+                {
+                    "id": "C",
+                    "text": "Changes the model being used"
+                },
+                {
+                    "id": "D",
+                    "text": "Disables sampling"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Few-shot examples are useful when a model needs additional guidance about a task, output format, or difficult decision boundaries. However, if a simple and clearly specified classification task already performs correctly with zero-shot prompting, adding unnecessary examples increases the number of input tokens processed on every request without necessarily improving the result. Few-shot prompting does not change the underlying model or automatically disable sampling. A good production practice is therefore to use the simplest prompt that consistently meets the required quality level."
+        },
+        {
+            "id": "q3",
+            "category": "Generative AI",
+            "question": "A teammate says two identical prompts must return identical text. What is the most accurate response?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "That is true, the model is deterministic"
+                },
+                {
+                    "id": "B",
+                    "text": "Not necessarily, the model samples each next token from a probability distribution, so wording can vary even when both answers are correct"
+                },
+                {
+                    "id": "C",
+                    "text": "That is only true if streaming is off"
+                },
+                {
+                    "id": "D",
+                    "text": "That is only true on the largest model"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Generative language models produce responses by selecting tokens according to probability distributions determined by the model and decoding configuration. Consequently, identical prompts do not necessarily guarantee identical generated text. Different valid tokens may be selected during generation, resulting in differences in wording or structure while preserving the same overall meaning. Generation settings can influence output variability, but streaming itself does not determine whether responses are identical, and model size does not guarantee deterministic output."
+        }
+    ]
+}

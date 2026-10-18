@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "Which of the following are valid operations you can perform on numeric vectors? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Normalizing a vector to unit length"
+                },
+                {
+                    "id": "B",
+                    "text": "Reordering a vector's components changes nothing about it"
+                },
+                {
+                    "id": "C",
+                    "text": "Adding two vectors element-wise"
+                },
+                {
+                    "id": "D",
+                    "text": "Computing the magnitude (length) of a vector"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "Numeric vectors support standard mathematical operations such as normalization, element-wise addition, and magnitude calculation. Normalization scales a vector to unit length while preserving its direction, which is useful in similarity calculations such as cosine similarity. Two vectors of compatible dimensions can be added by adding their corresponding components, and a vector's magnitude can be calculated from its components. Reordering components does change the vector because each position represents a particular dimension, so changing the order generally changes the vector's meaning and mathematical representation."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which statements about fine-tuning vs. prompt engineering are correct? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Fine-tuning modifies model weights"
+                },
+                {
+                    "id": "B",
+                    "text": "Prompt engineering requires retraining the model"
+                },
+                {
+                    "id": "C",
+                    "text": "Fine-tuning leaves the base weights unchanged"
+                },
+                {
+                    "id": "D",
+                    "text": "Prompt engineering is generally faster to implement"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "D"
+            ],
+            "explanation": "Fine-tuning adapts a pretrained model by updating model parameters using additional training examples, making the model better suited to particular tasks, domains, or behaviors. Prompt engineering works differently: it guides an existing model through instructions, context, examples, and output constraints without retraining the model. Because prompt engineering does not require a training pipeline or parameter updates, it is generally faster to implement and iterate on. Therefore, fine-tuning modifies model weights, while prompt engineering influences behavior through the model's input."
+        },
+        {
+            "id": "q3",
+            "category": "Generative AI",
+            "question": "Which of the following is a generative model trained with an adversarial (generator vs. discriminator) objective?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Generative Adversarial Networks (GANs)"
+                },
+                {
+                    "id": "B",
+                    "text": "Diffusion models"
+                },
+                {
+                    "id": "C",
+                    "text": "Support Vector Machines"
+                },
+                {
+                    "id": "D",
+                    "text": "Variational Autoencoders (VAEs)"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Generative Adversarial Networks (GANs) use an adversarial training framework involving two competing neural networks. The generator attempts to create synthetic samples that resemble real data, while the discriminator attempts to distinguish generated samples from genuine examples. During training, both networks improve through this competition, enabling the generator to produce increasingly realistic outputs. Diffusion models generate data through iterative denoising, VAEs use probabilistic latent-variable modeling, and Support Vector Machines are primarily supervised learning models rather than adversarial generative models."
+        }
+    ]
+}
