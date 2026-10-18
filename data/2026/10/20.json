@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI Agents",
+            "question": "Which are valid strategies for multi-agent coordination? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Centralized planning"
+                },
+                {
+                    "id": "B",
+                    "text": "Distributed consensus"
+                },
+                {
+                    "id": "C",
+                    "text": "Communication protocols"
+                },
+                {
+                    "id": "D",
+                    "text": "Single-threaded execution"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Multi-agent systems require mechanisms that allow multiple agents to coordinate their decisions and actions. Centralized planning uses a coordinator or supervisor to allocate tasks and manage execution across agents. Distributed consensus allows agents to collectively reach decisions without relying entirely on a central controller. Communication protocols enable agents to exchange messages, state, results, and task information so that their work can be coordinated. Single-threaded execution is an execution model rather than a coordination strategy and does not by itself provide mechanisms for agents to collaborate or reach shared decisions."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "What makes an AI agent different from a simple ML model?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Agents use more compute resources"
+                },
+                {
+                    "id": "B",
+                    "text": "Agents can perceive, decide, and act autonomously in an environment"
+                },
+                {
+                    "id": "C",
+                    "text": "Agents are always more accurate"
+                },
+                {
+                    "id": "D",
+                    "text": "Agents don't require training"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "An AI agent is designed to interact with an environment in pursuit of a goal. The agent can observe or perceive information, reason about the current situation, decide what action should be taken, and execute actions through tools, APIs, software systems, or other interfaces. A traditional machine learning model typically maps an input to an output, such as predicting a category or numerical value, without independently deciding and executing a sequence of actions. Agents are not necessarily more accurate, do not have to use more compute in every situation, and may rely on trained machine learning or language models as part of their architecture."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "In reinforcement learning, what does the agent receive after taking an action?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A dataset"
+                },
+                {
+                    "id": "B",
+                    "text": "A reward or penalty"
+                },
+                {
+                    "id": "C",
+                    "text": "A neural network"
+                },
+                {
+                    "id": "D",
+                    "text": "A classification label"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "In reinforcement learning, an agent interacts with an environment by observing its current state and selecting an action. After the action is performed, the environment provides feedback through a reward signal, which can be positive or negative depending on how beneficial the action was toward achieving the objective. The agent uses accumulated rewards to learn a policy that maximizes long-term reward over time. Unlike supervised learning, reinforcement learning does not primarily depend on receiving a predefined classification label after every action."
+        }
+    ]
+}
