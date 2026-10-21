@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which of the following are types of components LangChain provides for working with data? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Document loaders for various file formats"
+                },
+                {
+                    "id": "B",
+                    "text": "Retrievers that fetch relevant documents"
+                },
+                {
+                    "id": "C",
+                    "text": "A built-in spreadsheet pivot-table designer"
+                },
+                {
+                    "id": "D",
+                    "text": "Text splitters to chunk long documents"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "LangChain provides several components for loading, processing, and retrieving external data. Document loaders ingest content from sources such as files, web pages, and databases. Text splitters divide large documents into smaller chunks that can be processed, embedded, and retrieved efficiently. Retrievers search available knowledge sources and return relevant documents for a user query, which is particularly important in RAG applications. A spreadsheet pivot-table designer is not a standard LangChain data-processing component."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which term describes an AI's ability to retain information from earlier in a conversation?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Persistent Storage"
+                },
+                {
+                    "id": "B",
+                    "text": "Context Window"
+                },
+                {
+                    "id": "C",
+                    "text": "Frame Rate"
+                },
+                {
+                    "id": "D",
+                    "text": "Input Buffer"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "The context window represents the amount of information a language model can consider while generating a response. It can contain earlier conversation messages, system instructions, user prompts, retrieved documents, and other relevant context. Information from earlier parts of a conversation can therefore influence later responses as long as that information remains within the model's available context. A context window should not be confused with persistent or long-term memory, which requires an external mechanism to store information beyond the active context."
+        },
+        {
+            "id": "q3",
+            "category": "AI Agents",
+            "question": "Which of the following are true about nodes in LangGraph? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A node must return the full graph definition each call"
+                },
+                {
+                    "id": "B",
+                    "text": "A node is typically a function or callable"
+                },
+                {
+                    "id": "C",
+                    "text": "A node must be written in assembly for the graph to run"
+                },
+                {
+                    "id": "D",
+                    "text": "A node receives the current state as input"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "D"
+            ],
+            "explanation": "In LangGraph, nodes represent individual units of work within a graph-based workflow. A node is typically implemented as a function or another callable that receives the current graph state as input, performs an operation such as calling an LLM, invoking a tool, transforming data, or making a decision, and then returns state updates for subsequent nodes. A node does not need to return the complete graph definition because the graph structure is defined separately when constructing the workflow. Nodes also do not require low-level languages such as assembly. This separation between node logic, shared state, and graph routing makes LangGraph suitable for building modular and stateful agent workflows."
+        }
+    ]
+}

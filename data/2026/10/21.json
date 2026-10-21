@@ -1,0 +1,91 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "A vector search over millions of embeddings is too slow with brute force. Which approaches can help? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Using an Approximate Nearest Neighbor (ANN) index"
+                },
+                {
+                    "id": "B",
+                    "text": "Building an index such as HNSW or IVF"
+                },
+                {
+                    "id": "C",
+                    "text": "Trading a little accuracy for much faster search"
+                },
+                {
+                    "id": "D",
+                    "text": "Comparing the query against every vector as the only option"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Brute-force vector search compares a query vector against every stored vector, which becomes expensive as the collection grows to millions of embeddings. Approximate Nearest Neighbor (ANN) techniques improve scalability by searching only promising regions of the vector space rather than exhaustively comparing every vector. Index structures such as HNSW (Hierarchical Navigable Small World) and IVF (Inverted File Index) are commonly used to accelerate similarity search. ANN methods generally trade a small amount of retrieval accuracy or recall for substantial improvements in latency and scalability. Therefore, comparing the query against every vector is not the only option and is often impractical for large-scale vector search."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "Which capabilities does LangGraph provide for building agent applications? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Persistence of state via checkpointers"
+                },
+                {
+                    "id": "B",
+                    "text": "A guarantee that the graph runs without any state"
+                },
+                {
+                    "id": "C",
+                    "text": "Support for cyclic, multi-step agent loops"
+                },
+                {
+                    "id": "D",
+                    "text": "A guarantee that no node can ever call an LLM"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C"
+            ],
+            "explanation": "LangGraph is designed for building stateful, multi-step workflows and agent applications. Checkpointers can persist graph state so workflows can be resumed, inspected, or continued across execution steps. LangGraph also supports cycles, allowing an agent to repeatedly reason, call tools, observe results, and continue execution until a termination condition is reached. LangGraph does not require workflows to be stateless, and nodes are allowed to invoke LLMs, tools, APIs, or other application components. State persistence and cyclic execution are therefore important capabilities for building reliable agentic workflows."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which of the following are commonly used vector similarity measures in RAG retrieval? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Inner product on normalized embeddings (equivalent to cosine)"
+                },
+                {
+                    "id": "B",
+                    "text": "Euclidean (L2) distance between vectors"
+                },
+                {
+                    "id": "C",
+                    "text": "Cosine similarity between embeddings"
+                },
+                {
+                    "id": "D",
+                    "text": "Dot product of the vectors"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "Cosine similarity, Euclidean (L2) distance, and dot product or inner product are all commonly used to compare embedding vectors in semantic search and RAG systems. Cosine similarity measures how closely two vectors point in the same direction, while Euclidean distance measures the geometric distance between them. Dot product measures the product of corresponding vector components and can account for both direction and magnitude. When vectors are normalized to unit length, their inner product is equivalent to cosine similarity. The appropriate metric depends on the embedding model, whether vectors are normalized, and the similarity metric recommended for that model or vector database."
+        }
+    ]
+}
