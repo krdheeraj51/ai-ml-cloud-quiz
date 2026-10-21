@@ -1,0 +1,87 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "What is the purpose of attention mechanisms in transformers?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To reduce memory usage"
+                },
+                {
+                    "id": "B",
+                    "text": "To allow the model to focus on relevant parts of the input"
+                },
+                {
+                    "id": "C",
+                    "text": "To speed up training only"
+                },
+                {
+                    "id": "D",
+                    "text": "To compress data"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Attention mechanisms allow a Transformer to determine which parts of the input are most relevant when processing each token. Instead of treating all tokens as equally important, attention assigns different weights to relationships between tokens, helping the model capture context and dependencies across a sequence. For example, attention can help connect a pronoun with the earlier noun it refers to or identify which words are important for understanding a question. Attention is therefore primarily about modeling relationships and relevant context, rather than simply reducing memory usage, compressing data, or speeding up training."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Which techniques are used in modern LLMs for better performance? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Self-attention mechanisms"
+                },
+                {
+                    "id": "B",
+                    "text": "Positional encoding"
+                },
+                {
+                    "id": "C",
+                    "text": "Tokenization"
+                },
+                {
+                    "id": "D",
+                    "text": "Magnetic storage optimization"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Modern Large Language Models use several techniques to process language effectively. Self-attention enables the model to understand relationships between tokens across a sequence. Positional encoding or related positional representation methods provide information about token order because attention alone does not inherently encode sequence position. Tokenization converts input text into tokens that the model can process numerically. Magnetic storage optimization is a hardware-storage concept and is not a core technique used by LLM architectures for understanding or generating language."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which are valid evaluation metrics for classification models? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Accuracy"
+                },
+                {
+                    "id": "B",
+                    "text": "Precision"
+                },
+                {
+                    "id": "C",
+                    "text": "Mean Squared Error"
+                },
+                {
+                    "id": "D",
+                    "text": "F1-Score"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "Accuracy, Precision, and F1-Score are standard metrics for evaluating classification models. Accuracy measures the proportion of all predictions that are correct. Precision measures how many examples predicted as positive are actually positive, making it especially useful when false positives are costly. F1-Score combines Precision and Recall using their harmonic mean and is particularly useful when class distributions are imbalanced. Mean Squared Error is primarily a regression metric used to measure the difference between predicted and actual continuous numerical values, so it is not normally used as a standard classification evaluation metric."
+        }
+    ]
+}

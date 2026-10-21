@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "How does gradient descent use the loss function to update model weights?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It randomly adjusts weights"
+                },
+                {
+                    "id": "B",
+                    "text": "It computes gradients of the loss and updates weights in the direction that minimizes loss"
+                },
+                {
+                    "id": "C",
+                    "text": "It only uses the loss for logging purposes"
+                },
+                {
+                    "id": "D",
+                    "text": "It replaces the loss with new values"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Gradient descent is an optimization algorithm used to reduce a model's loss during training. The loss function measures how far the model's predictions are from the expected outputs. Gradient descent computes the gradient of the loss with respect to each model parameter, which indicates how the loss changes when a parameter changes. The optimizer then updates the weights in the opposite direction of the gradient, typically scaled by a learning rate, so that the loss is gradually reduced. Weight updates are therefore guided by mathematical gradients rather than being random."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "When designing a collaborative multi-agent system for warehouse robots, which factors must be considered? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Collision avoidance mechanisms"
+                },
+                {
+                    "id": "B",
+                    "text": "Task allocation strategies"
+                },
+                {
+                    "id": "C",
+                    "text": "Communication latency"
+                },
+                {
+                    "id": "D",
+                    "text": "Marketing strategies"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Collaborative multi-agent robotic systems require coordination across several dimensions. Collision avoidance mechanisms are essential so multiple robots can move safely through shared physical spaces. Task allocation strategies determine how work should be distributed among available robots based on factors such as location, capacity, workload, and task priority. Communication latency must also be considered because delayed messages can affect coordination and decision-making between agents. Marketing strategies are unrelated to the technical coordination and operation of warehouse robots."
+        },
+        {
+            "id": "q3",
+            "category": "Reinforcement Learning",
+            "question": "What is the exploration-exploitation tradeoff in reinforcement learning?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Balancing data storage and processing"
+                },
+                {
+                    "id": "B",
+                    "text": "Balancing trying new actions vs. using known good actions"
+                },
+                {
+                    "id": "C",
+                    "text": "Balancing speed and accuracy"
+                },
+                {
+                    "id": "D",
+                    "text": "Balancing cost and performance"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "The exploration-exploitation tradeoff is a fundamental challenge in reinforcement learning. Exploration means trying unfamiliar actions to discover whether they may produce better rewards, while exploitation means choosing actions that the agent already believes will produce good rewards based on previous experience. Too much exploration can prevent the agent from taking advantage of what it has learned, while too much exploitation can cause the agent to miss potentially better strategies. Effective reinforcement learning therefore requires balancing both behaviors to maximize long-term cumulative reward."
+        }
+    ]
+}
