@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Your recommendation agent is stuck suggesting similar items. What technique might help?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Reducing the dataset"
+                },
+                {
+                    "id": "B",
+                    "text": "Implementing exploration strategies like epsilon-greedy"
+                },
+                {
+                    "id": "C",
+                    "text": "Removing the reward function"
+                },
+                {
+                    "id": "D",
+                    "text": "Using smaller models"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "An epsilon-greedy exploration strategy helps a recommendation agent avoid repeatedly suggesting similar items. Most of the time, the agent exploits the option currently estimated to be best, but with a small probability represented by epsilon, the agent explores a different option. This balance between exploration and exploitation helps the agent discover potentially better recommendations. Reducing the dataset, removing the reward function, or using a smaller model does not directly address insufficient exploration."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "Your agent needs to learn optimal behavior through trial and error without labeled examples. Which learning paradigm applies?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Supervised learning"
+                },
+                {
+                    "id": "B",
+                    "text": "Unsupervised learning"
+                },
+                {
+                    "id": "C",
+                    "text": "Reinforcement learning"
+                },
+                {
+                    "id": "D",
+                    "text": "Transfer learning"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Reinforcement learning enables an agent to learn optimal behavior by interacting with an environment, taking actions, and receiving rewards or penalties. The agent gradually improves its decision-making strategy through trial and error rather than learning from labeled examples. Supervised learning requires labeled data, unsupervised learning focuses on discovering patterns in unlabeled data, and transfer learning reuses knowledge learned from another task or domain."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "In the context of multi-agent systems, what is emergent behavior?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Pre-programmed responses"
+                },
+                {
+                    "id": "B",
+                    "text": "Complex behaviors arising from simple agent interactions"
+                },
+                {
+                    "id": "C",
+                    "text": "System crashes"
+                },
+                {
+                    "id": "D",
+                    "text": "Data corruption"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Emergent behavior refers to complex system-level behavior that develops through interactions among relatively simple agents. The collective behavior may not be explicitly programmed into any individual agent. Instead, it arises from local decisions, communication, coordination, competition, or cooperation among the agents. System crashes and data corruption are failures, while pre-programmed responses are explicitly designed behaviors rather than emergent ones."
+        }
+    ]
+}

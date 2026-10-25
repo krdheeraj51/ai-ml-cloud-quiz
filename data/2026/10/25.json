@@ -1,0 +1,90 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Which of the following are popular vector databases or indexes used in RAG? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Chroma"
+                },
+                {
+                    "id": "B",
+                    "text": "MongoDB without vector search"
+                },
+                {
+                    "id": "C",
+                    "text": "Pinecone"
+                },
+                {
+                    "id": "D",
+                    "text": "FAISS"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "Chroma, Pinecone, and FAISS are commonly used technologies for storing, indexing, or searching vector embeddings in Retrieval-Augmented Generation (RAG) applications. Chroma provides an embedding-oriented database for AI applications, Pinecone provides managed vector search infrastructure, and FAISS is a library for efficient similarity search over dense vectors. These technologies help a RAG system retrieve document chunks whose embeddings are most similar to a user's query before relevant context is passed to the language model."
+        },
+        {
+            "id": "q2",
+            "category": "AI",
+            "question": "A team deploys an SLM but finds accuracy lacking on their specialized task. Which steps may help? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Deleting the SLM's weights to improve its accuracy"
+                },
+                {
+                    "id": "B",
+                    "text": "Fine-tuning the SLM on domain-specific data"
+                },
+                {
+                    "id": "C",
+                    "text": "Combining the SLM with retrieval (RAG) for extra context"
+                },
+                {
+                    "id": "D",
+                    "text": "Removing all task-specific instructions from prompts"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "C"
+            ],
+            "explanation": "When a Small Language Model (SLM) performs poorly on a specialized task, domain adaptation and external grounding can improve performance. Fine-tuning on high-quality domain-specific examples helps the model learn terminology, patterns, and behaviors relevant to the target use case. RAG can complement the SLM by retrieving relevant information from an external knowledge source and supplying that information as context at inference time. Deleting model weights would destroy learned capabilities, while removing useful task instructions would generally make it harder for the model to understand the expected behavior."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "Which factors strongly influence the quality of RAG retrieval? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The chunking strategy and chunk size"
+                },
+                {
+                    "id": "B",
+                    "text": "The choice and quality of the embedding model"
+                },
+                {
+                    "id": "C",
+                    "text": "The number of chunks retrieved (top-k)"
+                },
+                {
+                    "id": "D",
+                    "text": "The color theme of the application's user interface"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "RAG retrieval quality depends heavily on how documents are prepared and how relevant information is searched. Chunking strategy and chunk size determine how much context each retrievable unit contains; chunks that are too small may lose important context, while chunks that are too large may contain unnecessary information. The embedding model determines how effectively semantic meaning is represented in vector space, directly influencing similarity search quality. The top-k value controls how many candidate chunks are retrieved and therefore affects both context coverage and noise. The application's visual color theme has no meaningful effect on document retrieval relevance."
+        }
+    ]
+}
