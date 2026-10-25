@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "Your ML model has high training accuracy but low test accuracy. What is the likely issue?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Underfitting"
+                },
+                {
+                    "id": "B",
+                    "text": "Overfitting"
+                },
+                {
+                    "id": "C",
+                    "text": "Data corruption"
+                },
+                {
+                    "id": "D",
+                    "text": "Hardware failure"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "High training accuracy combined with significantly lower test accuracy is a classic sign of overfitting. The model has learned the training data very closely, including patterns or noise that do not generalize well to unseen examples. As a result, the model performs strongly on data it has already seen but poorly on new data. Techniques such as regularization, cross-validation, early stopping, reducing model complexity, and using more diverse training data can help reduce overfitting."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "What is overfitting in machine learning?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "When a model performs well on training data but poorly on new data"
+                },
+                {
+                    "id": "B",
+                    "text": "When a model is too simple"
+                },
+                {
+                    "id": "C",
+                    "text": "When data is insufficient"
+                },
+                {
+                    "id": "D",
+                    "text": "When hardware fails"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Overfitting occurs when a machine learning model learns the training data too specifically instead of learning patterns that generalize to unseen examples. An overfit model typically achieves very good performance on its training dataset but substantially worse performance on validation or test data. A model that is too simple is more commonly associated with underfitting. Although limited data can contribute to overfitting, insufficient data itself is not the definition of overfitting."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "What is the difference between classification and regression?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Classification predicts categories; regression predicts continuous values"
+                },
+                {
+                    "id": "B",
+                    "text": "They are the same thing"
+                },
+                {
+                    "id": "C",
+                    "text": "Regression predicts categories; classification predicts continuous values"
+                },
+                {
+                    "id": "D",
+                    "text": "Neither involves prediction"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Classification and regression are supervised machine learning tasks that differ mainly in the type of value being predicted. Classification predicts discrete classes or categories, such as whether an email is spam or not spam, or whether a transaction is fraudulent or legitimate. Regression predicts continuous numerical values, such as house prices, sales revenue, temperature, or energy consumption. Therefore, classification is appropriate when the target represents a category, while regression is appropriate when the target is a continuous numeric quantity."
+        }
+    ]
+}
