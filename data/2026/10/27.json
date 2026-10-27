@@ -27,28 +27,28 @@
         },
         {
             "id": "q2",
-            "category": "ML",
-            "question": "What is overfitting in machine learning?",
+            "category": "Applications & Integration",
+            "question": "Which API is the standard starting point for sending a conversation to Claude from an application?",
             "options": [
                 {
                     "id": "A",
-                    "text": "When a model performs well on training data but poorly on new data"
+                    "text": "The Messages API"
                 },
                 {
                     "id": "B",
-                    "text": "When a model is too simple"
+                    "text": "The Filesystem API"
                 },
                 {
                     "id": "C",
-                    "text": "When data is insufficient"
+                    "text": "The Completions Database API"
                 },
                 {
                     "id": "D",
-                    "text": "When hardware fails"
+                    "text": "The Training API"
                 }
             ],
             "correctAnswer": "A",
-            "explanation": "Overfitting occurs when a machine learning model learns the training data too specifically instead of learning patterns that generalize to unseen examples. An overfit model typically achieves very good performance on its training dataset but substantially worse performance on validation or test data. A model that is too simple is more commonly associated with underfitting. Although limited data can contribute to overfitting, insufficient data itself is not the definition of overfitting."
+            "explanation": "The Messages API accepts a sequence of messages and returns Claude's response. It is the core interface for building conversational applications and supports text, tool use, and supported multimodal inputs."
         },
         {
             "id": "q3",

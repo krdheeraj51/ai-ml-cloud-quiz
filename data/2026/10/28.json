@@ -2,28 +2,28 @@
     "questions": [
         {
             "id": "q1",
-            "category": "AI",
-            "question": "Your recommendation agent is stuck suggesting similar items. What technique might help?",
+            "category": "Applications & Integration",
+            "question": "In the Messages API, what does max_tokens primarily control?",
             "options": [
                 {
                     "id": "A",
-                    "text": "Reducing the dataset"
+                    "text": "The maximum number of output tokens generated in the response"
                 },
                 {
                     "id": "B",
-                    "text": "Implementing exploration strategies like epsilon-greedy"
+                    "text": "The maximum number of users allowed"
                 },
                 {
                     "id": "C",
-                    "text": "Removing the reward function"
+                    "text": "The size of the model's training dataset"
                 },
                 {
                     "id": "D",
-                    "text": "Using smaller models"
+                    "text": "The number of tools the model can access"
                 }
             ],
-            "correctAnswer": "B",
-            "explanation": "An epsilon-greedy exploration strategy helps a recommendation agent avoid repeatedly suggesting similar items. Most of the time, the agent exploits the option currently estimated to be best, but with a small probability represented by epsilon, the agent explores a different option. This balance between exploration and exploitation helps the agent discover potentially better recommendations. Reducing the dataset, removing the reward function, or using a smaller model does not directly address insufficient exploration."
+            "correctAnswer": "A",
+            "explanation": "max_tokens sets an upper bound on generated output tokens for that request. It is not a guarantee that the response will use that many tokens, and it does not set the input context limit."
         },
         {
             "id": "q2",
@@ -74,6 +74,31 @@
             ],
             "correctAnswer": "B",
             "explanation": "Emergent behavior refers to complex system-level behavior that develops through interactions among relatively simple agents. The collective behavior may not be explicitly programmed into any individual agent. Instead, it arises from local decisions, communication, coordination, competition, or cooperation among the agents. System crashes and data corruption are failures, while pre-programmed responses are explicitly designed behaviors rather than emergent ones."
+        },
+        {
+            "id": "q3",
+            "category": "Applications & Integration",
+            "question": "A request fails because the application sends an unsupported model identifier. What should you do first?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Verify the model ID against current Anthropic documentation and account availability"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase max_tokens to the largest possible value"
+                },
+                {
+                    "id": "C",
+                    "text": "Retry the same request indefinitely"
+                },
+                {
+                    "id": "D",
+                    "text": "Remove the system prompt"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Model identifiers and availability can change. Verify the exact supported identifier and access for the chosen API provider before changing unrelated request parameters."
         }
     ]
 }

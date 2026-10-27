@@ -1,0 +1,54 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI",
+            "question": "Your recommendation agent is stuck suggesting similar items. What technique might help?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Reducing the dataset"
+                },
+                {
+                    "id": "B",
+                    "text": "Implementing exploration strategies like epsilon-greedy"
+                },
+                {
+                    "id": "C",
+                    "text": "Removing the reward function"
+                },
+                {
+                    "id": "D",
+                    "text": "Using smaller models"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "An epsilon-greedy exploration strategy helps a recommendation agent avoid repeatedly suggesting similar items. Most of the time, the agent exploits the option currently estimated to be best, but with a small probability represented by epsilon, the agent explores a different option. This balance between exploration and exploitation helps the agent discover potentially better recommendations. Reducing the dataset, removing the reward function, or using a smaller model does not directly address insufficient exploration."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "What is overfitting in machine learning?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "When a model performs well on training data but poorly on new data"
+                },
+                {
+                    "id": "B",
+                    "text": "When a model is too simple"
+                },
+                {
+                    "id": "C",
+                    "text": "When data is insufficient"
+                },
+                {
+                    "id": "D",
+                    "text": "When hardware fails"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Overfitting occurs when a machine learning model learns the training data too specifically instead of learning patterns that generalize to unseen examples. An overfit model typically achieves very good performance on its training dataset but substantially worse performance on validation or test data. A model that is too simple is more commonly associated with underfitting. Although limited data can contribute to overfitting, insufficient data itself is not the definition of overfitting."
+        }
+    ]
+}
