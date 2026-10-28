@@ -49,6 +49,31 @@
             ],
             "correctAnswer": "A",
             "explanation": "Overfitting occurs when a machine learning model learns the training data too specifically instead of learning patterns that generalize to unseen examples. An overfit model typically achieves very good performance on its training dataset but substantially worse performance on validation or test data. A model that is too simple is more commonly associated with underfitting. Although limited data can contribute to overfitting, insufficient data itself is not the definition of overfitting."
+        },
+        {
+            "id": "q3",
+            "category": "Applications & Integration",
+            "question": "Your application needs to process thousands of independent prompts asynchronously, where immediate responses are unnecessary. Which feature may be appropriate?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Message Batches API"
+                },
+                {
+                    "id": "B",
+                    "text": "A separate synchronous request for every prompt with a long timeout"
+                },
+                {
+                    "id": "C",
+                    "text": "Computer use"
+                },
+                {
+                    "id": "D",
+                    "text": "MCP sampling only"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "The Message Batches API is designed for asynchronous processing of groups of Messages API requests. It can suit workloads that tolerate delayed results; check current availability, limits, and processing guarantees in the docs."
         }
     ]
 }

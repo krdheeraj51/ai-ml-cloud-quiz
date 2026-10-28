@@ -1,0 +1,80 @@
+{
+    "title": "Feature Engineering, Supervised Learning & Multi-Agent Systems Quiz",
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "What is feature engineering?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Building computer hardware"
+                },
+                {
+                    "id": "B",
+                    "text": "Creating and selecting relevant input variables for ML models"
+                },
+                {
+                    "id": "C",
+                    "text": "Writing software documentation"
+                },
+                {
+                    "id": "D",
+                    "text": "Designing user interfaces"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Feature engineering is the process of creating, transforming, and selecting input variables that help a machine learning model learn useful patterns. For example, raw transaction timestamps could be transformed into features such as hour of day, day of week, or time since the previous transaction. Good feature engineering can improve model accuracy, make patterns easier for algorithms to learn, and reduce irrelevant information. Building hardware, writing documentation, and designing user interfaces are not feature engineering activities."
+        },
+        {
+            "id": "q2",
+            "category": "Applications & Integration",
+            "question": "What is streaming useful for in a Claude-powered user interface?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Displaying generated response content incrementally as events arrive"
+                },
+                {
+                    "id": "B",
+                    "text": "Guaranteeing that the answer is factually correct"
+                },
+                {
+                    "id": "C",
+                    "text": "Reducing every request to one token"
+                },
+                {
+                    "id": "D",
+                    "text": "Allowing the model to bypass application authorization"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Streaming lets an interface render partial output before generation finishes, improving perceived responsiveness. The application still needs to handle events, errors, completion, and any tool-use flow correctly."
+        },
+        {
+            "id": "q3",
+            "category": "AI Agents",
+            "question": "A multi-agent system shows unexpected collective behavior not present in individual agents. How should this be interpreted?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "As a system bug to fix"
+                },
+                {
+                    "id": "B",
+                    "text": "As emergent behavior requiring analysis"
+                },
+                {
+                    "id": "C",
+                    "text": "As random noise"
+                },
+                {
+                    "id": "D",
+                    "text": "As a hardware malfunction"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Emergent behavior occurs when interactions among multiple agents produce system-level behavior that is not explicitly present in or predictable from any individual agent alone. Such behavior can arise from communication, coordination, competition, feedback loops, shared environments, or local decision rules. Unexpected collective behavior should therefore be analyzed to determine how agent interactions are producing the observed outcome and whether the behavior is beneficial, harmful, or requires additional controls. Emergent behavior is not automatically a software bug, random noise, or hardware failure."
+        }
+    ]
+}

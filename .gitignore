@@ -4,4 +4,5 @@ Thumbs.db
 .idea/
 node_modules/
 start-local-server.bat
+store/
 

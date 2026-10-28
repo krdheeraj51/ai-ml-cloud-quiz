@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "A company wants to predict customer churn. Which approach is most appropriate?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Unsupervised clustering"
+                },
+                {
+                    "id": "B",
+                    "text": "Supervised classification"
+                },
+                {
+                    "id": "C",
+                    "text": "Image recognition"
+                },
+                {
+                    "id": "D",
+                    "text": "Natural language generation"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Customer churn prediction is typically a supervised classification problem because the model learns from historical examples labeled with outcomes such as 'churned' and 'not churned'. Features such as usage patterns, subscription history, customer interactions, and account activity can be used to predict the class for a new customer. Clustering is useful for discovering groups without predefined labels, while image recognition and natural language generation address different types of problems."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "What distinguishes a model-based agent from a model-free agent?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Model-based agents use internal representations of the environment"
+                },
+                {
+                    "id": "B",
+                    "text": "Model-free agents are more accurate"
+                },
+                {
+                    "id": "C",
+                    "text": "Model-based agents don't use data"
+                },
+                {
+                    "id": "D",
+                    "text": "There is no difference"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "A model-based agent maintains or learns an internal representation of how the environment works, including how states may change in response to actions. The agent can use this model to predict possible outcomes and plan future actions. A model-free agent learns how to act directly from experience without explicitly modeling the environment's transition dynamics. Neither approach is inherently more accurate in every situation, and both approaches can learn from data and interactions."
+        },
+        {
+            "id": "q3",
+            "category": "Applications & Integration",
+            "question": "Your application needs to process thousands of independent prompts asynchronously, where immediate responses are unnecessary. Which feature may be appropriate?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Message Batches API"
+                },
+                {
+                    "id": "B",
+                    "text": "A separate synchronous request for every prompt with a long timeout"
+                },
+                {
+                    "id": "C",
+                    "text": "Computer use"
+                },
+                {
+                    "id": "D",
+                    "text": "MCP sampling only"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "The Message Batches API is designed for asynchronous processing of groups of Messages API requests. It can suit workloads that tolerate delayed results; check current availability, limits, and processing guarantees in the docs."
+        }
+    ]
+}
