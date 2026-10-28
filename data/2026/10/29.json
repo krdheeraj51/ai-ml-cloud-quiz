@@ -1,0 +1,25 @@
+ {
+            "id": "q3",
+            "category": "Applications & Integration",
+            "question": "A request fails because the application sends an unsupported model identifier. What should you do first?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Verify the model ID against current Anthropic documentation and account availability"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase max_tokens to the largest possible value"
+                },
+                {
+                    "id": "C",
+                    "text": "Retry the same request indefinitely"
+                },
+                {
+                    "id": "D",
+                    "text": "Remove the system prompt"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Model identifiers and availability can change. Verify the exact supported identifier and access for the chosen API provider before changing unrelated request parameters."
+        }
