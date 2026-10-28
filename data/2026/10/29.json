@@ -1,25 +1,79 @@
- {
-            "id": "q3",
-            "category": "Applications & Integration",
-            "question": "A request fails because the application sends an unsupported model identifier. What should you do first?",
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "What does the term 'training data' refer to in ML?",
             "options": [
                 {
                     "id": "A",
-                    "text": "Verify the model ID against current Anthropic documentation and account availability"
+                    "text": "Data used to test the model"
                 },
                 {
                     "id": "B",
-                    "text": "Increase max_tokens to the largest possible value"
+                    "text": "Data used to teach the model patterns"
                 },
                 {
                     "id": "C",
-                    "text": "Retry the same request indefinitely"
+                    "text": "Data stored in memory"
                 },
                 {
                     "id": "D",
-                    "text": "Remove the system prompt"
+                    "text": "Data from the internet"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Training data is the dataset used during the learning phase of a machine learning model. The model analyzes examples in this dataset to learn patterns, relationships, and parameters that allow the model to make predictions on new data. Training data is different from validation and test data, which are typically used to tune the model and evaluate how well the trained model generalizes to unseen examples. Training data can come from many sources and is not necessarily internet data."
+        },
+        {
+            "id": "q2",
+            "category": "Model Selection & Optimization",
+            "question": "You need low latency and low cost for simple high-volume classification. What is the best model-selection principle?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Evaluate a smaller, faster model against the task's quality threshold"
+                },
+                {
+                    "id": "B",
+                    "text": "Always choose the most capable model regardless of cost"
+                },
+                {
+                    "id": "C",
+                    "text": "Choose a model based only on its name"
+                },
+                {
+                    "id": "D",
+                    "text": "Use the largest context window for every request"
                 }
             ],
             "correctAnswer": "A",
-            "explanation": "Model identifiers and availability can change. Verify the exact supported identifier and access for the chosen API provider before changing unrelated request parameters."
+            "explanation": "Select the least costly and fastest model that reliably meets measured quality requirements. Benchmark representative examples and monitor accuracy, latency, and cost before deployment."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "What is a Large Language Model (LLM)?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A physical computing device"
+                },
+                {
+                    "id": "B",
+                    "text": "An AI model trained on vast text data to understand and generate language"
+                },
+                {
+                    "id": "C",
+                    "text": "A database management system"
+                },
+                {
+                    "id": "D",
+                    "text": "A type of computer memory"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A Large Language Model (LLM) is an AI model trained on large amounts of textual and, for some modern models, multimodal data. Through training, the model learns statistical patterns and relationships in language that enable tasks such as text generation, summarization, question answering, translation, classification, and information extraction. An LLM is a software-based machine learning model rather than a physical computing device, database management system, or type of computer memory."
         }
+    ]
+}

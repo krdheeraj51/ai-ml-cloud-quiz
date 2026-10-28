@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Applications & Integration",
+            "question": "What is the main purpose of the system parameter in a Messages API request?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To provide high-level behavior and instructions for Claude"
+                },
+                {
+                    "id": "B",
+                    "text": "To store the user's conversation permanently"
+                },
+                {
+                    "id": "C",
+                    "text": "To execute JavaScript before the model runs"
+                },
+                {
+                    "id": "D",
+                    "text": "To configure the network timeout only"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "System instructions establish the assistant's role, priorities, constraints, and general behavior. They do not replace user messages or enforce application-side security controls."
+        },
+        {
+            "id": "q2",
+            "category": "AI Agents",
+            "question": "Which of the following are types of AI agents? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Reflex agents"
+                },
+                {
+                    "id": "B",
+                    "text": "Goal-based agents"
+                },
+                {
+                    "id": "C",
+                    "text": "Utility-based agents"
+                },
+                {
+                    "id": "D",
+                    "text": "Database agents"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Reflex, goal-based, and utility-based agents are established AI agent categories. A reflex agent selects actions according to the current percept and predefined rules. A goal-based agent considers desired goals when deciding which actions to take. A utility-based agent evaluates possible outcomes using a utility function and attempts to select actions that maximize the expected utility. 'Database agent' is not a standard agent category in this classification, although AI agents can certainly use databases as tools or knowledge sources."
+        },
+        {
+            "id": "q3",
+            "category": "Applications & Integration",
+            "question": "A request fails because the application sends an unsupported model identifier. What should you do first?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Verify the model ID against current Anthropic documentation and account availability"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase max_tokens to the largest possible value"
+                },
+                {
+                    "id": "C",
+                    "text": "Retry the same request indefinitely"
+                },
+                {
+                    "id": "D",
+                    "text": "Remove the system prompt"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Model identifiers and availability can change. Verify the exact supported identifier and access for the chosen API provider before changing unrelated request parameters."
+        }
+    ]
+}

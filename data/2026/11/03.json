@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q7",
+            "category": "Applications & Integration",
+            "question": "When using a third-party cloud provider to access Claude, what should you verify?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Provider-specific feature support, model IDs, authentication, and limits"
+                },
+                {
+                    "id": "B",
+                    "text": "That every Anthropic API feature is automatically supported identically"
+                },
+                {
+                    "id": "C",
+                    "text": "That prompts no longer count toward usage"
+                },
+                {
+                    "id": "D",
+                    "text": "That the provider grants the model unrestricted internet access"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Cloud-provider integrations can differ in model naming, supported features, authentication, logging, and limits. Consult the provider's current compatibility documentation rather than assuming parity."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "In supervised learning, what role do labels play in the training process?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Labels are optional metadata"
+                },
+                {
+                    "id": "B",
+                    "text": "Labels provide the ground truth that the model learns to predict"
+                },
+                {
+                    "id": "C",
+                    "text": "Labels only affect model speed"
+                },
+                {
+                    "id": "D",
+                    "text": "Labels are used solely for data visualization"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "In supervised learning, labels represent the known target or ground-truth outcome associated with each training example. The model learns a relationship between input features and these expected outputs by comparing its predictions with the labels and using the resulting error to update its parameters. For example, in spam classification, an email is the input while 'spam' or 'not spam' is the label. Labels therefore play a fundamental role in training rather than serving merely as metadata, visualization information, or a mechanism for controlling model speed."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which factors typically influence the choice between batch and online learning? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Data availability (streaming vs. static)"
+                },
+                {
+                    "id": "B",
+                    "text": "Memory constraints"
+                },
+                {
+                    "id": "C",
+                    "text": "Need for real-time adaptation"
+                },
+                {
+                    "id": "D",
+                    "text": "The programming language used"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "The choice between batch and online learning depends strongly on how data arrives and how quickly the model must adapt. Batch learning works well when relatively static datasets can be processed periodically, while online learning updates the model incrementally as new observations arrive. Online learning can also be useful when datasets are too large to keep entirely in memory or when the application must adapt quickly to changing patterns, such as fraud detection or recommendation systems. The programming language used to implement the system does not determine whether batch or online learning is appropriate."
+        }
+    ]
+}
