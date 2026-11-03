@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Generative AI",
+            "question": "Which model type is best for creating new content such as images or text?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Traditional ML"
+                },
+                {
+                    "id": "B",
+                    "text": "Rule-based systems"
+                },
+                {
+                    "id": "C",
+                    "text": "Generative AI"
+                },
+                {
+                    "id": "D",
+                    "text": "Deterministic algorithms"
+                }
+            ],
+            "correctAnswers": "C",
+            "explanation": "Generative AI models are specifically designed to create new content such as text, images, audio, video, and code by learning patterns from large datasets. For example, language models can generate summaries or articles, while text-to-image models can create images from natural-language descriptions. Traditional machine learning is commonly focused on tasks such as classification and regression, while rule-based and deterministic systems follow explicitly defined logic rather than learning how to generate new content."
+        },
+        {
+            "id": "q2",
+            "category": "Generative AI",
+            "question": "Which output control improves deterministic responses?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Higher temperature"
+                },
+                {
+                    "id": "B",
+                    "text": "Lower temperature"
+                },
+                {
+                    "id": "C",
+                    "text": "Larger context window"
+                },
+                {
+                    "id": "D",
+                    "text": "Top-p sampling"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Temperature controls the randomness of token selection during generation. A lower temperature makes the model favor higher-probability tokens, generally producing more consistent and predictable responses. Higher temperature increases randomness and output diversity. A larger context window determines how much information the model can consider rather than how deterministic its output is. Top-p is another sampling control, but among the listed options, lowering temperature is the most direct way to reduce output randomness."
+        },
+        {
+            "id": "q3",
+            "category": "Generative AI",
+            "question": "Which AI capability is most suitable for automatically summarizing long business reports?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Classification"
+                },
+                {
+                    "id": "B",
+                    "text": "Clustering"
+                },
+                {
+                    "id": "C",
+                    "text": "Text generation"
+                },
+                {
+                    "id": "D",
+                    "text": "Anomaly detection"
+                }
+            ],
+            "correctAnswers": "C",
+            "explanation": "Automatic summarization is primarily a text-generation task because the AI must understand the important information in a source document and generate a shorter natural-language version that preserves the key points. Large Language Models are commonly used for abstractive summarization, where the summary may use different wording from the original document. Classification predicts categories, clustering groups similar data, and anomaly detection identifies unusual patterns, so these approaches do not directly perform document summarization."
+        }
+    ]
+}

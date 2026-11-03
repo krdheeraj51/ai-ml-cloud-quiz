@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Agents & Workflows",
+            "question": "Why should an application not assume that Claude's tool call has already executed?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The model proposes a structured call; the application or runtime is responsible for execution"
+                },
+                {
+                    "id": "B",
+                    "text": "Tool calls are only decorative text and can never be parsed"
+                },
+                {
+                    "id": "C",
+                    "text": "Claude executes every function in the developer's codebase automatically"
+                },
+                {
+                    "id": "D",
+                    "text": "Tool calls bypass all network and permission boundaries"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Tool use separates model decisions from actual execution. The host must dispatch calls, enforce permissions, validate arguments, handle errors, and return results."
+        },
+        {
+            "id": "q2",
+            "category": "Agents & Workflows",
+            "question": "A workflow has a deterministic three-step transformation that does not require model decisions between steps. What is usually preferable?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Use ordinary code or a fixed workflow instead of an autonomous agent"
+                },
+                {
+                    "id": "B",
+                    "text": "Give an agent unlimited tool access"
+                },
+                {
+                    "id": "C",
+                    "text": "Ask the model to invent the steps at runtime"
+                },
+                {
+                    "id": "D",
+                    "text": "Repeat the workflow until the model stops"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Use the simplest reliable architecture. Deterministic tasks are often cheaper and easier to test as ordinary code or a fixed chain; agents are most useful when decisions and adaptation are genuinely needed."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "When an AI model produces outdated or incorrect results due to changes in real-world data, this is known as:",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Hallucination"
+                },
+                {
+                    "id": "B",
+                    "text": "Overfitting"
+                },
+                {
+                    "id": "C",
+                    "text": "Model drift"
+                },
+                {
+                    "id": "D",
+                    "text": "Underfitting"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Model drift occurs when changes in real-world data or relationships cause a previously effective model to become less accurate over time. For example, customer behavior, fraud patterns, market conditions, or business processes may change after deployment, making patterns learned from historical training data less representative of current conditions. Teams typically monitor production performance and data distributions to detect drift and may retrain or update the model when degradation becomes significant. Overfitting refers to poor generalization from training data, underfitting occurs when a model fails to learn the underlying patterns sufficiently, and hallucination generally refers to generated content that is unsupported or incorrect."
+        }
+    ]
+}

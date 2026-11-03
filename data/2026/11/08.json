@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Generative AI",
+            "question": "What is the main output type of a text-to-image GenAI model?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Keywords"
+                },
+                {
+                    "id": "B",
+                    "text": "Images"
+                },
+                {
+                    "id": "C",
+                    "text": "Audio"
+                },
+                {
+                    "id": "D",
+                    "text": "Tables"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A text-to-image generative AI model takes a natural-language prompt describing a desired scene, object, style, or composition and generates an image based on that description. The model learns visual patterns and relationships from training data and uses them to synthesize new visual content. Keywords may be part of the input prompt, but the primary output is an image. Audio and tables are produced by other types of AI systems."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "In Python, which library helps compute cosine similarity for simple retrieval tasks?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "flask"
+                },
+                {
+                    "id": "B",
+                    "text": "itertools"
+                },
+                {
+                    "id": "C",
+                    "text": "tkinter"
+                },
+                {
+                    "id": "D",
+                    "text": "sklearn.metrics.pairwise"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "The sklearn.metrics.pairwise module provides utilities such as cosine_similarity for calculating similarity between numeric vectors. In embedding-based retrieval, a query and documents can be represented as vectors, and cosine similarity can measure how closely their directions align. Higher cosine similarity generally indicates greater semantic similarity when suitable embeddings are used. Flask is a web framework, itertools provides iteration utilities, and tkinter is primarily used for building graphical user interfaces."
+        },
+        {
+            "id": "q3",
+            "category": "Agents & Workflows",
+            "question": "In a typical tool-use cycle, what happens after Claude returns a tool_use block?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The application executes the requested tool and sends the result back as a tool_result"
+                },
+                {
+                    "id": "B",
+                    "text": "Claude has already executed any local function automatically"
+                },
+                {
+                    "id": "C",
+                    "text": "The request must be discarded"
+                },
+                {
+                    "id": "D",
+                    "text": "The tool result should be inserted as a new system instruction"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Claude requests a tool by returning a structured tool_use block. The host application validates and executes the call, then sends a tool_result associated with the tool-use ID so Claude can continue."
+        }
+    ]
+}
