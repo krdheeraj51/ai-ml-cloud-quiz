@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Model Selection & Optimization",
+            "question": "Which approach is best for reducing unnecessary output-token cost?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Request a concise output format and set an appropriate max_tokens limit"
+                },
+                {
+                    "id": "B",
+                    "text": "Always ask for exhaustive explanations"
+                },
+                {
+                    "id": "C",
+                    "text": "Repeat the entire conversation several times"
+                },
+                {
+                    "id": "D",
+                    "text": "Increase max_tokens for every request"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Output tokens contribute to cost and latency. Specify the required length and format, set a sensible output cap, and validate that the cap does not truncate useful responses."
+        },
+        {
+            "id": "q2",
+            "category": "Model Selection & Optimization",
+            "question": "What should guide a decision to use a model with a larger context window?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Whether the task needs the extra context and the quality/cost trade-offs justify it"
+                },
+                {
+                    "id": "B",
+                    "text": "The assumption that larger context always improves every answer"
+                },
+                {
+                    "id": "C",
+                    "text": "The desire to avoid evaluating retrieval"
+                },
+                {
+                    "id": "D",
+                    "text": "The number of developers on the team"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "A larger context window can accommodate more material, but long inputs can increase cost and may make relevant details harder to use. Compare full-context and retrieval-based approaches on real tasks."
+        },
+        {
+            "id": "q3",
+            "category": "ML",
+            "question": "Which common pitfall can cause semantic search to return irrelevant but high-similarity vectors?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Using cosine similarity instead of exact string match always"
+                },
+                {
+                    "id": "B",
+                    "text": "Embedding model not fine-tuned for domain and capturing spurious correlations"
+                },
+                {
+                    "id": "C",
+                    "text": "Too many prompt templates"
+                },
+                {
+                    "id": "D",
+                    "text": "Low network bandwidth"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A semantic search system is only as effective as the embedding representation it uses. If the embedding model does not represent the application's specialized domain well, it may place unrelated items close together because of superficial similarities or spurious correlations learned from more general data. This can produce high similarity scores for documents that are not actually relevant to the user's intent. Domain-appropriate embedding models, representative evaluation datasets, hybrid retrieval, metadata filtering, and re-ranking can help improve retrieval quality. Prompt template count and network bandwidth do not determine the semantic relationships encoded in vectors."
+        }
+    ]
+}

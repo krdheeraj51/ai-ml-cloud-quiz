@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI Security",
+            "question": "A multi-tenant index must prevent cross-customer retrieval. Which control is most direct?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Larger embedding vectors"
+                },
+                {
+                    "id": "B",
+                    "text": "Higher retrieval top-k"
+                },
+                {
+                    "id": "C",
+                    "text": "Tenant metadata filtering"
+                },
+                {
+                    "id": "D",
+                    "text": "More chunk overlap"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Tenant metadata filtering is the most direct control because every stored document or vector can be associated with a tenant identifier, and retrieval can be restricted to records belonging to the authenticated tenant. This helps prevent one customer's query from retrieving another customer's data from a shared index. In production systems, metadata filtering should be combined with authorization checks and appropriate tenant isolation controls. Increasing vector dimensions, retrieval top-k, or chunk overlap may affect retrieval behavior, but none of these provides access isolation between tenants."
+        },
+        {
+            "id": "q2",
+            "category": "Model Selection & Optimization",
+            "question": "A complex code-reasoning task fails frequently with a small model. What is a sensible next step?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Benchmark a more capable model on representative tasks"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase temperature to the maximum without testing"
+                },
+                {
+                    "id": "C",
+                    "text": "Remove test cases from the evaluation set"
+                },
+                {
+                    "id": "D",
+                    "text": "Assume all Claude models perform identically"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Different models have different capabilities and cost/latency profiles. Evaluate a more capable option using a representative benchmark, then compare quality, latency, and cost."
+        },
+        {
+            "id": "q3",
+            "category": "AI Observability",
+            "question": "Which fields are useful in an LLM request trace? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "User password value"
+                },
+                {
+                    "id": "B",
+                    "text": "Prompt and response token counts"
+                },
+                {
+                    "id": "C",
+                    "text": "Model and prompt versions"
+                },
+                {
+                    "id": "D",
+                    "text": "Latency and error status"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "An LLM request trace should capture operational information that helps teams diagnose quality, performance, reliability, and cost issues. Prompt and response token counts help monitor usage and cost; model and prompt versions make it possible to identify which configuration produced a particular result; and latency and error status help investigate performance and reliability problems. Sensitive credentials such as user passwords should never be stored in LLM traces or application logs because doing so creates a serious security risk."
+        }
+    ]
+}

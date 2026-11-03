@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Model Selection & Optimization",
+            "question": "A complex code-reasoning task fails frequently with a small model. What is a sensible next step?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Benchmark a more capable model on representative tasks"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase temperature to the maximum without testing"
+                },
+                {
+                    "id": "C",
+                    "text": "Remove test cases from the evaluation set"
+                },
+                {
+                    "id": "D",
+                    "text": "Assume all Claude models perform identically"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Different models have different capabilities and cost/latency profiles. Evaluate a more capable option using a representative benchmark, then compare quality, latency, and cost."
+        },
+        {
+            "id": "q2",
+            "category": "Generative AI",
+            "question": "A model sometimes returns JSON followed by commentary. Which change best addresses the issue?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Require a response schema"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase top-p sampling"
+                },
+                {
+                    "id": "C",
+                    "text": "Add more retrieved chunks"
+                },
+                {
+                    "id": "D",
+                    "text": "Increase chunk overlap"
+                }
+            ],
+            "correctAnswers": "A",
+            "explanation": "Requiring a structured response schema directly constrains the expected output format and is therefore the best solution when an application requires machine-readable JSON without additional commentary. Structured output mechanisms can define required fields, data types, and permitted values, making responses easier and safer for downstream applications to parse and validate. Increasing top-p affects generation randomness, while adding retrieved chunks or increasing chunk overlap affects retrieval context. None of those changes directly enforces the required JSON structure."
+        },
+        {
+            "id": "q3",
+            "category": "Model Selection & Optimization",
+            "question": "What is prompt caching primarily intended to improve?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Cost and latency for repeated use of eligible shared prompt prefixes"
+                },
+                {
+                    "id": "B",
+                    "text": "Model training accuracy"
+                },
+                {
+                    "id": "C",
+                    "text": "The number of output tokens a model can generate"
+                },
+                {
+                    "id": "D",
+                    "text": "The security of an exposed API key"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Prompt caching can reduce repeated processing of eligible prompt prefixes, which may improve latency and input cost. Cache eligibility, breakpoints, retention, and pricing depend on current platform rules."
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI Agents",
+            "question": "Which of the following are true about nodes in LangGraph? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A node must return the full graph definition each call"
+                },
+                {
+                    "id": "B",
+                    "text": "A node is typically a function or callable"
+                },
+                {
+                    "id": "C",
+                    "text": "A node must be written in assembly for the graph to run"
+                },
+                {
+                    "id": "D",
+                    "text": "A node receives the current state as input"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "D"
+            ],
+            "explanation": "In LangGraph, a node is typically a function or callable that performs a specific unit of work within the graph. A node commonly receives the current graph state, performs an operation such as calling an LLM, invoking a tool, transforming data, or making a routing decision, and returns updates to the state. A node does not need to return the complete graph definition because the graph structure is defined separately. Nodes also do not need to be written in a low-level language such as assembly."
+        },
+        {
+            "id": "q2",
+            "category": "Model Selection & Optimization",
+            "question": "When is prompt caching most likely to help?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Many requests reuse a large, stable system prompt or document prefix"
+                },
+                {
+                    "id": "B",
+                    "text": "Every request contains entirely unique short input"
+                },
+                {
+                    "id": "C",
+                    "text": "The application sends no prompt content"
+                },
+                {
+                    "id": "D",
+                    "text": "The model generates only one token once"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Caching is most useful when substantial prompt content is reused across requests. Frequently changing content near the cache boundary or tiny prompts may provide little benefit."
+        },
+        {
+            "id": "q3",
+            "category": "AI",
+            "question": "A developer must choose a vector store for an embedding-based application. Which are reasonable considerations? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Whether the store uses the same font as the website"
+                },
+                {
+                    "id": "B",
+                    "text": "Support for filtering by metadata alongside vector search"
+                },
+                {
+                    "id": "C",
+                    "text": "The similarity metrics the store supports"
+                },
+                {
+                    "id": "D",
+                    "text": "Scalability to the expected number of vectors"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "C",
+                "D"
+            ],
+            "explanation": "Selecting a vector store requires evaluating capabilities that directly affect retrieval quality, application requirements, and production scalability. Metadata filtering is important when searches must be restricted by properties such as tenant, document type, date, permissions, or category. Supported similarity metrics such as cosine similarity, dot product, and Euclidean distance matter because embedding models may be optimized for particular comparison methods. Scalability is also critical because the vector store must handle the expected number of vectors while meeting latency and availability requirements. Website fonts have no relationship to vector retrieval performance."
+        }
+    ]
+}
