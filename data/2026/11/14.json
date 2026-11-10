@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "RAG",
+            "question": "A query includes a product code and a natural-language issue description. Which retrieval approach best uses both?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Hybrid lexical-vector search"
+                },
+                {
+                    "id": "B",
+                    "text": "Vector search without filters"
+                },
+                {
+                    "id": "C",
+                    "text": "Keyword search without embeddings"
+                },
+                {
+                    "id": "D",
+                    "text": "Randomized nearest-neighbor search"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Hybrid lexical-vector search combines keyword-based retrieval with semantic vector search. The lexical component is effective for exact identifiers such as product codes, error codes, SKUs, and technical terms, while vector search captures the semantic meaning of the natural-language issue description. Combining both approaches improves retrieval when a query contains both precise terminology and descriptive language. Vector-only search may miss exact identifier importance, while keyword-only search may fail to recognize semantically related descriptions."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt & Context Engineering",
+            "question": "Which prompt is most likely to produce a reliable structured answer?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "State the task, constraints, output schema, and what to do when information is missing"
+                },
+                {
+                    "id": "B",
+                    "text": "Say only 'do something useful'"
+                },
+                {
+                    "id": "C",
+                    "text": "Provide contradictory instructions and no context"
+                },
+                {
+                    "id": "D",
+                    "text": "Ask the model to guess any missing facts"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Clear instructions and an explicit output contract reduce ambiguity. Tell the model how to handle missing or uncertain information rather than encouraging unsupported guesses."
+        },
+        {
+            "id": "q3",
+            "category": "RAG",
+            "question": "Which steps occur during online RAG query processing? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Transform or embed query"
+                },
+                {
+                    "id": "B",
+                    "text": "Rebuild the full index"
+                },
+                {
+                    "id": "C",
+                    "text": "Retrieve candidate chunks"
+                },
+                {
+                    "id": "D",
+                    "text": "Assemble grounded context"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "C",
+                "D"
+            ],
+            "explanation": "During online RAG processing, the user's query is first transformed or embedded into a representation suitable for retrieval. The retrieval system then searches the existing index and selects candidate document chunks relevant to the query. These chunks are filtered, ranked, and assembled into grounded context that is supplied to the language model along with the user's question. Rebuilding the entire search or vector index is normally an offline ingestion or indexing operation and is not performed for every user query."
+        }
+    ]
+}

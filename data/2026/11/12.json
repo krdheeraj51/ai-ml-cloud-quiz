@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Agents & Workflows",
+            "question": "What is a key benefit of limiting an agent's available tools to those needed for its task?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "It reduces risk and makes behavior easier to reason about"
+                },
+                {
+                    "id": "B",
+                    "text": "It guarantees the agent cannot make mistakes"
+                },
+                {
+                    "id": "C",
+                    "text": "It eliminates the need for authentication"
+                },
+                {
+                    "id": "D",
+                    "text": "It guarantees faster results in every case"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "A narrow tool set reduces the possible actions and attack surface. It improves clarity and governance but does not eliminate errors or replace runtime authorization."
+        },
+        {
+            "id": "q2",
+            "category": "AI Evaluation",
+            "question": "Which checks should follow fine-tuning? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Evaluate held-out examples"
+                },
+                {
+                    "id": "B",
+                    "text": "Compare with the base model"
+                },
+                {
+                    "id": "C",
+                    "text": "Test known failure cases"
+                },
+                {
+                    "id": "D",
+                    "text": "Assume training loss proves quality"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Fine-tuning should be followed by systematic evaluation rather than relying only on training loss. Held-out examples measure how well the fine-tuned model generalizes to data that was not used during training. Comparing the fine-tuned model with the original base model helps determine whether fine-tuning actually improved the target behavior and whether other capabilities degraded. Known failure and edge cases should also be retested to confirm that important problems have been addressed. Training loss alone does not prove production quality because a model can achieve low training loss while still generalizing poorly or introducing regressions."
+        },
+        {
+            "id": "q3",
+            "category": "Generative AI",
+            "question": "What is a key difference between GenAI and traditional rule-based automation?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "GenAI follows fixed decision branches"
+                },
+                {
+                    "id": "B",
+                    "text": "GenAI generates output from learned patterns"
+                },
+                {
+                    "id": "C",
+                    "text": "GenAI uses predefined response templates"
+                },
+                {
+                    "id": "D",
+                    "text": "GenAI executes documented business rules"
+                }
+            ],
+            "correctAnswers": "B",
+            "explanation": "Generative AI learns statistical patterns and relationships from training data and uses those learned patterns to generate new content such as text, images, audio, or code. Traditional rule-based automation instead follows explicitly programmed rules, decision branches, and predefined logic. For example, a rule-based system may execute 'if condition X occurs, perform action Y,' whereas a generative model can produce new responses based on the context provided. Therefore, generating outputs from learned patterns is a key characteristic that distinguishes GenAI from traditional rule-based automation."
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "questions": [
+        {
+            "id": "q18",
+            "category": "Agents & Workflows",
+            "question": "An agent repeatedly calls a tool with the same invalid arguments. What is a good design improvement?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Return actionable validation errors and bound retries with clear stopping conditions"
+                },
+                {
+                    "id": "B",
+                    "text": "Allow unlimited retries"
+                },
+                {
+                    "id": "C",
+                    "text": "Hide all tool errors from the model"
+                },
+                {
+                    "id": "D",
+                    "text": "Grant the tool administrator permissions"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Structured errors can help the model correct its arguments. Retry limits, validation, and explicit stopping conditions prevent loops, excessive cost, and repeated unsafe actions."
+        }
+    ]
+}

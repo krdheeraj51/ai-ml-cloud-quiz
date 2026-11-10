@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Prompt & Context Engineering",
+            "question": "You need Claude to classify support tickets into one of five categories. What is a useful prompting technique?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Define the categories, decision rules, and representative examples"
+                },
+                {
+                    "id": "B",
+                    "text": "Provide only a vague request to classify tickets"
+                },
+                {
+                    "id": "C",
+                    "text": "Include irrelevant long documents in every request"
+                },
+                {
+                    "id": "D",
+                    "text": "Ask for a different category on each run"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Explicit label definitions and representative examples clarify edge cases and expected behavior. Evaluate on held-out tickets to check whether the prompt generalizes."
+        },
+        {
+            "id": "q2",
+            "category": "AI Observability",
+            "question": "Which signals help investigate rising response latency? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Prompt token count"
+                },
+                {
+                    "id": "B",
+                    "text": "Model processing time"
+                },
+                {
+                    "id": "C",
+                    "text": "Tool-call duration"
+                },
+                {
+                    "id": "D",
+                    "text": "Answer sentiment label"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Investigating LLM response latency requires measuring the stages that contribute directly to end-to-end request time. Prompt token count is useful because larger inputs generally require more model processing. Model processing time shows how much latency comes from inference itself. Tool-call duration is important in agentic applications because slow APIs, databases, search systems, or other external tools can significantly increase total response time. An answer sentiment label describes characteristics of the generated content but does not normally explain why a request took longer to process."
+        },
+        {
+            "id": "q3",
+            "category": "Generative AI",
+            "question": "A model knows the task but repeatedly violates a stable domain writing convention across many prompts. Which approach is most suitable to evaluate?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Supervised fine-tuning"
+                },
+                {
+                    "id": "B",
+                    "text": "Larger retrieval top-k"
+                },
+                {
+                    "id": "C",
+                    "text": "More document chunk overlap"
+                },
+                {
+                    "id": "D",
+                    "text": "Higher output token limit"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Supervised fine-tuning is appropriate to evaluate when a model already understands the underlying task but consistently fails to follow a stable, repeated domain-specific behavior or writing convention across many prompts. Fine-tuning uses curated input-output examples to adapt model behavior toward the desired style, terminology, format, or conventions. Before fine-tuning, teams should normally confirm that simpler prompt instructions or few-shot examples are insufficient because those approaches are cheaper and easier to maintain. Increasing retrieval top-k or chunk overlap changes retrieval behavior, while increasing the output token limit only allows longer responses and does not teach the model a consistent writing convention."
+        }
+    ]
+}

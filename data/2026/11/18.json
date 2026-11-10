@@ -1,0 +1,85 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Prompt & Context Engineering",
+            "question": "Why can XML-style tags be useful in a Claude prompt?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "They clearly separate instructions, source documents, examples, and user data"
+                },
+                {
+                    "id": "B",
+                    "text": "They encrypt the prompt"
+                },
+                {
+                    "id": "C",
+                    "text": "They guarantee that embedded content is trusted"
+                },
+                {
+                    "id": "D",
+                    "text": "They increase the model's context window"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Tags such as <instructions>, <document>, and <examples> can make boundaries clearer in complex prompts. They are organizational cues, not a security boundary or encryption mechanism."
+        },
+        {
+            "id": "q2",
+            "category": "RAG",
+            "question": "A RAG answer cites the right document but the cited passage does not support the claim. What failed?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Document ingestion scheduling"
+                },
+                {
+                    "id": "B",
+                    "text": "Embedding batch sizing"
+                },
+                {
+                    "id": "C",
+                    "text": "Citation-grounding validation"
+                },
+                {
+                    "id": "D",
+                    "text": "Model endpoint routing"
+                }
+            ],
+            "correctAnswers": [
+                "C"
+            ],
+            "explanation": "Citation-grounding validation checks whether the specific evidence being cited actually supports the claim made by the generated answer. Finding the correct document alone is not sufficient because the model may cite a passage that is unrelated to, weaker than, or even contradictory to the generated statement. A reliable RAG system should verify claim-to-evidence alignment at the passage level before presenting a citation. Document ingestion scheduling, embedding batch size, and model endpoint routing may affect other parts of the system, but they do not directly validate whether a cited passage supports a particular claim."
+        },
+        {
+            "id": "q3",
+            "category": "Generative AI",
+            "question": "Which actions can improve the factual reliability of a GenAI response? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Provide trusted reference material"
+                },
+                {
+                    "id": "B",
+                    "text": "Request supporting sources"
+                },
+                {
+                    "id": "C",
+                    "text": "Increase response creativity"
+                },
+                {
+                    "id": "D",
+                    "text": "Verify important claims"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "Factual reliability improves when generated answers are grounded in trustworthy evidence and important statements are independently checked. Providing trusted reference material gives the model authoritative context instead of relying only on knowledge learned during training. Requesting supporting sources improves traceability and allows claims to be inspected against their evidence. Verifying important claims provides an additional validation layer, particularly for high-impact business, technical, financial, legal, or healthcare information. Increasing creativity generally increases output variation and does not provide additional factual grounding, so it is not a suitable technique for improving factual reliability."
+        }
+    ]
+}

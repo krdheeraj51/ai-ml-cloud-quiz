@@ -1,0 +1,29 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Tools & MCP",
+            "question": "What does MCP stand for in the Claude developer ecosystem?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Model Context Protocol"
+                },
+                {
+                    "id": "B",
+                    "text": "Model Control Process"
+                },
+                {
+                    "id": "C",
+                    "text": "Machine Conversation Pipeline"
+                },
+                {
+                    "id": "D",
+                    "text": "Managed Claude Prompt"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "MCP means Model Context Protocol. It defines a standardized way for applications to connect AI systems with external tools and context sources through MCP clients and servers."
+        }
+    ]
+}

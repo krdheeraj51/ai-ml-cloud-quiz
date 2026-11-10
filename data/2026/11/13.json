@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "RAG",
+            "question": "Retrieved passages are accurate, but the prompt truncates the most important one. What should be adjusted?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Embedding model training set"
+                },
+                {
+                    "id": "B",
+                    "text": "Source document permissions"
+                },
+                {
+                    "id": "C",
+                    "text": "Vector database replication"
+                },
+                {
+                    "id": "D",
+                    "text": "Context assembly and ranking"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "If retrieval already returns the correct passages but the most important evidence is removed when constructing the model prompt, the problem lies in context assembly rather than retrieval itself. The application should improve how retrieved chunks are ranked, selected, ordered, and fitted within the model's context budget. Techniques such as re-ranking, relevance-based prioritization, contextual compression, deduplication, and token-budget management can ensure the strongest evidence reaches the LLM. Changing the embedding training set, document permissions, or database replication does not directly solve prompt-context truncation."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt & Context Engineering",
+            "question": "A user asks a question that the supplied document does not answer. What should the prompt encourage Claude to do?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "State that the evidence is insufficient rather than invent an answer"
+                },
+                {
+                    "id": "B",
+                    "text": "Create a plausible citation"
+                },
+                {
+                    "id": "C",
+                    "text": "Use unrelated background knowledge as if it came from the document"
+                },
+                {
+                    "id": "D",
+                    "text": "Always choose the first option"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "For grounded tasks, explicitly instruct the model to distinguish supported claims from missing evidence and to say when the source does not answer the question."
+        },
+        {
+            "id": "q3",
+            "category": "Agents & Workflows",
+            "question": "What is the purpose of maintaining explicit state in a multi-step agent workflow?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To track progress, tool results, and decisions across steps"
+                },
+                {
+                    "id": "B",
+                    "text": "To make every tool call stateless and unrelated"
+                },
+                {
+                    "id": "C",
+                    "text": "To guarantee that the model remembers everything forever"
+                },
+                {
+                    "id": "D",
+                    "text": "To bypass context-window limits automatically"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Explicit state helps workflows resume, audit progress, and pass relevant information between steps. State should be minimized, validated, and persisted securely when necessary."
+        }
+    ]
+}
