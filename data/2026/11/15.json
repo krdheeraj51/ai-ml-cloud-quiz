@@ -1,0 +1,87 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "AI Evaluation",
+            "question": "Which checks should follow fine-tuning? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Evaluate held-out examples"
+                },
+                {
+                    "id": "B",
+                    "text": "Compare with the base model"
+                },
+                {
+                    "id": "C",
+                    "text": "Test known failure cases"
+                },
+                {
+                    "id": "D",
+                    "text": "Assume training loss proves quality"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Fine-tuning should be followed by systematic evaluation rather than relying only on training loss. Held-out examples measure how well the fine-tuned model generalizes to data that was not used during training. Comparing the fine-tuned model with the original base model helps determine whether fine-tuning actually improved the target behavior and whether other capabilities degraded. Known failure and edge cases should also be retested to confirm that important problems have been addressed. Training loss alone does not prove production quality because a model can achieve low training loss while still generalizing poorly or introducing regressions."
+        },
+        {
+            "id": "q2",
+            "category": "Agents & Workflows",
+            "question": "An agent needs to search, compare results, and then choose a follow-up action. Which design best describes this?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A bounded observe-decide-act loop with defined tools and exit conditions"
+                },
+                {
+                    "id": "B",
+                    "text": "A single hard-coded string replacement"
+                },
+                {
+                    "id": "C",
+                    "text": "An unrestricted loop with no maximum steps"
+                },
+                {
+                    "id": "D",
+                    "text": "A static HTML page"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Agentic workflows commonly alternate between observing tool results, deciding what to do next, and acting. Reliable implementations define allowed tools, budgets, error handling, and termination conditions."
+        },
+        {
+            "id": "q3",
+            "category": "RAG",
+            "question": "Which needs favor RAG over fine-tuning? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Frequently updated knowledge"
+                },
+                {
+                    "id": "B",
+                    "text": "Traceable source citations"
+                },
+                {
+                    "id": "C",
+                    "text": "User-specific document access"
+                },
+                {
+                    "id": "D",
+                    "text": "Persistent response style"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "RAG is generally preferable when an application needs dynamic or externally managed knowledge. Frequently updated information can be refreshed in the underlying knowledge source without retraining the model. Retrieved passages can be associated with source metadata, enabling traceable citations and evidence-grounded responses. RAG also supports user-specific or role-based access by restricting retrieval according to permissions, tenant identifiers, or metadata filters. Persistent response style is usually better addressed through prompt engineering or fine-tuning because it concerns model behavior and presentation rather than retrieving current knowledge."
+        }
+    ]
+}

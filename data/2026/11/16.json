@@ -1,0 +1,85 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "RAG",
+            "question": "Relevant documents appear below several loosely related results. Which component can reorder candidates by query relevance?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Tokenizer"
+                },
+                {
+                    "id": "B",
+                    "text": "Reranker"
+                },
+                {
+                    "id": "C",
+                    "text": "Output validator"
+                },
+                {
+                    "id": "D",
+                    "text": "Fine-tuning adapter"
+                }
+            ],
+            "correctAnswers": [
+                "B"
+            ],
+            "explanation": "A reranker improves retrieval quality by taking an initial set of candidate documents and scoring them again using a more precise relevance model. The reranker then reorders the candidates so passages most closely related to the user's query appear first. In RAG systems, this helps when fast vector or hybrid retrieval finds the correct documents but does not rank them highly enough. A tokenizer converts text into tokens, an output validator checks generated responses, and a fine-tuning adapter modifies model behavior rather than directly reordering retrieved documents."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt & Context Engineering",
+            "question": "What is the main purpose of few-shot examples in a prompt?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Demonstrate the expected input-output pattern"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase the user's account permissions"
+                },
+                {
+                    "id": "C",
+                    "text": "Replace application-side validation"
+                },
+                {
+                    "id": "D",
+                    "text": "Guarantee perfect generalization"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Few-shot examples show the model the desired format, style, or decision boundary. Examples should be representative and consistent; they can improve behavior but do not guarantee correctness."
+        },
+        {
+            "id": "q3",
+            "category": "RAG",
+            "question": "Which changes may improve retrieval precision? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Apply metadata filters"
+                },
+                {
+                    "id": "B",
+                    "text": "Use a reranking stage"
+                },
+                {
+                    "id": "C",
+                    "text": "Create coherent chunks"
+                },
+                {
+                    "id": "D",
+                    "text": "Increase top-k without review"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "Retrieval precision improves when the system reduces irrelevant results while preserving highly relevant evidence. Metadata filters can restrict retrieval to appropriate documents based on attributes such as tenant, document type, date, product, or permissions. A reranking stage can rescore initial candidates and move the most query-relevant passages higher. Creating coherent chunks helps ensure each retrieved unit contains meaningful, self-contained information rather than fragmented text. Simply increasing top-k without reviewing or reranking the additional results can introduce more irrelevant context and may reduce precision."
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Generative AI",
+            "question": "What is a key difference between GenAI and traditional rule-based automation?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "GenAI follows fixed decision branches"
+                },
+                {
+                    "id": "B",
+                    "text": "GenAI generates output from learned patterns"
+                },
+                {
+                    "id": "C",
+                    "text": "GenAI uses predefined response templates"
+                },
+                {
+                    "id": "D",
+                    "text": "GenAI executes documented business rules"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Generative AI learns statistical patterns and relationships from training data and uses those learned patterns to generate new content such as text, images, audio, or code. Traditional rule-based automation instead follows explicitly programmed rules, decision branches, and predefined logic. For example, a rule-based system may execute 'if condition X occurs, perform action Y,' whereas a generative model can produce new responses based on the context provided. Therefore, generating outputs from learned patterns is a key characteristic that distinguishes GenAI from traditional rule-based automation."
+        },
+        {
+            "id": "q2",
+            "category": "Tools & MCP",
+            "question": "In MCP architecture, what is the primary role of an MCP server?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Expose capabilities such as tools, resources, or prompts to an MCP client"
+                },
+                {
+                    "id": "B",
+                    "text": "Train Claude's foundation model"
+                },
+                {
+                    "id": "C",
+                    "text": "Replace every application's authentication system"
+                },
+                {
+                    "id": "D",
+                    "text": "Guarantee that all tool output is safe"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "An MCP server exposes capabilities according to the protocol, such as tools and resources. Clients discover and invoke supported capabilities, while applications still need to manage trust, permissions, and errors."
+        },
+        {
+            "id": "q3",
+            "category": "RAG",
+            "question": "Which needs favor RAG over fine-tuning? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Frequently updated knowledge"
+                },
+                {
+                    "id": "B",
+                    "text": "Traceable source citations"
+                },
+                {
+                    "id": "C",
+                    "text": "User-specific document access"
+                },
+                {
+                    "id": "D",
+                    "text": "Persistent response style"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "RAG is generally preferable when an application needs dynamic or externally managed knowledge. Frequently updated information can be refreshed in the underlying knowledge source without retraining the model. Retrieved passages can be associated with source metadata, enabling traceable citations and evidence-grounded responses. RAG also supports user-specific or role-based access by restricting retrieval according to permissions, tenant identifiers, or metadata filters. Persistent response style is usually better addressed through prompt engineering or fine-tuning because it concerns model behavior and presentation rather than retrieving current knowledge."
+        }
+    ]
+}
