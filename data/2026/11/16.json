@@ -22,9 +22,7 @@
                     "text": "Fine-tuning adapter"
                 }
             ],
-            "correctAnswers": [
-                "B"
-            ],
+            "correctAnswer": "B",
             "explanation": "A reranker improves retrieval quality by taking an initial set of candidate documents and scoring them again using a more precise relevance model. The reranker then reorders the candidates so passages most closely related to the user's query appear first. In RAG systems, this helps when fast vector or hybrid retrieval finds the correct documents but does not rank them highly enough. A tokenizer converts text into tokens, an output validator checks generated responses, and a fine-tuning adapter modifies model behavior rather than directly reordering retrieved documents."
         },
         {
