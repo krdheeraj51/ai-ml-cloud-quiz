@@ -1,7 +1,32 @@
 {
     "questions": [
-        {
+         {
             "id": "q1",
+            "category": "Tools & MCP",
+            "question": "Before invoking a newly discovered MCP tool, what should a secure client do?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Inspect its description and schema, validate arguments, and apply authorization policy"
+                },
+                {
+                    "id": "B",
+                    "text": "Assume every tool is safe because it uses MCP"
+                },
+                {
+                    "id": "C",
+                    "text": "Send all available secrets to the tool"
+                },
+                {
+                    "id": "D",
+                    "text": "Skip confirmation for destructive operations"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "MCP standardizes communication, not trustworthiness. Clients should evaluate tool metadata, validate inputs, enforce least privilege, and apply approval requirements for sensitive actions."
+        },
+        {
+            "id": "q2",
             "category": "Tools & MCP",
             "question": "What does MCP stand for in the Claude developer ecosystem?",
             "options": [
