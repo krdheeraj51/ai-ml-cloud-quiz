@@ -51,31 +51,6 @@
             "explanation": "Structured errors can help the model correct its arguments. Retry limits, validation, and explicit stopping conditions prevent loops, excessive cost, and repeated unsafe actions."
         },
         {
-            "id": "q30",
-            "category": "Tools & MCP",
-            "question": "Before invoking a newly discovered MCP tool, what should a secure client do?",
-            "options": [
-                {
-                    "id": "A",
-                    "text": "Inspect its description and schema, validate arguments, and apply authorization policy"
-                },
-                {
-                    "id": "B",
-                    "text": "Assume every tool is safe because it uses MCP"
-                },
-                {
-                    "id": "C",
-                    "text": "Send all available secrets to the tool"
-                },
-                {
-                    "id": "D",
-                    "text": "Skip confirmation for destructive operations"
-                }
-            ],
-            "correctAnswer": "A",
-            "explanation": "MCP standardizes communication, not trustworthiness. Clients should evaluate tool metadata, validate inputs, enforce least privilege, and apply approval requirements for sensitive actions."
-        },
-        {
             "id": "q3",
             "category": "Tools & MCP",
             "question": "A tool accepts a file path supplied by Claude. Which control is most important?",
