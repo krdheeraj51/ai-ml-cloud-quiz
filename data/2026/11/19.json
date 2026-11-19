@@ -1,7 +1,32 @@
 {
     "questions": [
+         {
+            "id": "q1",
+            "category": "Tools & MCP",
+            "question": "What does MCP stand for in the Claude developer ecosystem?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Model Context Protocol"
+                },
+                {
+                    "id": "B",
+                    "text": "Model Control Process"
+                },
+                {
+                    "id": "C",
+                    "text": "Machine Conversation Pipeline"
+                },
+                {
+                    "id": "D",
+                    "text": "Managed Claude Prompt"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "MCP means Model Context Protocol. It defines a standardized way for applications to connect AI systems with external tools and context sources through MCP clients and servers."
+        },
         {
-            "id": "q18",
+            "id": "q2",
             "category": "Agents & Workflows",
             "question": "An agent repeatedly calls a tool with the same invalid arguments. What is a good design improvement?",
             "options": [
@@ -24,6 +49,56 @@
             ],
             "correctAnswer": "A",
             "explanation": "Structured errors can help the model correct its arguments. Retry limits, validation, and explicit stopping conditions prevent loops, excessive cost, and repeated unsafe actions."
+        },
+        {
+            "id": "q30",
+            "category": "Tools & MCP",
+            "question": "Before invoking a newly discovered MCP tool, what should a secure client do?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Inspect its description and schema, validate arguments, and apply authorization policy"
+                },
+                {
+                    "id": "B",
+                    "text": "Assume every tool is safe because it uses MCP"
+                },
+                {
+                    "id": "C",
+                    "text": "Send all available secrets to the tool"
+                },
+                {
+                    "id": "D",
+                    "text": "Skip confirmation for destructive operations"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "MCP standardizes communication, not trustworthiness. Clients should evaluate tool metadata, validate inputs, enforce least privilege, and apply approval requirements for sensitive actions."
+        },
+        {
+            "id": "q3",
+            "category": "Tools & MCP",
+            "question": "A tool accepts a file path supplied by Claude. Which control is most important?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Restrict access to approved directories and validate the resolved path"
+                },
+                {
+                    "id": "B",
+                    "text": "Trust the path because the model generated it"
+                },
+                {
+                    "id": "C",
+                    "text": "Disable all logging"
+                },
+                {
+                    "id": "D",
+                    "text": "Run every file operation as an administrator"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Model-generated arguments are untrusted input. Resolve paths safely, prevent traversal outside permitted locations, and apply operating-system permissions and application authorization."
         }
     ]
 }
