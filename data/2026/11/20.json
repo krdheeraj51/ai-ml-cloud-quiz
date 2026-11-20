@@ -49,6 +49,31 @@
             ],
             "correctAnswer": "A",
             "explanation": "MCP means Model Context Protocol. It defines a standardized way for applications to connect AI systems with external tools and context sources through MCP clients and servers."
+        },
+        {
+            "id": "q3",
+            "category": "Security & Safety",
+            "question": "Where should an Anthropic API key be stored in a production application?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "In a server-side secret manager or protected environment configuration"
+                },
+                {
+                    "id": "B",
+                    "text": "In frontend JavaScript shipped to every browser"
+                },
+                {
+                    "id": "C",
+                    "text": "In a public Git repository"
+                },
+                {
+                    "id": "D",
+                    "text": "Inside every user-visible prompt"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "API keys must remain on trusted server infrastructure and be managed as secrets. Use restricted access, rotation, monitoring, and avoid logging the key or embedding it in client-side code."
         }
     ]
 }
