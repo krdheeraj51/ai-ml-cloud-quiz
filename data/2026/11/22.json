@@ -1,3 +1,79 @@
 {
-    "questions": []
+    "questions": [
+        {
+            "id": "q1",
+            "category": "LangChain & LCEL",
+            "question": "In LangChain LCEL, what is the primary difference between RunnableSequence and RunnableParallel?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "RunnableSequence executes tasks sequentially, while RunnableParallel executes independent tasks concurrently"
+                },
+                {
+                    "id": "B",
+                    "text": "RunnableSequence is used only for agents, while RunnableParallel is used only for retrievers"
+                },
+                {
+                    "id": "C",
+                    "text": "Both execute tasks sequentially, but store outputs differently"
+                },
+                {
+                    "id": "D",
+                    "text": "RunnableParallel is exclusively used for streaming model responses"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "RunnableSequence connects components so that one component's output becomes the next component's input. RunnableParallel executes multiple independent Runnables using the same input and collects their outputs in a dictionary."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt Engineering",
+            "question": "A developer wants an LLM to classify customer feedback into positive, negative, or neutral categories. Which prompting approach is most suitable for consistent results?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Ask the model to freely describe the customer's emotions"
+                },
+                {
+                    "id": "B",
+                    "text": "Provide explicit classification rules and require output in a predefined structured schema"
+                },
+                {
+                    "id": "C",
+                    "text": "Increase the temperature to encourage creative classifications"
+                },
+                {
+                    "id": "D",
+                    "text": "Avoid providing examples or output constraints"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Explicit classification criteria and structured output constraints reduce ambiguity. A schema such as an enum containing positive, negative, and neutral helps applications reliably consume model predictions."
+        },
+        {
+            "id": "q3",
+            "category": "Langfuse Observability",
+            "question": "What is the primary purpose of associating multiple LLM observations with a single Langfuse trace?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To combine multiple foundation models into one model"
+                },
+                {
+                    "id": "B",
+                    "text": "To automatically fine-tune the model"
+                },
+                {
+                    "id": "C",
+                    "text": "To track the complete execution of a request across multiple LLM calls and operations"
+                },
+                {
+                    "id": "D",
+                    "text": "To eliminate the need for application-level error handling"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "A trace represents an overall execution flow. Multiple observations, including spans and generations, can be associated with it to provide visibility into individual operations, model calls, latency, and errors."
+        }
+    ]
 }
