@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "LangChain & Production RAG",
+            "question": "A production RAG system uses a retriever that returns relevant documents, but the LLM frequently generates answers using information not present in those documents. Which architectural improvement is most appropriate?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Increase the number of retrieved documents without evaluating relevance"
+                },
+                {
+                    "id": "B",
+                    "text": "Increase the temperature to make the model more flexible"
+                },
+                {
+                    "id": "C",
+                    "text": "Introduce context-grounded prompting, relevance checks, and an explicit fallback when evidence is insufficient"
+                },
+                {
+                    "id": "D",
+                    "text": "Remove all retrieved context and depend on model knowledge"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "A robust RAG architecture should validate whether retrieved evidence is sufficient, instruct the model to ground its answers in that evidence, and provide a fallback when the context cannot support an answer. Retrieval evaluation and output checks further improve reliability."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt Engineering & Few-Shot Learning",
+            "question": "A developer provides 20 examples in a few-shot prompt, but the model starts producing inconsistent classifications. What is the best next step?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Review example quality, remove contradictory examples, and select representative examples aligned with the task"
+                },
+                {
+                    "id": "B",
+                    "text": "Add as many random examples as possible"
+                },
+                {
+                    "id": "C",
+                    "text": "Remove the system instructions"
+                },
+                {
+                    "id": "D",
+                    "text": "Replace all examples with unrelated creative-writing examples"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Few-shot examples should be representative, consistent, and aligned with the desired output. Contradictory or noisy examples can confuse the model. Example selection should be validated against a separate evaluation dataset."
+        },
+        {
+            "id": "q3",
+            "category": "Langfuse & LLM Cost Monitoring",
+            "question": "An application team notices that LLM costs have increased significantly after deploying a new prompt version. Which Langfuse observability data would be most useful for investigating the change?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Only the number of active application users"
+                },
+                {
+                    "id": "B",
+                    "text": "Only the HTTP status codes returned by the backend"
+                },
+                {
+                    "id": "C",
+                    "text": "Only the average response length in characters"
+                },
+                {
+                    "id": "D",
+                    "text": "Generation-level token usage, model information, request volume, and associated cost data"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Generation-level observations can expose token consumption, model details, and cost information. Comparing these metrics across prompt versions and time periods helps identify whether increased input tokens, output tokens, model selection, or request volume caused the cost increase."
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "LangChain & Stateful Workflows",
+            "question": "A LangGraph application needs to preserve workflow state across multiple interactions and resume execution after interruptions. Which capability is primarily responsible for this?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "PromptTemplate"
+                },
+                {
+                    "id": "B",
+                    "text": "Checkpointer"
+                },
+                {
+                    "id": "C",
+                    "text": "OutputParser"
+                },
+                {
+                    "id": "D",
+                    "text": "TextSplitter"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "LangGraph checkpointers persist graph state at execution steps. They enable capabilities such as conversation continuity, recovery, interruption handling, and resuming workflows using thread identifiers."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt Engineering & Security",
+            "question": "A customer support AI uses an LLM to execute refund operations through external tools. Which design provides the strongest protection against unauthorized refunds?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Ask the LLM to decide whether a refund is authorized based only on its generated response"
+                },
+                {
+                    "id": "B",
+                    "text": "Allow the LLM to directly access the payment database without restrictions"
+                },
+                {
+                    "id": "C",
+                    "text": "Enforce authorization, business rules, input validation, and approval requirements in the backend tool execution layer"
+                },
+                {
+                    "id": "D",
+                    "text": "Add the sentence 'Never issue unauthorized refunds' to the user prompt and rely on it exclusively"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "LLM instructions alone are not a security boundary. Sensitive operations must be protected by backend authorization, transaction validation, business rules, least-privilege access, and human approval where appropriate."
+        },
+        {
+            "id": "q3",
+            "category": "Langfuse & Experimentation",
+            "question": "A team wants to determine whether a new LangChain prompt improves answer quality without affecting production users. Which evaluation strategy is most appropriate?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Replace the production prompt immediately and evaluate only after deployment"
+                },
+                {
+                    "id": "B",
+                    "text": "Evaluate both prompts on a representative fixed dataset using consistent metrics and compare the results before deployment"
+                },
+                {
+                    "id": "C",
+                    "text": "Compare only the length of generated responses"
+                },
+                {
+                    "id": "D",
+                    "text": "Select the prompt that generates the most tokens"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Controlled offline evaluation using a fixed dataset makes prompt comparisons more meaningful. Consistent metrics such as correctness, relevance, and faithfulness help assess quality before introducing the new prompt into production."
+        }
+    ]
+}

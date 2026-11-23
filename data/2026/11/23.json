@@ -1,3 +1,79 @@
 {
-    "questions": []
+    "questions": [
+        {
+            "id": "q1",
+            "category": "LangChain & RAG",
+            "question": "A RAG application retrieves 10 documents, but only 2 are relevant to the user's question. Which improvement should be considered to improve the quality of the context passed to the LLM?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Increase the LLM temperature"
+                },
+                {
+                    "id": "B",
+                    "text": "Remove the retriever and ask the LLM to answer directly"
+                },
+                {
+                    "id": "C",
+                    "text": "Increase the context window without changing retrieval"
+                },
+                {
+                    "id": "D",
+                    "text": "Introduce a reranking step to reorder retrieved documents by relevance"
+                }
+            ],
+            "correctAnswer": "D",
+            "explanation": "A reranker evaluates retrieved candidates and reorders them based on their relevance to the query. This can improve the quality of the final context supplied to the LLM, even when the initial retriever returns noisy results."
+        },
+        {
+            "id": "q2",
+            "category": "Prompt Engineering",
+            "question": "What is the main purpose of using delimiters around retrieved documents in a prompt?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To increase the number of tokens available to the model"
+                },
+                {
+                    "id": "B",
+                    "text": "To help distinguish trusted instructions from untrusted contextual data"
+                },
+                {
+                    "id": "C",
+                    "text": "To automatically encrypt retrieved documents"
+                },
+                {
+                    "id": "D",
+                    "text": "To convert retrieved text into vector embeddings"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Delimiters make prompt structure clearer by separating instructions from contextual content. They help communicate trust boundaries but are not a complete defense against prompt injection. Additional validation and security controls are required."
+        },
+        {
+            "id": "q3",
+            "category": "Langfuse Evaluation",
+            "question": "A team evaluates a RAG application using a test dataset containing questions and reference answers. Which evaluation approach measures whether the generated answer is factually supported by the retrieved context?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Faithfulness evaluation"
+                },
+                {
+                    "id": "B",
+                    "text": "Request throughput measurement"
+                },
+                {
+                    "id": "C",
+                    "text": "Token consumption tracking"
+                },
+                {
+                    "id": "D",
+                    "text": "Response latency monitoring"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Faithfulness evaluates whether the generated response is supported by the provided context. It is particularly useful in RAG systems for identifying unsupported claims and hallucinations."
+        }
+    ]
 }

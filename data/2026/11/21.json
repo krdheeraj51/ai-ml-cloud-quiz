@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "LLM Observability",
+            "question": "What is the primary purpose of Langfuse as an observability platform?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To track, monitor, and analyze LLM application behavior, costs, and performance"
+                },
+                {
+                    "id": "B",
+                    "text": "To replace OpenAI API with an open-source alternative"
+                },
+                {
+                    "id": "C",
+                    "text": "To train and fine-tune LLM models from scratch"
+                },
+                {
+                    "id": "D",
+                    "text": "To store and manage prompt templates for different use cases"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Langfuse is an LLM engineering and observability platform that helps teams trace and analyze the execution of LLM applications. Its observability capabilities provide visibility into model calls, inputs and outputs, latency, token usage, costs, errors, and application execution flows. This information helps developers debug failures, evaluate quality, monitor production behavior, and optimize performance and cost. Langfuse also provides prompt-management and evaluation capabilities, but those are additional features rather than the primary observability purpose described in this question."
+        },
+        {
+            "id": "q2",
+            "category": "LLM Observability",
+            "question": "What is a Trace in the Langfuse data model?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A single end-to-end execution flow through an LLM application, from user request to final response"
+                },
+                {
+                    "id": "B",
+                    "text": "A database query log for storing API responses"
+                },
+                {
+                    "id": "C",
+                    "text": "A report showing monthly cost breakdowns"
+                },
+                {
+                    "id": "D",
+                    "text": "A code snippet for debugging Python applications"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "A trace represents an end-to-end execution of an application request and provides a hierarchical view of the operations that occurred during that execution. A trace can contain observations representing operations such as LLM generations, retrieval, tool calls, API interactions, or application logic. This structure helps developers understand how a request moved through the system, how long individual operations took, and where errors or unexpected behavior occurred."
+        },
+        {
+            "id": "q3",
+            "category": "Security & Safety",
+            "question": "What is the best defense against a user asking an AI agent to access another user's records?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Enforce authorization in the application and data layer for every request"
+                },
+                {
+                    "id": "B",
+                    "text": "Ask Claude to promise not to do it"
+                },
+                {
+                    "id": "C",
+                    "text": "Rely only on a system prompt saying 'be secure'"
+                },
+                {
+                    "id": "D",
+                    "text": "Hide the database table name"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Access control must be enforced outside the model using authenticated identity, authorization checks, and scoped queries. Prompt instructions alone cannot provide a security boundary."
+        }
+    ]
+}
