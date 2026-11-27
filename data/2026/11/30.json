@@ -1,0 +1,82 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Generative AI",
+            "question": "An LLM API returns text that a downstream service must parse. Which interface choice reduces parsing ambiguity?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Free-form prose response"
+                },
+                {
+                    "id": "B",
+                    "text": "Schema-constrained JSON response"
+                },
+                {
+                    "id": "C",
+                    "text": "Higher-temperature response"
+                },
+                {
+                    "id": "D",
+                    "text": "Longer system instruction"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "A schema-constrained JSON response is the best choice when another application must reliably parse an LLM's output. A predefined schema specifies the expected fields, data types, and structure, reducing ambiguity and making validation easier before the response is passed to downstream services. Free-form prose can vary in wording and formatting, while increasing temperature generally increases output variation. Longer system instructions may provide additional guidance but do not enforce machine-readable structure as reliably as schema-constrained output."
+        },
+        {
+            "id": "q2",
+            "category": "Generative AI",
+            "question": "A user asks a model to answer using a policy document supplied in the prompt. Which technique is being used?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Grounding with provided context"
+                },
+                {
+                    "id": "B",
+                    "text": "Training a foundation model"
+                },
+                {
+                    "id": "C",
+                    "text": "Fine-tuning model weights"
+                },
+                {
+                    "id": "D",
+                    "text": "Creating new embeddings"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Supplying a policy document directly in the prompt gives the model external context that can be used to ground the answer. The model uses the provided evidence during inference without changing its underlying parameters. This is different from foundation-model training or fine-tuning, both of which involve updating model weights. Creating embeddings converts content into numerical vector representations for retrieval or similarity search, but embeddings are not required when the relevant policy text is already supplied directly in the prompt."
+        },
+        {
+            "id": "q3",
+            "category": "Generative AI",
+            "question": "Which settings can influence variation in generated text? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Context window size"
+                },
+                {
+                    "id": "B",
+                    "text": "Temperature setting"
+                },
+                {
+                    "id": "C",
+                    "text": "Top-p sampling setting"
+                },
+                {
+                    "id": "D",
+                    "text": "Model parameter count"
+                }
+            ],
+            "correctAnswers": [
+                "B",
+                "C"
+            ],
+            "explanation": "Temperature and top-p are decoding or sampling controls that directly influence how tokens are selected during generation. Higher temperature generally spreads probability across more token choices and increases variation, while lower temperature tends to make output more consistent. Top-p, also called nucleus sampling, limits token selection to a probability mass defined by the configured threshold and therefore also affects output diversity. Context window size determines how much information the model can consider, while model parameter count describes model capacity; neither is primarily a sampling setting used to control run-to-run variation."
+        }
+    ]
+}

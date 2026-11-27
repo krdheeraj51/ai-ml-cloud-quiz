@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "Prompt Engineering",
+            "question": "Consider a task that keeps returning output in the wrong structure under a zero-shot prompt. Predict what changes if you switch to multi-shot.",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Switching to multi-shot retrains the model on the new structure, so the change is permanent across every future call once the examples are sent."
+                },
+                {
+                    "id": "B",
+                    "text": "Adding two or three correct input-output examples shows the model the exact structure to match, which usually fixes a structure problem that more instruction text did not. The cost is extra tokens on every call, so add the fewest examples that make the output reliable."
+                },
+                {
+                    "id": "C",
+                    "text": "Multi-shot will not help a structure problem; only raising the temperature changes the shape of the output."
+                },
+                {
+                    "id": "D",
+                    "text": "Multi-shot lowers the token cost per call, because examples let the model produce shorter responses."
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Multi-shot prompting provides the model with several input-output examples that demonstrate the expected structure and behavior. This in-context guidance can make formatting more reliable when a zero-shot instruction is insufficient. Multi-shot prompting does not retrain or permanently modify the model's weights; the examples must be supplied as context for relevant requests. Those examples also consume input tokens, so production prompts should use the smallest number of high-quality examples needed to achieve reliable results."
+        },
+        {
+            "id": "q2",
+            "category": "AI Architecture",
+            "question": "Consider a pipeline that must process 50,000 documents overnight with no user waiting. Predict which request shape fits and why.",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A synchronous loop fits best, because calling the API once per document is the simplest pattern and avoids the overhead of submitting a batch."
+                },
+                {
+                    "id": "B",
+                    "text": "Streaming fits best, because sending the response in pieces lets the pipeline start processing each document sooner."
+                },
+                {
+                    "id": "C",
+                    "text": "The batch pattern fits: submit the requests in a batch and poll for completion, accepting longer latency for a lower per-token cost. A synchronous loop would hit rate limits and tie up the application, and streaming buys nothing because no user is watching."
+                },
+                {
+                    "id": "D",
+                    "text": "A larger context window fits best, because fitting all 50,000 documents into one request avoids making repeated calls."
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Batch processing is the appropriate pattern for a large offline workload where individual responses are not needed immediately. The application can submit many requests for asynchronous processing and later retrieve the completed results, avoiding the need to keep thousands of synchronous requests open. This pattern is particularly suitable for overnight classification, extraction, evaluation, embedding, or summarization jobs. Streaming primarily improves the experience when a user is waiting for incremental output, while placing 50,000 documents into one context would be impractical and would not provide the operational benefits of batch processing."
+        },
+        {
+            "id": "q3",
+            "category": "AI Agents",
+            "question": "Consider a long multi-turn agent session whose context window keeps filling. Predict the symptoms and name the budget at fault.",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The model silently drops the oldest turns to make room, so the session continues but quietly loses early context without any error."
+                },
+                {
+                    "id": "B",
+                    "text": "The context window is a fixed token budget; as history and tool results accumulate it fills. An input that is already oversized is rejected with an error before generation, while a request that fits on input but reaches the ceiling mid-generation can return truncated output or a context-limit stop condition. The application must trim, summarize, or otherwise manage history."
+                },
+                {
+                    "id": "C",
+                    "text": "The symptom is slower sampling, and the budget at fault is the temperature setting, which must be lowered as the session grows."
+                },
+                {
+                    "id": "D",
+                    "text": "There is no fixed budget; the window expands automatically to hold whatever history accumulates, so a long session never fails for this reason."
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "An LLM context window represents a finite token budget shared by information such as system instructions, conversation history, tool results, retrieved context, the current request, and generated output. In a long-running agent session, accumulated messages and tool observations can eventually consume this budget. Depending on the model and API, an oversized request may be rejected, generation may be limited, or application-side context management may be required. Production agents therefore commonly trim old messages, summarize conversation history, remove unnecessary tool outputs, or retrieve relevant historical information on demand instead of continually sending the entire session."
+        }
+    ]
+}

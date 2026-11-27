@@ -1,0 +1,83 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "What is transfer learning?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Moving data between computers"
+                },
+                {
+                    "id": "B",
+                    "text": "Using knowledge from one task to improve learning on another task"
+                },
+                {
+                    "id": "C",
+                    "text": "Transferring files over a network"
+                },
+                {
+                    "id": "D",
+                    "text": "A type of data storage"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Transfer learning is a machine learning technique where knowledge learned while solving one task is reused to improve learning on another related task. A common example is starting with a pretrained language or vision model and adapting the model to a specialized downstream task using a smaller task-specific dataset. This can reduce training time and data requirements compared with training a model entirely from scratch. Transfer learning refers to transferring learned representations or model knowledge, not moving files or data between computer systems."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "Which situations are examples of distribution shift? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "A fraud model encounters a new customer behavior pattern after deployment"
+                },
+                {
+                    "id": "B",
+                    "text": "Hospital equipment changes how input measurements are produced"
+                },
+                {
+                    "id": "C",
+                    "text": "The learning rate is reduced during training"
+                },
+                {
+                    "id": "D",
+                    "text": "User behavior changes substantially several years after training"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "Distribution shift occurs when the statistical characteristics of production data differ from the data used to train or validate a model. New fraud behavior can change the patterns seen by a fraud-detection model. Replacing hospital equipment can alter how input features are measured, creating a change in the input distribution. Long-term changes in user behavior can similarly make historical training data less representative of current users. Reducing the learning rate is a model-training configuration change and does not itself represent a shift in the real-world data distribution."
+        },
+        {
+            "id": "q3",
+            "category": "RAG Evaluation",
+            "question": "Retrieval recall is high, but answers include claims absent from retrieved passages. Which metric needs attention?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Answer faithfulness"
+                },
+                {
+                    "id": "B",
+                    "text": "Chunk ingestion rate"
+                },
+                {
+                    "id": "C",
+                    "text": "Embedding throughput"
+                },
+                {
+                    "id": "D",
+                    "text": "Index storage size"
+                }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Answer faithfulness measures whether claims in a generated response are supported by the context or evidence supplied to the model. High retrieval recall indicates that the retrieval system is successfully finding relevant information, but it does not guarantee that the LLM will restrict its answer to that evidence. If the generated response introduces claims that cannot be supported by the retrieved passages, faithfulness or groundedness is the quality dimension that needs attention. Chunk ingestion rate, embedding throughput, and index storage size measure operational characteristics rather than whether generated claims are supported by retrieved evidence."
+        }
+    ]
+}
