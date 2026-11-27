@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "A deployed ML model's performance degrades over time. What is the most likely cause?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "The code becoming outdated"
+                },
+                {
+                    "id": "B",
+                    "text": "Data drift—the real-world data distribution has changed"
+                },
+                {
+                    "id": "C",
+                    "text": "The model files corrupting"
+                },
+                {
+                    "id": "D",
+                    "text": "Network connectivity issues"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Data drift is a common reason a production machine learning model gradually loses performance. Data drift occurs when the statistical distribution of real-world inputs changes compared with the data used during training. For example, customer behavior, fraud patterns, market conditions, or device measurements may change over time, causing previously learned relationships to become less representative. Production ML systems should therefore monitor input distributions and model performance so drift can be detected and addressed through investigation, feature updates, or retraining."
+        },
+        {
+            "id": "q2",
+            "category": "ML",
+            "question": "Why do neural networks require non-linear activation functions?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "To reduce training time"
+                },
+                {
+                    "id": "B",
+                    "text": "To enable learning of complex, non-linear patterns in data"
+                },
+                {
+                    "id": "C",
+                    "text": "To decrease model size"
+                },
+                {
+                    "id": "D",
+                    "text": "To simplify backpropagation calculations"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Non-linear activation functions allow neural networks to learn complex relationships that cannot be represented by a simple linear transformation. Without non-linear activations, stacking multiple neural-network layers would still collapse mathematically into an equivalent linear transformation, severely limiting the types of patterns the network could learn. Activation functions such as ReLU, GELU, sigmoid, and tanh introduce non-linearity, enabling neural networks to model complex decision boundaries and relationships in data. Their primary purpose is not reducing model size or simplifying backpropagation."
+        },
+        {
+            "id": "q3",
+            "category": "ML Evaluation",
+            "question": "Why might an AI model perform well on a benchmark after benchmark questions become widely available online?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Larger context window"
+                },
+                {
+                    "id": "B",
+                    "text": "Benchmark contamination"
+                },
+                {
+                    "id": "C",
+                    "text": "Feature normalization"
+                },
+                {
+                    "id": "D",
+                    "text": "Lower learning rate"
+                }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Benchmark contamination can occur when benchmark questions, answers, or closely related examples become part of a model's training or post-training data. In that situation, strong benchmark performance may partly reflect prior exposure or memorization rather than the model's ability to generalize to genuinely unseen problems. This can make evaluation results appear stronger than the model's real-world capabilities. Careful benchmark design therefore uses held-out or newly created evaluation data and contamination checks where possible. Context-window size, feature normalization, and learning rate do not directly explain unexpectedly high performance caused by prior exposure to benchmark content."
+        }
+    ]
+}

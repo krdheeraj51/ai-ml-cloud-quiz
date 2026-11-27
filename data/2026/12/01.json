@@ -1,0 +1,87 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "category": "ML",
+            "question": "Which statements explain why high confidence from a neural network should NOT automatically be interpreted as high certainty? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Neural networks can be poorly calibrated"
+                },
+                {
+                    "id": "B",
+                    "text": "Inputs far from the training distribution can still generate confident predictions"
+                },
+                {
+                    "id": "C",
+                    "text": "Softmax probabilities automatically guarantee correctness"
+                },
+                {
+                    "id": "D",
+                    "text": "Confidence scores depend on learned model behavior"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "D"
+            ],
+            "explanation": "A neural network's confidence score is not automatically equivalent to the probability that its prediction is correct. Neural networks can be poorly calibrated, meaning their reported confidence does not accurately correspond to observed correctness rates. Models can also produce highly confident predictions for out-of-distribution inputs that differ significantly from their training data. Confidence scores ultimately arise from learned model behavior and the model's output distribution. Softmax converts model outputs into normalized values that resemble probabilities, but it does not guarantee that those values are calibrated or that the highest-confidence prediction is correct."
+        },
+        {
+            "id": "q2",
+            "category": "RAG",
+            "question": "An application needs private current manuals and a stable response format. Which combination fits both needs?",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Fine-tuning without retrieval"
+                },
+                {
+                    "id": "B",
+                    "text": "Prompting without manuals"
+                },
+                {
+                    "id": "C",
+                    "text": "RAG plus format controls"
+                },
+                {
+                    "id": "D",
+                    "text": "Retraining a new model"
+                }
+            ],
+            "correctAnswer": "C",
+            "explanation": "RAG and format controls address two different requirements. Retrieval-Augmented Generation allows the application to retrieve relevant information from private, current manuals at request time, so knowledge can be updated without retraining the model. Format controls such as structured-output schemas, JSON schemas, templates, or output validation provide a predictable response structure for downstream applications. Fine-tuning can help teach stable behavior or style, but by itself it does not provide reliable access to continuously updated private documents."
+        },
+        {
+            "id": "q3",
+            "category": "Multimodal AI",
+            "question": "Which of the following models do not support image inputs / vision capabilities? (Select all that apply)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "GPT-3.5 Turbo"
+                },
+                {
+                    "id": "B",
+                    "text": "GPT-3"
+                },
+                {
+                    "id": "C",
+                    "text": "MAI code 2 flash"
+                },
+                {
+                    "id": "D",
+                    "text": "Claude Haiku 5.5"
+                }
+            ],
+            "correctAnswers": [
+                "A",
+                "B",
+                "C"
+            ],
+            "explanation": "GPT-3.5 Turbo is a text-input/text-output model and does not support image input. The earlier GPT-3 family is likewise associated with text rather than modern multimodal vision input. The option 'MAI code 2 flash' refers to a code-oriented model rather than Microsoft's dedicated MAI image-model family, so it should not be treated as an image-input vision model in this question. Claude's Haiku family includes multimodal/visual reasoning capabilities, so Claude Haiku 5.5 should not be selected as a model lacking vision."
+        }
+    ]
+}
